@@ -1,15 +1,28 @@
+# Ignorar archivos de configuración específicos de IDE
 *.iml
+.idea/
 .gradle
+
+# Ignorar archivos generados
+/build/
+.cxx/
+.externalNativeBuild/
+
+# Ignorar archivos de sistema y de usuario
+.DS_Store
+/captures
+
+# Ignorar archivos de configuración local
 /local.properties
+
+# Excluir archivos específicos dentro de la carpeta .idea
 /.idea/caches
 /.idea/libraries
 /.idea/modules.xml
 /.idea/workspace.xml
 /.idea/navEditor.xml
 /.idea/assetWizardSettings.xml
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
-local.properties
+
+# Opcional: Gradle Wrapper, si decides ignorarlo
+# gradle/wrapper/gradle-wrapper.jar
+# gradle/wrapper/gradle-wrapper.properties
