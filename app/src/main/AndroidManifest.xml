@@ -13,6 +13,30 @@
         android:theme="@style/Theme.CMISentinelPrimeMobile"
         tools:targetApi="31">
         <activity
+            android:name=".dashboard"
+            android:exported="false" />
+        <activity
+            android:name=".changePassword"
+            android:exported="false" />
+        <activity
+            android:name=".language"
+            android:exported="false" />
+        <activity
+            android:name=".editProfile"
+            android:exported="false" />
+        <activity
+            android:name=".profile"
+            android:exported="false" />
+        <activity
+            android:name=".setting"
+            android:exported="false" />
+        <activity
+            android:name=".login"
+            android:exported="false" />
+        <activity
+            android:name=".register"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
