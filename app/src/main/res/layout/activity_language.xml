@@ -7,17 +7,183 @@
     android:layout_height="match_parent"
     tools:context=".language">
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="203dp"
-        android:layout_marginTop="357dp"
-        android:layout_marginEnd="151dp"
-        android:layout_marginBottom="355dp"
-        android:text="@string/screen7"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <LinearLayout
+        android:layout_width="396dp"
+        android:layout_height="728dp"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="213dp"
+            android:layout_height="42dp"
+            android:gravity="center_horizontal"
+            android:text="Languaje"
+            android:layout_margin="30dp"
+            app:autoSizeTextType="uniform" />
+
+        <LinearLayout
+            android:layout_width="368dp"
+            android:layout_height="44dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editTextText"
+                android:layout_width="335dp"
+                android:layout_height="48dp"
+                android:hint="Buscar"
+                android:inputType="text"/>
+
+
+            <SearchView
+                android:layout_width="35dp"
+                android:layout_height="44dp"
+                android:background="#A2A2A7"
+                android:backgroundTint="#F4F4F4">
+
+            </SearchView>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:background="?android:attr/listDivider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="348dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/united_states" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="335dp"
+                    android:layout_height="58dp"
+                    android:text="Ingles"
+                    android:textColor="@color/black"
+                    android:background="@color/white_100"
+                    android:textSize="30sp"/>
+
+                <RadioButton
+                    android:id="@+id/radioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/france" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="335dp"
+                    android:layout_height="58dp"
+                    android:text="Francés"
+                    android:textColor="@color/black"
+                    android:background="@color/white_100"
+                    android:textSize="30sp"/>
+
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/espa_a" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="335dp"
+                    android:layout_height="58dp"
+                    android:text="Español"
+                    android:textColor="@color/black"
+                    android:background="@color/white_100"
+                    android:textSize="30sp"/>
+
+                <RadioButton
+                    android:id="@+id/radioButton3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/vietnam" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="335dp"
+                    android:layout_height="58dp"
+                    android:text="Vietnamita"
+                    android:textColor="@color/black"
+                    android:background="@color/white_100"
+                    android:textSize="30sp"/>
+
+                <RadioButton
+                    android:id="@+id/radioButton4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
