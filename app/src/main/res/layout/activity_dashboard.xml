@@ -102,5 +102,43 @@
         app:layout_constraintTop_toBottomOf="@+id/searchIcon"
         app:srcCompat="@android:drawable/ic_menu_report_image" />
 
+    <!-- En Ruta -->
+    <TextView
+        android:id="@+id/enRutaLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="22dp"
+        android:text="En Ruta"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerFilterText" />
+
+    <TextView
+        android:id="@+id/enRutaValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="246"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/enRutaLabel"
+        app:layout_constraintTop_toBottomOf="@id/enRutaLabel"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/enRutaComparison"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comparado con (267 el mes pasado)"
+        android:textSize="10sp"
+        android:textColor="#808080"
+        app:layout_constraintStart_toStartOf="@id/enRutaLabel"
+        app:layout_constraintTop_toBottomOf="@id/enRutaValue"
+        android:layout_marginTop="4dp"
+        tools:ignore="SmallSp" />
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
