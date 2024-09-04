@@ -23,8 +23,8 @@
 
         <ImageView
             android:id="@+id/imgsentinelPrime"
-            android:layout_width="80"
-            android:layout_height="70.94"
+            android:layout_width="80dp"
+            android:layout_height="86dp"
             app:srcCompat="@drawable/group" />
 
         <TextView
@@ -33,8 +33,9 @@
             android:layout_height="wrap_content"
             android:text="@string/txt_sentinel"
             android:textAlignment="center"
-            android:textSize="18sp"
-            android:textStyle="bold"/>
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"/>
 
         <TextView
             android:id="@+id/txtPrime"
@@ -42,7 +43,7 @@
             android:layout_height="wrap_content"
             android:text="@string/txt_prime"
             android:textAlignment="center"
-            android:textSize="17sp"
+            android:textSize="35sp"
             android:textStyle="bold"/>
 
     </LinearLayout>
