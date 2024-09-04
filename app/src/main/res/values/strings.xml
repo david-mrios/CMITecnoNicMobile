@@ -9,4 +9,10 @@
     <string name="screen7">language</string>
     <string name="screen8">change Password</string>
     <string name="screen9">dashboard</string>
+    <string name="sentinelprime">sentinelPrime</string>
+    <string name="txtsentinelprime">txtsentinelPrime</string>
+    <string name="sentinel">Sentinel</string>
+    <string name="prime">Prime</string>
+    <string name="txt_sentinel">Sentinel</string>
+    <string name="txt_prime">Prime</string>
 </resources>
