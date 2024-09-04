@@ -50,8 +50,8 @@
     <!-- Search icon -->
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/searchIcon"
-        android:layout_width="35.92dp"
-        android:layout_height="32dp"
+        android:layout_width="48dp"
+        android:layout_height="40dp"
         android:layout_marginEnd="8dp"
         android:contentDescription="Search icon"
         app:layout_constraintBottom_toBottomOf="@id/profileImage"
@@ -59,7 +59,48 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:src="@drawable/ic_launcher_background" />
 
+    <TextView
+        android:id="@+id/headerResumeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:text="Resumen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileImage" />
 
+    <TextView
+        android:id="@+id/headerFilterText"
+        android:layout_width="112dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="9dp"
+        android:text="Mostrar: Este Año"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerResumeText" />
+
+    <ImageView
+        android:id="@+id/filterIcon"
+        android:layout_width="19.38dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="67dp"
+        app:layout_constraintStart_toEndOf="@+id/headerFilterText"
+        app:layout_constraintTop_toBottomOf="@+id/userNameText"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageButton
+        android:id="@+id/btnReport"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="TODO"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchIcon"
+        app:srcCompat="@android:drawable/ic_menu_report_image" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
