@@ -25,7 +25,7 @@
             android:id="@+id/imgsentinelPrime"
             android:layout_width="80dp"
             android:layout_height="86dp"
-            app:srcCompat="@drawable/group" />
+            app:srcCompat="@drawable/ic_main" />
 
         <TextView
             android:id="@+id/txtSentinel"
