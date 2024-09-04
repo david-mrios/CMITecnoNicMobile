@@ -102,7 +102,7 @@
         app:layout_constraintTop_toBottomOf="@+id/searchIcon"
         app:srcCompat="@android:drawable/ic_menu_report_image" />
 
-    <!-- En Ruta -->
+    <!-- on way -->
     <TextView
         android:id="@+id/enRutaLabel"
         android:layout_width="wrap_content"
@@ -110,7 +110,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="22dp"
         android:text="En Ruta"
-        android:textSize="16sp"
+        android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/headerFilterText" />
@@ -138,7 +138,205 @@
         android:layout_marginTop="4dp"
         tools:ignore="SmallSp" />
 
+    <TextView
+        android:id="@+id/percentOnRutText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="22dp"
+        android:text="-16%"
+        android:textColor="@color/red_500"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/enRutaLabel"
+        app:layout_constraintTop_toBottomOf="@+id/headerFilterText" />
 
+    <ImageView
+        android:id="@+id/iconDownRuta"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="22dp"
+        android:contentDescription="TODO"
+        app:layout_constraintStart_toEndOf="@+id/percentOnRutText"
+        app:layout_constraintTop_toBottomOf="@+id/headerFilterText"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <!-- Pending -->
+    <TextView
+        android:id="@+id/pendienteLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="163dp"
+        android:layout_marginEnd="113dp"
+        android:text="Pendiente"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pendienteValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="254"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/pendienteLabel"
+        app:layout_constraintTop_toBottomOf="@id/pendienteLabel"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/pendienteComparison"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:text="Comparado con (230 el mes pasado)"
+        android:textColor="#808080"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/pendienteLabel"
+        app:layout_constraintTop_toBottomOf="@id/pendienteValue"
+        tools:ignore="SmallSp" />
+    <TextView
+        android:id="@+id/percentPendingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="163dp"
+        android:text="-16%"
+        android:textColor="@color/red_500"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/pendienteLabel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iconDownPending"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="163dp"
+        app:layout_constraintStart_toEndOf="@+id/percentPendingText"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <!-- Cancel -->
+    <TextView
+        android:id="@+id/canceladoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="24dp"
+        android:text="Cancelado"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/enRutaComparison" />
+
+    <TextView
+        android:id="@+id/canceladoValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="252"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/canceladoLabel"
+        app:layout_constraintTop_toBottomOf="@id/canceladoLabel"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/canceladoComparison"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comparado con (300 el mes pasado)"
+        android:textSize="10sp"
+        android:textColor="#808080"
+        app:layout_constraintStart_toStartOf="@id/canceladoLabel"
+        app:layout_constraintTop_toBottomOf="@id/canceladoValue"
+        android:layout_marginTop="4dp"
+        tools:ignore="SmallSp" />
+
+    <!-- Delivered -->
+
+    <TextView
+        android:id="@+id/percentCancelText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="23dp"
+        android:text="-16%"
+        android:textColor="@color/red_500"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/canceladoLabel"
+        app:layout_constraintTop_toBottomOf="@+id/enRutaComparison" />
+
+    <ImageView
+        android:id="@+id/iconArrowCancel"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="23dp"
+        android:contentDescription="TODO"
+        app:layout_constraintStart_toEndOf="@+id/percentCancelText"
+        app:layout_constraintTop_toBottomOf="@+id/enRutaComparison"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/entregadoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="113dp"
+        android:text="Entregado"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pendienteComparison" />
+
+    <TextView
+        android:id="@+id/entregadoValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="248"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/entregadoLabel"
+        app:layout_constraintTop_toBottomOf="@id/entregadoLabel"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/entregadoComparison"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comparado con (236 el mes pasado)"
+        android:textSize="10sp"
+        android:textColor="#808080"
+        app:layout_constraintStart_toStartOf="@id/entregadoLabel"
+        app:layout_constraintTop_toBottomOf="@id/entregadoValue"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/percentDeliveredText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="24dp"
+        android:text="-16%"
+        android:textColor="@color/red_500"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/entregadoLabel"
+        app:layout_constraintTop_toBottomOf="@+id/pendienteComparison" />
+
+    <ImageView
+        android:id="@+id/iconArrowDelivered"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="TODO"
+        app:layout_constraintStart_toEndOf="@+id/percentDeliveredText"
+        app:layout_constraintTop_toBottomOf="@+id/pendienteComparison"
+        tools:srcCompat="@tools:sample/avatars" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
