@@ -426,11 +426,13 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginStart="25dp"
             android:layout_marginTop="16dp"
-            android:background="#f5f5f5"
+            android:layout_marginEnd="10dp"
             android:orientation="vertical"
-            app:layout_constraintTop_toBottomOf="@+id/shippingTopImg"
-            tools:layout_editor_absoluteX="16dp">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shippingTopImg">
 
             <TextView
                 android:id="@+id/titulo"
@@ -438,7 +440,6 @@
                 android:layout_height="wrap_content"
                 android:padding="16dp"
                 android:text="Nuevos Clientes"
-                android:textColor="#000000"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -454,7 +455,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
-                    android:background="@android:color/white"
                     android:orientation="horizontal"
                     android:paddingVertical="10dp">
 
@@ -462,7 +462,7 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_gravity="center_vertical"
-                        android:src="@drawable/francis_image" />
+                        android:src="@drawable/profileimg" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -477,7 +477,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Francis Holzworth"
-                            android:textColor="#000000"
                             android:textSize="16sp"
                             android:textStyle="bold" />
 
@@ -497,12 +496,11 @@
                         android:src="@drawable/ic_email" />
                 </LinearLayout>
 
-                <!-- Cliente 2 -->
+                <!-- Client 2 -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
-                    android:background="@android:color/white"
                     android:orientation="horizontal"
                     android:paddingVertical="10dp">
 
@@ -510,7 +508,7 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_gravity="center_vertical"
-                        android:src="@drawable/kaylyn_image" />
+                        android:src="@drawable/profileimg" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -525,7 +523,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Kaylyn Yokel"
-                            android:textColor="#000000"
                             android:textSize="16sp"
                             android:textStyle="bold" />
 
@@ -545,9 +542,6 @@
                         android:src="@drawable/ic_email" />
                 </LinearLayout>
 
-                <!-- Repetir para más clientes -->
-
-                <!-- Botón Ver Todos los Clientes -->
                 <TextView
                     android:id="@+id/btn_ver_todos"
                     android:layout_width="wrap_content"
@@ -555,7 +549,9 @@
                     android:layout_gravity="center_horizontal"
                     android:padding="16dp"
                     android:text="Ver Todos los Clientes"
-                    android:textColor="@color/primary"
+                    android:textAllCaps="true"
+                    android:textColor="@color/blue_500"
+                    android:textColorHighlight="@color/gray_500"
                     android:textSize="16sp" />
             </LinearLayout>
         </LinearLayout>
