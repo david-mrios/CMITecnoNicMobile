@@ -9,4 +9,9 @@
     <string name="screen7">language</string>
     <string name="screen8">change Password</string>
     <string name="screen9">dashboard</string>
+    <string name="txtSignUp">Registrarse</string>
+    <string name="txtName">Nombre Completo</string>
+    <string name="txtPhoneNumber">Numero de teléfono</string>
+    <string name="txtEmail">Correo Electrónico</string>
+    <string name="txtPassword">Contraseña</string>
 </resources>
