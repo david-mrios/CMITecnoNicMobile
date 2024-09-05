@@ -9,4 +9,16 @@
     <string name="screen7">language</string>
     <string name="screen8">change Password</string>
     <string name="screen9">dashboard</string>
+    <string name="ajustes">Ajustes</string>
+    <string name="general">General</string>
+    <string name="lenguaje">Lenguaje</string>
+    <string name="espa_ol">Español</string>
+    <string name="mi_perfil">Mi perfil</string>
+    <string name="contactenos">Contactenos</string>
+    <string name="seguridad">Seguridad</string>
+    <string name="cambiar_la_contrase_a">Cambiar la Contraseña</string>
+    <string name="pol_ticas_de_privacidad">Políticas de Privacidad</string>
+    <string name="boton_retroceder">Boton Retroceder</string>
+    <string name="bot_n_de_grupo">Botón de Grupo</string>
+    <string name="Ajustes" />
 </resources>
