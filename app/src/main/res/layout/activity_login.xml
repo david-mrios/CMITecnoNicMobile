@@ -21,7 +21,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
         <ImageButton
-            android:id="@+id/imagebtnBack"
+            android:id="@+id/imageBtnBack"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/cirlcleimagebtn"
@@ -29,11 +29,12 @@
             app:srcCompat="@drawable/ic_path"
             android:scaleType="centerInside"
             android:layout_marginTop="20dp"
-        android:layout_marginStart="30dp"
-        android:padding="15dp"/>
+            android:layout_marginStart="30dp"
+            android:padding="15dp"
+            />
 
         <TextView
-            android:id="@+id/txtlogin"
+            android:id="@+id/txtLogin"
             android:layout_width="245dp"
             android:layout_height="35sp"
             android:text="@string/txtlogin"
@@ -43,24 +44,54 @@
             android:textStyle="bold"/>
 
         <TextView
-            android:id="@+id/txtemail"
+            android:id="@+id/txtEmail"
             android:layout_width="139dp"
             android:layout_height="16dp"
             android:text="@string/txtEmail"
             android:layout_marginTop="35sp"
             android:layout_marginStart="54dp"
-            android:textSize="14dp"
-            android:textColor="@color/gray_400"/>
+            android:textSize="14sp"
+            android:textColor="@color/gray_500"/>
+
+        <EditText
+            android:id="@+id/editTxtEmail"
+            android:layout_width="335dp"
+            android:layout_height="32dp"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:layout_marginTop="10sp"
+            android:layout_marginStart="54dp"
+            android:background="@drawable/edit_textline_email"
+            android:hint="@string/hint_test_gmail_com"
+            android:drawableStart="@drawable/ic_email"
+            android:drawablePadding="10dp"
+            android:paddingTop="12dp"
+            />
 
         <TextView
-            android:id="@+id/txtpassword"
+            android:id="@+id/txtPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Contraseña"
+            android:text="@string/txtcontrase_a"
             android:layout_marginTop="35sp"
             android:layout_marginStart="54dp"
-            android:textSize="14dp"
-            android:textColor="@color/gray_400"/>
+            android:textSize="14sp"
+            android:textColor="@color/gray_500"/>
+
+        <EditText
+            android:id="@+id/editTxtPassword"
+            android:layout_width="335dp"
+            android:layout_height="32dp"
+            android:ems="10"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="54dp"
+            android:inputType="textPassword"
+            android:background="@drawable/edit_textline_email"
+            android:hint="@string/hint_test_gmail_com"
+            android:drawableStart="@drawable/ic_email"
+            android:drawablePadding="10dp"
+            android:paddingTop="12dp"/>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
