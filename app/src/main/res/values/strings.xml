@@ -14,4 +14,8 @@
     <string name="txtPhoneNumber">Numero de teléfono</string>
     <string name="txtEmail">Correo Electrónico</string>
     <string name="txtPassword">Contraseña</string>
+    <string name="txtUser">Test Usuario</string>
+    <string name="txtPhoneNum">+505 00000000</string>
+    <string name="txtEmailSignUp">test@gmail.com</string>
+    <string name="txtPass">........</string>
 </resources>
