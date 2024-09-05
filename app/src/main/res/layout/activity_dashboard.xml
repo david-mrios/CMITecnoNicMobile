@@ -19,13 +19,13 @@
             android:layout_height="50dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="8dp"
-            android:contentDescription="Profile img"
+            android:contentDescription="@string/profileImg"
             android:scaleType="centerCrop"
             app:civ_border_width="2dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:src="@drawable/profileimg"
-            tools:srcCompat="@drawable/profileimg" />
+            tools:src="@drawable/ci_profile"
+            tools:srcCompat="@drawable/ci_profile" />
 
 
         <!-- welcome text -->
@@ -33,7 +33,7 @@
             android:id="@+id/welcomeText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bienvenido"
+            android:text="@string/welcomeHome"
             android:textColor="#808080"
             android:textSize="12sp"
             android:layout_marginStart="10dp"
@@ -44,7 +44,7 @@
             android:id="@+id/userNameText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tanya Myroniuk"
+            android:text="@string/nameUserHome"
             android:layout_marginStart="10dp"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -54,15 +54,15 @@
         <!-- Search icon -->
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/searchIcon"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginEnd="8dp"
-            android:background="@drawable/circle_imgbtn"
-            android:contentDescription="Search icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/ic_circular_button"
+            android:contentDescription="@string/searchIconHome"
             app:layout_constraintBottom_toBottomOf="@id/profileImage"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:src="@drawable/searchloupe" />
+            tools:src="@drawable/ic_search" />
 
         <TextView
             android:id="@+id/headerResumeText"
@@ -72,7 +72,7 @@
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_marginTop="30dp"
-            android:text="Resumen"
+            android:text="@string/headResumeLabel"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/profileImage" />
 
@@ -82,9 +82,10 @@
             android:layout_height="20dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="9dp"
-            android:text="Mostrar: Este Año"
+            android:text="@string/filterLabel"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/headerResumeText" />
+            app:layout_constraintTop_toBottomOf="@+id/headerResumeText"
+            tools:ignore="TextSizeCheck" />
 
         <ImageView
             android:id="@+id/filterIcon"
@@ -92,20 +93,23 @@
             android:layout_height="16dp"
             android:layout_marginStart="4dp"
             android:layout_marginTop="67dp"
+            android:contentDescription="@string/descriptionImg"
             app:layout_constraintStart_toEndOf="@+id/headerFilterText"
             app:layout_constraintTop_toBottomOf="@+id/userNameText"
-            tools:srcCompat="@tools:sample/avatars" />
+            tools:srcCompat="@drawable/ic_filter" />
 
         <ImageButton
             android:id="@+id/btnReport"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_marginTop="50dp"
-            android:layout_marginEnd="8dp"
-            android:contentDescription="TODO"
+            android:layout_marginEnd="10dp"
+            android:background="@color/blue_500"
+            android:contentDescription="@string/descriptionImg"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/searchIcon"
-            app:srcCompat="@android:drawable/ic_menu_report_image" />
+            app:srcCompat="@drawable/ic_shape"
+            tools:ignore="DuplicateSpeakableTextCheck" />
 
         <!-- on way -->
         <TextView
@@ -114,7 +118,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="22dp"
-            android:text="En Ruta"
+            android:text="@string/onWayLabel"
             android:textSize="12sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -124,7 +128,7 @@
             android:id="@+id/enRutaValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="246"
+            android:text="@string/onWayCount"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@id/enRutaLabel"
@@ -135,9 +139,9 @@
             android:id="@+id/enRutaComparison"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Comparado con (267 el mes pasado)"
+            android:text="@string/comparisonOnWay"
             android:textSize="10sp"
-            android:textColor="#808080"
+            android:textColor="@color/gray_600"
             app:layout_constraintStart_toStartOf="@id/enRutaLabel"
             app:layout_constraintTop_toBottomOf="@id/enRutaValue"
             android:layout_marginTop="4dp"
@@ -149,7 +153,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="22dp"
-            android:text="-16%"
+            android:text="@string/percentOnWay"
             android:textColor="@color/red_500"
             android:textSize="12sp"
             app:layout_constraintStart_toEndOf="@+id/enRutaLabel"
@@ -161,19 +165,20 @@
             android:layout_height="12dp"
             android:layout_marginStart="4dp"
             android:layout_marginTop="22dp"
-            android:contentDescription="TODO"
+            android:contentDescription="@string/descriptionImg"
             app:layout_constraintStart_toEndOf="@+id/percentOnRutText"
             app:layout_constraintTop_toBottomOf="@+id/headerFilterText"
+            tools:ignore="ImageContrastCheck"
             tools:srcCompat="@tools:sample/avatars" />
 
         <!-- Pending -->
         <TextView
-            android:id="@+id/pendienteLabel"
+            android:id="@+id/backorderLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="163dp"
             android:layout_marginEnd="113dp"
-            android:text="Pendiente"
+            android:text="@string/backorderHead"
             android:textSize="12sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -183,11 +188,11 @@
             android:id="@+id/pendienteValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="254"
+            android:text="@string/countBackorder"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@id/pendienteLabel"
-            app:layout_constraintTop_toBottomOf="@id/pendienteLabel"
+            app:layout_constraintStart_toStartOf="@id/backorderLabel"
+            app:layout_constraintTop_toBottomOf="@id/backorderLabel"
             android:layout_marginTop="8dp" />
 
         <TextView
@@ -196,11 +201,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="8dp"
-            android:text="Comparado con (230 el mes pasado)"
-            android:textColor="#808080"
+            android:text="@string/comparisonBackorder"
+            android:textColor="@color/gray_600"
             android:textSize="10sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@id/pendienteLabel"
+            app:layout_constraintStart_toStartOf="@id/backorderLabel"
             app:layout_constraintTop_toBottomOf="@id/pendienteValue"
             tools:ignore="SmallSp" />
         <TextView
@@ -209,10 +214,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="9dp"
             android:layout_marginTop="163dp"
-            android:text="-16%"
+            android:text="@string/percentBackorder"
             android:textColor="@color/red_500"
             android:textSize="12sp"
-            app:layout_constraintStart_toEndOf="@+id/pendienteLabel"
+            app:layout_constraintStart_toEndOf="@+id/backorderLabel"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
@@ -221,6 +226,7 @@
             android:layout_height="12dp"
             android:layout_marginStart="4dp"
             android:layout_marginTop="163dp"
+            android:contentDescription="@string/descriptionImg"
             app:layout_constraintStart_toEndOf="@+id/percentPendingText"
             app:layout_constraintTop_toTopOf="parent"
             tools:srcCompat="@tools:sample/avatars" />
@@ -232,7 +238,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="24dp"
-            android:text="Cancelado"
+            android:text="@string/cancelHead"
             android:textSize="12sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -242,7 +248,7 @@
             android:id="@+id/canceladoValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="252"
+            android:text="@string/countCancel"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@id/canceladoLabel"
@@ -253,23 +259,22 @@
             android:id="@+id/canceladoComparison"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Comparado con (300 el mes pasado)"
+            android:text="@string/comparisonCancel"
             android:textSize="10sp"
-            android:textColor="#808080"
+            android:textColor="@color/gray_600"
             app:layout_constraintStart_toStartOf="@id/canceladoLabel"
             app:layout_constraintTop_toBottomOf="@id/canceladoValue"
             android:layout_marginTop="4dp"
             tools:ignore="SmallSp" />
 
         <!-- Delivered -->
-
         <TextView
             android:id="@+id/percentCancelText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="23dp"
-            android:text="-16%"
+            android:text="@string/percentCancel"
             android:textColor="@color/red_500"
             android:textSize="12sp"
             app:layout_constraintStart_toEndOf="@+id/canceladoLabel"
@@ -281,9 +286,10 @@
             android:layout_height="12dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="23dp"
-            android:contentDescription="TODO"
+            android:contentDescription="@string/descriptionImg"
             app:layout_constraintStart_toEndOf="@+id/percentCancelText"
             app:layout_constraintTop_toBottomOf="@+id/enRutaComparison"
+            tools:ignore="ImageContrastCheck"
             tools:srcCompat="@tools:sample/avatars" />
 
         <TextView
@@ -292,7 +298,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="113dp"
-            android:text="Entregado"
+            android:text="@string/deliveredHead"
             android:textSize="12sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -302,7 +308,7 @@
             android:id="@+id/entregadoValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="248"
+            android:text="@string/countDelivered"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@id/entregadoLabel"
@@ -313,12 +319,13 @@
             android:id="@+id/entregadoComparison"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Comparado con (236 el mes pasado)"
+            android:text="@string/comparisonDelivered"
             android:textSize="10sp"
-            android:textColor="#808080"
+            android:textColor="@color/gray_600"
             app:layout_constraintStart_toStartOf="@id/entregadoLabel"
             app:layout_constraintTop_toBottomOf="@id/entregadoValue"
-            android:layout_marginTop="4dp" />
+            android:layout_marginTop="4dp"
+            tools:ignore="SmallSp" />
 
         <TextView
             android:id="@+id/percentDeliveredText"
@@ -326,8 +333,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="9dp"
             android:layout_marginTop="24dp"
-            android:text="-16%"
-            android:textColor="@color/red_500"
+            android:text="@string/percentDelivered"
+            android:textColor="#D32F2F"
             android:textSize="12sp"
             app:layout_constraintStart_toEndOf="@+id/entregadoLabel"
             app:layout_constraintTop_toBottomOf="@+id/pendienteComparison" />
@@ -338,7 +345,7 @@
             android:layout_height="12dp"
             android:layout_marginStart="4dp"
             android:layout_marginTop="24dp"
-            android:contentDescription="TODO"
+            android:contentDescription="@string/descriptionImg"
             app:layout_constraintStart_toEndOf="@+id/percentDeliveredText"
             app:layout_constraintTop_toBottomOf="@+id/pendienteComparison"
             tools:srcCompat="@tools:sample/avatars" />
@@ -346,29 +353,31 @@
 
         <ImageView
             android:id="@+id/reportSellerImg"
-            android:layout_width="331dp"
+            android:layout_width="340dp"
             android:layout_height="303dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="10dp"
-            android:contentDescription="TODO"
+            android:contentDescription="@string/descriptionImg"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/canceladoComparison"
+            app:layout_constraintTop_toBottomOf="@+id/entregadoComparison"
             tools:srcCompat="@drawable/salesgraphs" />
 
         <ImageView
             android:id="@+id/reportImg"
-            android:layout_width="360dp"
-            android:layout_height="67dp"
+            android:layout_width="331dp"
+            android:layout_height="77dp"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="10dp"
+            android:contentDescription="@string/descriptionImg"
             android:paddingStart="29dp"
-            android:contentDescription="TODO"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.535"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/reportSellerImg"
+            tools:ignore="RtlSymmetry,ImageContrastCheck"
             tools:srcCompat="@drawable/hitrate" />
 
         <ImageView
@@ -378,7 +387,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="10dp"
-            android:contentDescription="TODO"
+            android:contentDescription="@string/descriptionImg"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/reportImg"
@@ -391,7 +400,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="10dp"
-            android:contentDescription="TODO"
+            android:contentDescription="@string/descriptionImg"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/reportCustomer"
@@ -404,10 +413,11 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="10dp"
-            android:contentDescription="TODO"
+            android:contentDescription="@string/descriptionImg"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/shippingReportsImg"
+            tools:ignore="ImageContrastCheck"
             tools:srcCompat="@drawable/paymentpie" />
 
         <ImageView
@@ -417,7 +427,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="10dp"
-            android:contentDescription="TODO"
+            android:contentDescription="@string/descriptionImg"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/piePaymentImg"
@@ -439,7 +449,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="16dp"
-                android:text="Nuevos Clientes"
+                android:text="@string/listClientHead"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -462,7 +472,8 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_gravity="center_vertical"
-                        android:src="@drawable/profileimg" />
+                        android:contentDescription="@string/descriptionImg"
+                        android:src="@drawable/ci_profile" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -473,19 +484,19 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/nombre_cliente"
+                            android:id="@+id/nameClient"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Francis Holzworth"
+                            android:text="@string/firstClientLabel"
                             android:textSize="16sp"
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/id_cliente"
+                            android:id="@+id/idFirstClient"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Cliente ID#00222"
-                            android:textColor="#666666"
+                            android:text="@string/firstIdClient"
+                            android:textColor="#546E7A"
                             android:textSize="14sp" />
                     </LinearLayout>
 
@@ -493,7 +504,9 @@
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:layout_gravity="center_vertical"
-                        android:src="@drawable/ic_email" />
+                        android:contentDescription="@string/descriptionImg"
+                        android:src="@drawable/ic_email"
+                        tools:ignore="ImageContrastCheck" />
                 </LinearLayout>
 
                 <!-- Client 2 -->
@@ -508,7 +521,8 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_gravity="center_vertical"
-                        android:src="@drawable/profileimg" />
+                        android:contentDescription="@string/descriptionImg"
+                        android:src="@drawable/ci_profile" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -519,18 +533,18 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/nombre_cliente2"
+                            android:id="@+id/secondNameClient"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Kaylyn Yokel"
+                            android:text="@string/secondClientLabel"
                             android:textSize="16sp"
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/id_cliente2"
+                            android:id="@+id/idSecondClient"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Cliente ID#00222"
+                            android:text="@string/secIdClient"
                             android:textColor="#666666"
                             android:textSize="14sp" />
                     </LinearLayout>
@@ -539,7 +553,9 @@
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:layout_gravity="center_vertical"
-                        android:src="@drawable/ic_email" />
+                        android:contentDescription="@string/descriptionImg"
+                        android:src="@drawable/ic_email"
+                        tools:ignore="ImageContrastCheck" />
                 </LinearLayout>
 
                 <TextView
@@ -548,7 +564,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:padding="16dp"
-                    android:text="Ver Todos los Clientes"
+                    android:text="@string/showOtherClient"
                     android:textAllCaps="true"
                     android:textColor="@color/blue_500"
                     android:textColorHighlight="@color/gray_500"
