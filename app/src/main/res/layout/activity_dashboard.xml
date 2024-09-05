@@ -13,7 +13,7 @@
         tools:context=".dashboard">
 
         <!-- Profile img -->
-        <de.hdodenhof.circleimageview.CircleImageView
+        <ImageView
             android:id="@+id/profileImage"
             android:layout_width="50dp"
             android:layout_height="50dp"
@@ -26,7 +26,6 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:src="@drawable/ci_profile"
             tools:srcCompat="@drawable/ci_profile" />
-
 
         <!-- welcome text -->
         <TextView
@@ -113,7 +112,7 @@
 
         <!-- on way -->
         <TextView
-            android:id="@+id/enRutaLabel"
+            android:id="@+id/onWayLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -125,30 +124,30 @@
             app:layout_constraintTop_toBottomOf="@+id/headerFilterText" />
 
         <TextView
-            android:id="@+id/enRutaValue"
+            android:id="@+id/onWayValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/onWayCount"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@id/enRutaLabel"
-            app:layout_constraintTop_toBottomOf="@id/enRutaLabel"
+            app:layout_constraintStart_toStartOf="@id/onWayLabel"
+            app:layout_constraintTop_toBottomOf="@id/onWayLabel"
             android:layout_marginTop="8dp" />
 
         <TextView
-            android:id="@+id/enRutaComparison"
+            android:id="@+id/onWayComparison"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/comparisonOnWay"
             android:textSize="10sp"
             android:textColor="@color/gray_600"
-            app:layout_constraintStart_toStartOf="@id/enRutaLabel"
-            app:layout_constraintTop_toBottomOf="@id/enRutaValue"
+            app:layout_constraintStart_toStartOf="@id/onWayLabel"
+            app:layout_constraintTop_toBottomOf="@id/onWayValue"
             android:layout_marginTop="4dp"
             tools:ignore="SmallSp" />
 
         <TextView
-            android:id="@+id/percentOnRutText"
+            android:id="@+id/percentOnWayText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -156,17 +155,17 @@
             android:text="@string/percentOnWay"
             android:textColor="@color/red_500"
             android:textSize="12sp"
-            app:layout_constraintStart_toEndOf="@+id/enRutaLabel"
+            app:layout_constraintStart_toEndOf="@+id/onWayLabel"
             app:layout_constraintTop_toBottomOf="@+id/headerFilterText" />
 
         <ImageView
-            android:id="@+id/iconDownRuta"
+            android:id="@+id/iconDownOnWay"
             android:layout_width="12dp"
             android:layout_height="12dp"
             android:layout_marginStart="4dp"
             android:layout_marginTop="22dp"
             android:contentDescription="@string/descriptionImg"
-            app:layout_constraintStart_toEndOf="@+id/percentOnRutText"
+            app:layout_constraintStart_toEndOf="@+id/percentOnWayText"
             app:layout_constraintTop_toBottomOf="@+id/headerFilterText"
             tools:ignore="ImageContrastCheck"
             tools:srcCompat="@tools:sample/avatars" />
@@ -185,7 +184,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/pendienteValue"
+            android:id="@+id/pendingValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/countBackorder"
@@ -196,7 +195,7 @@
             android:layout_marginTop="8dp" />
 
         <TextView
-            android:id="@+id/pendienteComparison"
+            android:id="@+id/pendingComparison"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
@@ -206,7 +205,7 @@
             android:textSize="10sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/backorderLabel"
-            app:layout_constraintTop_toBottomOf="@id/pendienteValue"
+            app:layout_constraintTop_toBottomOf="@id/pendingValue"
             tools:ignore="SmallSp" />
         <TextView
             android:id="@+id/percentPendingText"
@@ -233,7 +232,7 @@
 
         <!-- Cancel -->
         <TextView
-            android:id="@+id/canceladoLabel"
+            android:id="@+id/cancelledLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -242,34 +241,34 @@
             android:textSize="12sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/enRutaComparison" />
+            app:layout_constraintTop_toBottomOf="@id/onWayComparison" />
 
         <TextView
-            android:id="@+id/canceladoValue"
+            android:id="@+id/cancelledValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/countCancel"
             android:textSize="24sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@id/canceladoLabel"
-            app:layout_constraintTop_toBottomOf="@id/canceladoLabel"
+            app:layout_constraintStart_toStartOf="@id/cancelledLabel"
+            app:layout_constraintTop_toBottomOf="@id/cancelledLabel"
             android:layout_marginTop="8dp" />
 
         <TextView
-            android:id="@+id/canceladoComparison"
+            android:id="@+id/cancelledComparison"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/comparisonCancel"
             android:textSize="10sp"
             android:textColor="@color/gray_600"
-            app:layout_constraintStart_toStartOf="@id/canceladoLabel"
-            app:layout_constraintTop_toBottomOf="@id/canceladoValue"
+            app:layout_constraintStart_toStartOf="@id/cancelledLabel"
+            app:layout_constraintTop_toBottomOf="@id/cancelledValue"
             android:layout_marginTop="4dp"
             tools:ignore="SmallSp" />
 
         <!-- Delivered -->
         <TextView
-            android:id="@+id/percentCancelText"
+            android:id="@+id/percentCancelledText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -277,23 +276,23 @@
             android:text="@string/percentCancel"
             android:textColor="@color/red_500"
             android:textSize="12sp"
-            app:layout_constraintStart_toEndOf="@+id/canceladoLabel"
-            app:layout_constraintTop_toBottomOf="@+id/enRutaComparison" />
+            app:layout_constraintStart_toEndOf="@+id/cancelledLabel"
+            app:layout_constraintTop_toBottomOf="@+id/onWayComparison" />
 
         <ImageView
-            android:id="@+id/iconArrowCancel"
+            android:id="@+id/iconArrowCancelled"
             android:layout_width="12dp"
             android:layout_height="12dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="23dp"
             android:contentDescription="@string/descriptionImg"
-            app:layout_constraintStart_toEndOf="@+id/percentCancelText"
-            app:layout_constraintTop_toBottomOf="@+id/enRutaComparison"
+            app:layout_constraintStart_toEndOf="@+id/percentCancelledText"
+            app:layout_constraintTop_toBottomOf="@+id/onWayComparison"
             tools:ignore="ImageContrastCheck"
             tools:srcCompat="@tools:sample/avatars" />
 
         <TextView
-            android:id="@+id/entregadoLabel"
+            android:id="@+id/deliveredLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
@@ -302,28 +301,28 @@
             android:textSize="12sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/pendienteComparison" />
+            app:layout_constraintTop_toBottomOf="@+id/pendingComparison" />
 
         <TextView
-            android:id="@+id/entregadoValue"
+            android:id="@+id/deliveredValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/countDelivered"
             android:textSize="24sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@id/entregadoLabel"
-            app:layout_constraintTop_toBottomOf="@id/entregadoLabel"
+            app:layout_constraintStart_toStartOf="@id/deliveredLabel"
+            app:layout_constraintTop_toBottomOf="@id/deliveredLabel"
             android:layout_marginTop="8dp" />
 
         <TextView
-            android:id="@+id/entregadoComparison"
+            android:id="@+id/deliveredComparison"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/comparisonDelivered"
             android:textSize="10sp"
             android:textColor="@color/gray_600"
-            app:layout_constraintStart_toStartOf="@id/entregadoLabel"
-            app:layout_constraintTop_toBottomOf="@id/entregadoValue"
+            app:layout_constraintStart_toStartOf="@id/deliveredLabel"
+            app:layout_constraintTop_toBottomOf="@id/deliveredValue"
             android:layout_marginTop="4dp"
             tools:ignore="SmallSp" />
 
@@ -336,8 +335,8 @@
             android:text="@string/percentDelivered"
             android:textColor="#D32F2F"
             android:textSize="12sp"
-            app:layout_constraintStart_toEndOf="@+id/entregadoLabel"
-            app:layout_constraintTop_toBottomOf="@+id/pendienteComparison" />
+            app:layout_constraintStart_toEndOf="@+id/deliveredLabel"
+            app:layout_constraintTop_toBottomOf="@+id/pendingComparison" />
 
         <ImageView
             android:id="@+id/iconArrowDelivered"
@@ -347,9 +346,8 @@
             android:layout_marginTop="24dp"
             android:contentDescription="@string/descriptionImg"
             app:layout_constraintStart_toEndOf="@+id/percentDeliveredText"
-            app:layout_constraintTop_toBottomOf="@+id/pendienteComparison"
+            app:layout_constraintTop_toBottomOf="@+id/pendingComparison"
             tools:srcCompat="@tools:sample/avatars" />
-
 
         <ImageView
             android:id="@+id/reportSellerImg"
@@ -361,7 +359,7 @@
             android:contentDescription="@string/descriptionImg"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/entregadoComparison"
+            app:layout_constraintTop_toBottomOf="@+id/deliveredComparison"
             tools:srcCompat="@drawable/salesgraphs" />
 
         <ImageView
@@ -445,7 +443,7 @@
             app:layout_constraintTop_toBottomOf="@+id/shippingTopImg">
 
             <TextView
-                android:id="@+id/titulo"
+                android:id="@+id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="16dp"
@@ -559,7 +557,7 @@
                 </LinearLayout>
 
                 <TextView
-                    android:id="@+id/btn_ver_todos"
+                    android:id="@+id/btn_view_all"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
