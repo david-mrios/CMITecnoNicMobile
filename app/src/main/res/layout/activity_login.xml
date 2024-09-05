@@ -87,10 +87,12 @@
             android:layout_marginStart="54dp"
             android:inputType="textPassword"
             android:background="@drawable/edit_textline_email"
-            android:hint="@string/hint_test_gmail_com"
-            android:drawableStart="@drawable/ic_email"
+            android:hint="@string/hintpassword"
+            android:textColorHint="@color/black"
+            android:drawableStart="@drawable/ic_lock"
             android:drawablePadding="10dp"
-            android:paddingTop="12dp"/>
+            android:paddingTop="10dp"
+            android:drawableEnd="@drawable/ic_eye"/>
 
     </LinearLayout>
 
