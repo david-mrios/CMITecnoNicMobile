@@ -8,16 +8,24 @@
     tools:context=".login">
 
     <LinearLayout
+
         android:layout_width="409dp"
         android:layout_height="729dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp">
-
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">>
         <ImageButton
-            android:id="@+id/imageButton"
+            android:id="@+id/imageButton2"
             android:layout_width="42dp"
             android:layout_height="42dp"
-            app:srcCompat="@drawable/ic_path" />
+            app:srcCompat="@drawable/ic_path"
+            android:background="@drawable/cirlcle_imagebutton/>
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
