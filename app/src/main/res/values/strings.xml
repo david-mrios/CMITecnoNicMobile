@@ -24,7 +24,7 @@
     <string name="backorderHead">Pendiente</string>
     <string name="countBackorder">254</string>
     <string name="comparisonBackorder">Comparado con (230 el mes pasado)</string>
-    <string name="percentBackorder">-16%</string>
+    <string name="percentBackorder">+10%</string>
     <string name="cancelHead">Cancelado</string>
     <string name="countCancel">252</string>
     <string name="comparisonCancel">Comparado con (300 el mes pasado)</string>
@@ -32,7 +32,7 @@
     <string name="deliveredHead">Entregado</string>
     <string name="countDelivered">248</string>
     <string name="comparisonDelivered">Comparado con (236 el mes pasado)</string>
-    <string name="percentDelivered">-16%</string>
+    <string name="percentDelivered">+5%</string>
     <string name="listClientHead">Nuevos Clientes</string>
     <string name="firstClientLabel">Francis Holzworth</string>
     <string name="firstIdClient">Cliente ID#00222</string>

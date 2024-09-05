@@ -32,10 +32,10 @@
             android:id="@+id/welcomeText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/welcomeHome"
-            android:textColor="#808080"
-            android:textSize="12sp"
             android:layout_marginStart="10dp"
+            android:text="@string/welcomeHome"
+            android:textColor="#546E7A"
+            android:textSize="12sp"
             app:layout_constraintStart_toEndOf="@id/profileImage"
             app:layout_constraintTop_toTopOf="@id/profileImage" />
 
@@ -61,6 +61,7 @@
             app:layout_constraintBottom_toBottomOf="@id/profileImage"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ImageContrastCheck"
             tools:src="@drawable/ic_search" />
 
         <TextView
@@ -95,6 +96,7 @@
             android:contentDescription="@string/descriptionImg"
             app:layout_constraintStart_toEndOf="@+id/headerFilterText"
             app:layout_constraintTop_toBottomOf="@+id/userNameText"
+            tools:ignore="ImageContrastCheck"
             tools:srcCompat="@drawable/ic_filter" />
 
         <ImageButton
@@ -139,12 +141,12 @@
             android:id="@+id/onWayComparison"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
             android:text="@string/comparisonOnWay"
+            android:textColor="#546E7A"
             android:textSize="10sp"
-            android:textColor="@color/gray_600"
             app:layout_constraintStart_toStartOf="@id/onWayLabel"
             app:layout_constraintTop_toBottomOf="@id/onWayValue"
-            android:layout_marginTop="4dp"
             tools:ignore="SmallSp" />
 
         <TextView
@@ -154,7 +156,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="22dp"
             android:text="@string/percentOnWay"
-            android:textColor="@color/red_500"
+            android:textColor="#D32F2F"
             android:textSize="12sp"
             app:layout_constraintStart_toEndOf="@+id/onWayLabel"
             app:layout_constraintTop_toBottomOf="@+id/headerFilterText" />
@@ -169,7 +171,7 @@
             app:layout_constraintStart_toEndOf="@+id/percentOnWayText"
             app:layout_constraintTop_toBottomOf="@+id/headerFilterText"
             tools:ignore="ImageContrastCheck"
-            tools:srcCompat="@tools:sample/avatars" />
+            tools:srcCompat="@drawable/ic_down" />
 
         <!-- Pending -->
         <TextView
@@ -202,12 +204,13 @@
             android:layout_marginTop="4dp"
             android:layout_marginEnd="8dp"
             android:text="@string/comparisonBackorder"
-            android:textColor="@color/gray_600"
+            android:textColor="#546E7A"
             android:textSize="10sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/backorderLabel"
             app:layout_constraintTop_toBottomOf="@id/pendingValue"
             tools:ignore="SmallSp" />
+
         <TextView
             android:id="@+id/percentPendingText"
             android:layout_width="wrap_content"
@@ -215,7 +218,7 @@
             android:layout_marginStart="9dp"
             android:layout_marginTop="163dp"
             android:text="@string/percentBackorder"
-            android:textColor="@color/red_500"
+            android:textColor="#2E7D32"
             android:textSize="12sp"
             app:layout_constraintStart_toEndOf="@+id/backorderLabel"
             app:layout_constraintTop_toTopOf="parent" />
@@ -229,7 +232,8 @@
             android:contentDescription="@string/descriptionImg"
             app:layout_constraintStart_toEndOf="@+id/percentPendingText"
             app:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@tools:sample/avatars" />
+            tools:ignore="ImageContrastCheck,ImageContrastCheck"
+            tools:srcCompat="@drawable/ic_up" />
 
         <!-- Cancel -->
         <TextView
@@ -259,12 +263,12 @@
             android:id="@+id/cancelledComparison"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
             android:text="@string/comparisonCancel"
+            android:textColor="#546E7A"
             android:textSize="10sp"
-            android:textColor="@color/gray_600"
             app:layout_constraintStart_toStartOf="@id/cancelledLabel"
             app:layout_constraintTop_toBottomOf="@id/cancelledValue"
-            android:layout_marginTop="4dp"
             tools:ignore="SmallSp" />
 
         <!-- Delivered -->
@@ -275,7 +279,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="23dp"
             android:text="@string/percentCancel"
-            android:textColor="@color/red_500"
+            android:textColor="#D32F2F"
             android:textSize="12sp"
             app:layout_constraintStart_toEndOf="@+id/cancelledLabel"
             app:layout_constraintTop_toBottomOf="@+id/onWayComparison" />
@@ -290,7 +294,7 @@
             app:layout_constraintStart_toEndOf="@+id/percentCancelledText"
             app:layout_constraintTop_toBottomOf="@+id/onWayComparison"
             tools:ignore="ImageContrastCheck"
-            tools:srcCompat="@tools:sample/avatars" />
+            tools:srcCompat="@drawable/ic_down" />
 
         <TextView
             android:id="@+id/deliveredLabel"
@@ -319,12 +323,12 @@
             android:id="@+id/deliveredComparison"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
             android:text="@string/comparisonDelivered"
+            android:textColor="#546E7A"
             android:textSize="10sp"
-            android:textColor="@color/gray_600"
             app:layout_constraintStart_toStartOf="@id/deliveredLabel"
             app:layout_constraintTop_toBottomOf="@id/deliveredValue"
-            android:layout_marginTop="4dp"
             tools:ignore="SmallSp" />
 
         <TextView
@@ -334,7 +338,7 @@
             android:layout_marginStart="9dp"
             android:layout_marginTop="24dp"
             android:text="@string/percentDelivered"
-            android:textColor="#D32F2F"
+            android:textColor="#2E7D32"
             android:textSize="12sp"
             app:layout_constraintStart_toEndOf="@+id/deliveredLabel"
             app:layout_constraintTop_toBottomOf="@+id/pendingComparison" />
@@ -348,7 +352,8 @@
             android:contentDescription="@string/descriptionImg"
             app:layout_constraintStart_toEndOf="@+id/percentDeliveredText"
             app:layout_constraintTop_toBottomOf="@+id/pendingComparison"
-            tools:srcCompat="@tools:sample/avatars" />
+            tools:ignore="ImageContrastCheck"
+            tools:srcCompat="@drawable/ic_up" />
 
         <ImageView
             android:id="@+id/reportSellerImg"
