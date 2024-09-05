@@ -19,13 +19,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">>
+        app:layout_constraintTop_toTopOf="parent">
         <ImageButton
             android:id="@+id/imageButton2"
             android:layout_width="42dp"
             android:layout_height="42dp"
+            android:background="@drawable/cirlcleimagebtn"
             app:srcCompat="@drawable/ic_path"
-            android:background="@drawable/cirlcle_imagebutton/>
+            android:scaleType="centerInside"
+            android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:padding="15"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
