@@ -18,4 +18,5 @@
     <string name="txtPhoneNum">+505 00000000</string>
     <string name="txtEmailSignUp">test@gmail.com</string>
     <string name="txtPass">........</string>
+    <string name="btnSignUp">Registrarse</string>
 </resources>

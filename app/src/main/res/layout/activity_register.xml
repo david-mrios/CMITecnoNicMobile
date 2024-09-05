@@ -34,11 +34,11 @@
             android:id="@+id/txtSignUp"
             android:layout_width="193dp"
             android:layout_height="40dp"
+            android:layout_marginStart="54dp"
+            android:layout_marginTop="30dp"
             android:text="@string/txtSignUp"
             android:textSize="32sp"
-            android:layout_marginTop="30dp"
-            android:layout_marginStart="54dp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/txtFullName"
@@ -144,6 +144,23 @@
             android:paddingTop="1dp"
             android:drawableEnd="@drawable/ic_eye"
             android:textSize="45sp"
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="335dp"
+            android:layout_height="56dp"
+            android:text="@string/btnSignUp"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="40dp"/>
+
+        <TextView
+            android:id="@+id/txtSignIn"
+            android:layout_width="236dp"
+            android:layout_height="16dp"
+            android:text="Iniciar sesión"
+            android:textColor="@color/blue_500"
+            android:layout_marginStart="165dp"
+            android:layout_marginTop="15dp"/>
 
         //>
     </LinearLayout>
