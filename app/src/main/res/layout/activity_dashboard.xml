@@ -24,8 +24,8 @@
             app:civ_border_width="2dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:src="@tools:sample/avatars"
-            tools:srcCompat="@tools:sample/avatars" />
+            tools:src="@drawable/profileimg"
+            tools:srcCompat="@drawable/profileimg" />
 
 
         <!-- welcome text -->
@@ -57,11 +57,12 @@
             android:layout_width="48dp"
             android:layout_height="40dp"
             android:layout_marginEnd="8dp"
+            android:background="@color/red_500"
             android:contentDescription="Search icon"
             app:layout_constraintBottom_toBottomOf="@id/profileImage"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:src="@drawable/ic_launcher_background" />
+            tools:src="@dr" />
 
         <TextView
             android:id="@+id/headerResumeText"
@@ -358,12 +359,12 @@
 
         <ImageView
             android:id="@+id/reportImg"
-            android:layout_width="331dp"
+            android:layout_width="360dp"
             android:layout_height="67dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="10dp"
-            android:paddingLeft="29dp"
+            android:paddingStart="29dp"
             android:contentDescription="TODO"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -383,6 +384,44 @@
             app:layout_constraintTop_toBottomOf="@+id/reportImg"
             tools:srcCompat="@drawable/allvisitor" />
 
+        <ImageView
+            android:id="@+id/shippingReportsImg"
+            android:layout_width="331dp"
+            android:layout_height="303dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="TODO"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reportCustomer"
+            tools:srcCompat="@drawable/shippingreports" />
+
+        <ImageView
+            android:id="@+id/piePaymentImg"
+            android:layout_width="331dp"
+            android:layout_height="303dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="TODO"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shippingReportsImg"
+            tools:srcCompat="@drawable/paymentpie" />
+
+        <ImageView
+            android:id="@+id/shippingTopImg"
+            android:layout_width="331dp"
+            android:layout_height="433dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="TODO"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/piePaymentImg"
+            tools:srcCompat="@drawable/shippingtop" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
