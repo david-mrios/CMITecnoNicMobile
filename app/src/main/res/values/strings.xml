@@ -16,4 +16,5 @@
     <string name="txtcontrase_a">Contraseña</string>
     <string name="hintpassword">......</string>
     <string name="btnLogin">Iniciar Sesión</string>
+    <string name="txtsignup">Registrarse</string>
 </resources>
