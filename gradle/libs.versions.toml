@@ -9,7 +9,7 @@ appcompat = "1.7.0"
 material = "1.12.0"
 activity = "1.9.1"
 constraintlayout = "2.1.4"
-circleImageView = "3.1.0"
+
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -20,10 +20,6 @@ androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
-# circle img
-glide = { group = "com.github.bumptech.glide", name = "glide", version = "4.11.0" }
-glide-compiler = { group = "com.github.bumptech.glide", name = "compiler", version = "4.11.0" }
-circleImageView = { module = "de.hdodenhof:circleimageview", version.ref = "circleImageView" }
 
 
 

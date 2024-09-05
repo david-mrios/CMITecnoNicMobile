@@ -47,16 +47,6 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     testImplementation(libs.junit)
-    // Glide dependencies using version catalogs
-    implementation(libs.glide)
-    annotationProcessor(libs.glide.compiler)
-    // circle img
-    implementation(libs.circleImageView)
-
-
-
-
-
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
