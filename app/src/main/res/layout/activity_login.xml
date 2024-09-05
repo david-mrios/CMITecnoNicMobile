@@ -7,17 +7,17 @@
     android:layout_height="match_parent"
     tools:context=".login">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="173dp"
-        android:layout_marginTop="325dp"
-        android:layout_marginEnd="180dp"
-        android:layout_marginBottom="387dp"
-        android:text="@string/screen3"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            app:srcCompat="@drawable/ic_path" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
