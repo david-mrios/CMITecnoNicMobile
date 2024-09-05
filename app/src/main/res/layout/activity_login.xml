@@ -21,15 +21,46 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
         <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="42dp"
-            android:layout_height="42dp"
+            android:id="@+id/imagebtnBack"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:background="@drawable/cirlcleimagebtn"
+            android:contentDescription="@string/loginImgbutton"
             app:srcCompat="@drawable/ic_path"
             android:scaleType="centerInside"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
         android:layout_marginStart="30dp"
-        android:padding="15"/>
+        android:padding="15dp"/>
+
+        <TextView
+            android:id="@+id/txtlogin"
+            android:layout_width="245dp"
+            android:layout_height="35sp"
+            android:text="@string/txtlogin"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="54dp"
+            android:textSize="32sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/txtemail"
+            android:layout_width="139dp"
+            android:layout_height="16dp"
+            android:text="@string/txtEmail"
+            android:layout_marginTop="35sp"
+            android:layout_marginStart="54dp"
+            android:textSize="14dp"
+            android:textColor="@color/gray_400"/>
+
+        <TextView
+            android:id="@+id/txtpassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contraseña"
+            android:layout_marginTop="35sp"
+            android:layout_marginStart="54dp"
+            android:textSize="14dp"
+            android:textColor="@color/gray_400"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

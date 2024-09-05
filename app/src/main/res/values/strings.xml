@@ -9,4 +9,7 @@
     <string name="screen7">language</string>
     <string name="screen8">change Password</string>
     <string name="screen9">dashboard</string>
+    <string name="loginImgbutton">TODO</string>
+    <string name="txtlogin">Iniciar Sesión</string>
+    <string name="txtEmail">Correo Electronico</string>
 </resources>
