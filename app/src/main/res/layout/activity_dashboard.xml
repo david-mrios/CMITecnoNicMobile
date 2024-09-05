@@ -103,12 +103,13 @@
             android:layout_height="48dp"
             android:layout_marginTop="50dp"
             android:layout_marginEnd="10dp"
-            android:background="@color/blue_500"
+            android:background="@drawable/rounded_button"
             android:contentDescription="@string/descriptionImg"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/searchIcon"
             app:srcCompat="@drawable/ic_shape"
             tools:ignore="DuplicateSpeakableTextCheck" />
+
 
         <!-- on way -->
         <TextView
