@@ -22,8 +22,8 @@
 
         <ImageButton
             android:id="@+id/imageButton"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            android:layout_width="42dp"
+            android:layout_height="39dp"
             android:background="@drawable/circle_button"
             android:padding="8dp"
             android:scaleType="centerInside"
@@ -39,8 +39,8 @@
             android:text="Editar Perfil"
             android:textColor="@color/black"
             android:textSize="25sp"
-            tools:layout_editor_absoluteX="140dp"
-            tools:layout_editor_absoluteY="44dp" />
+            tools:layout_editor_absoluteX="131dp"
+            tools:layout_editor_absoluteY="49dp" />
 
         <ImageButton
             android:id="@+id/imageButton2"
@@ -80,11 +80,72 @@
             android:drawablePadding="20dp"
             android:ems="10"
             android:padding="12dp"
-            android:text="Nombre"
+            android:text="Testing User"
             android:textColor="@android:color/black"
             android:textSize="16sp"
             tools:layout_editor_absoluteX="2dp"
             tools:layout_editor_absoluteY="292dp" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="139dp"
+            android:layout_height="16dp"
+            android:text="Correo Electrónico"
+            android:textColor="@color/gray_500"
+            android:textSize="14sp"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="356dp" />
+
+        <EditText
+            android:id="@+id/editTextText2"
+            android:layout_width="404dp"
+            android:layout_height="58dp"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/ic_email_mail_letter"
+            android:drawablePadding="20dp"
+            android:ems="10"
+            android:padding="12dp"
+            android:inputType="text"
+            android:text="testing@gmail.com"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            tools:layout_editor_absoluteX="2dp"
+            tools:layout_editor_absoluteY="389dp" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="139dp"
+            android:layout_height="16dp"
+            android:text="Número de Teléfono"
+            android:textColor="@color/gray_500"
+            android:textSize="14sp"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="454dp" />
+
+        <EditText
+            android:id="@+id/editTextText3"
+            android:layout_width="404dp"
+            android:layout_height="58dp"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/ic_phone"
+            android:drawablePadding="20dp"
+            android:ems="10"
+            android:padding="12dp"
+            android:inputType="text"
+            android:text="+8801712663389"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="484dp" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Se unió 21 Enero 2024"
+            tools:layout_editor_absoluteX="134dp"
+            tools:layout_editor_absoluteY="670dp" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
