@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
-            android:id="@+id/imageButton3"
+            android:id="@+id/backImgBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/circular_button_background"
@@ -30,7 +30,7 @@
             tools:layout_editor_absoluteY="54dp" />
 
         <ImageButton
-            android:id="@+id/imageButton4"
+            android:id="@+id/addImgBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/circular_button_background"
@@ -43,7 +43,7 @@
             android:id="@+id/textView4"
             android:layout_width="54dp"
             android:layout_height="34dp"
-            android:text="Perfil"
+            android:text="@string/perfil"
             android:textColor="@android:color/black"
             android:textSize="20sp"
             app:layout_constraintTop_margin="16dp"
@@ -51,7 +51,7 @@
             tools:layout_editor_absoluteY="68dp" />
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/profileImgView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/ic_profile"
@@ -62,12 +62,44 @@
             android:id="@+id/textView11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Testing USer"
+            android:text="@string/testing_user"
             android:textColor="@android:color/black"
             android:textSize="20sp"
             app:layout_constraintTop_margin="16dp"
             tools:layout_editor_absoluteX="123dp"
             tools:layout_editor_absoluteY="150dp" />
+
+        <EditText
+            android:id="@+id/personalInformationTxt"
+            android:layout_width="407dp"
+            android:layout_height="55dp"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/ic_profile_text"
+            android:drawableRight="@drawable/ic_following"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:inputType="text"
+            android:padding="12dp"
+            android:text="@string/informaci_n_personal"
+            android:textSize="20sp"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="243dp" />
+
+        <EditText
+            android:id="@+id/configurationTxt"
+            android:layout_width="407dp"
+            android:layout_height="55dp"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/ic_configuration"
+            android:drawableRight="@drawable/ic_following"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:inputType="text"
+            android:padding="12dp"
+            android:text="@string/ajustes"
+            android:textSize="20sp"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="298dp" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

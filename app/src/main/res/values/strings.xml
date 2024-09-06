@@ -9,4 +9,8 @@
     <string name="screen7">language</string>
     <string name="screen8">change Password</string>
     <string name="screen9">dashboard</string>
+    <string name="perfil">Perfil</string>
+    <string name="testing_user">Testing USer</string>
+    <string name="informaci_n_personal">Información Personal</string>
+    <string name="ajustes">Ajustes</string>
 </resources>
