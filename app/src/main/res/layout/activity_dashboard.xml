@@ -21,7 +21,6 @@
             android:layout_marginTop="8dp"
             android:contentDescription="@string/profileImg"
             android:scaleType="centerCrop"
-            app:civ_border_width="2dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:src="@drawable/ci_profile"
