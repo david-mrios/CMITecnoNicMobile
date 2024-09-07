@@ -23,6 +23,7 @@
             android:scaleType="centerCrop"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ci_profile"
             tools:src="@drawable/ci_profile"
             tools:srcCompat="@drawable/ci_profile" />
 
@@ -95,6 +96,7 @@
             android:contentDescription="@string/descriptionImg"
             app:layout_constraintStart_toEndOf="@+id/headerFilterText"
             app:layout_constraintTop_toBottomOf="@+id/userNameText"
+            app:srcCompat="@drawable/ic_filter"
             tools:ignore="ImageContrastCheck"
             tools:srcCompat="@drawable/ic_filter" />
 
@@ -109,7 +111,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/searchIcon"
             app:srcCompat="@drawable/ic_shape"
-            tools:ignore="DuplicateSpeakableTextCheck" />
+            tools:ignore="DuplicateSpeakableTextCheck"
+            tools:srcCompat="@drawable/ic_shape" />
 
 
         <!-- on way -->
@@ -169,6 +172,7 @@
             android:contentDescription="@string/descriptionImg"
             app:layout_constraintStart_toEndOf="@+id/percentOnWayText"
             app:layout_constraintTop_toBottomOf="@+id/headerFilterText"
+            app:srcCompat="@drawable/ic_down"
             tools:ignore="ImageContrastCheck"
             tools:srcCompat="@drawable/ic_down" />
 
@@ -231,6 +235,7 @@
             android:contentDescription="@string/descriptionImg"
             app:layout_constraintStart_toEndOf="@+id/percentPendingText"
             app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_up"
             tools:ignore="ImageContrastCheck,ImageContrastCheck"
             tools:srcCompat="@drawable/ic_up" />
 
@@ -292,6 +297,7 @@
             android:contentDescription="@string/descriptionImg"
             app:layout_constraintStart_toEndOf="@+id/percentCancelledText"
             app:layout_constraintTop_toBottomOf="@+id/onWayComparison"
+            app:srcCompat="@drawable/ic_down"
             tools:ignore="ImageContrastCheck"
             tools:srcCompat="@drawable/ic_down" />
 
@@ -351,6 +357,7 @@
             android:contentDescription="@string/descriptionImg"
             app:layout_constraintStart_toEndOf="@+id/percentDeliveredText"
             app:layout_constraintTop_toBottomOf="@+id/pendingComparison"
+            app:srcCompat="@drawable/ic_up"
             tools:ignore="ImageContrastCheck"
             tools:srcCompat="@drawable/ic_up" />
 
@@ -365,6 +372,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/deliveredComparison"
+            app:srcCompat="@drawable/ic_salesgraphs"
             tools:srcCompat="@drawable/ic_salesgraphs" />
 
         <ImageView
@@ -380,6 +388,7 @@
             app:layout_constraintHorizontal_bias="0.535"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/reportSellerImg"
+            app:srcCompat="@drawable/ic_hitrate"
             tools:ignore="RtlSymmetry,ImageContrastCheck"
             tools:srcCompat="@drawable/ic_hitrate" />
 
@@ -394,6 +403,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/reportImg"
+            app:srcCompat="@drawable/ic_allvisitor"
             tools:srcCompat="@drawable/ic_allvisitor" />
 
         <ImageView
@@ -407,6 +417,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/reportCustomer"
+            app:srcCompat="@drawable/ic_shippingreports"
             tools:srcCompat="@drawable/ic_shippingreports" />
 
         <ImageView
@@ -420,6 +431,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/shippingReportsImg"
+            app:srcCompat="@drawable/ic_paymentpie"
             tools:ignore="ImageContrastCheck"
             tools:srcCompat="@drawable/ic_paymentpie" />
 
@@ -434,6 +446,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/piePaymentImg"
+            app:srcCompat="@drawable/ic_shippingtop"
             tools:srcCompat="@drawable/ic_shippingtop" />
 
         <LinearLayout
@@ -509,7 +522,9 @@
                         android:layout_gravity="center_vertical"
                         android:contentDescription="@string/descriptionImg"
                         android:src="@drawable/ic_email"
-                        tools:ignore="ImageContrastCheck" />
+                        app:srcCompat="@drawable/ic_email"
+                        tools:ignore="ImageContrastCheck"
+                        tools:srcCompat="@drawable/ic_email" />
                 </LinearLayout>
 
                 <!-- Client 2 -->
@@ -558,7 +573,9 @@
                         android:layout_gravity="center_vertical"
                         android:contentDescription="@string/descriptionImg"
                         android:src="@drawable/ic_email"
-                        tools:ignore="ImageContrastCheck" />
+                        app:srcCompat="@drawable/ic_email"
+                        tools:ignore="ImageContrastCheck"
+                        tools:srcCompat="@drawable/ic_email" />
                 </LinearLayout>
 
                 <TextView
