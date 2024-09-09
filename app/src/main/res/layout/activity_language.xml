@@ -7,4 +7,175 @@
     android:layout_height="match_parent"
     tools:context=".language">
 
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="93dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="355dp"
+        android:text="Lenguaje"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.132" />
+
+    <SearchView
+        android:layout_width="335dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="102dp"
+        android:background="@color/gray_400"
+        android:backgroundTint="@color/white_100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left" />
+
+    <LinearLayout
+        android:layout_width="423dp"
+        android:layout_height="315dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="170dp">
+
+        <LinearLayout
+            android:layout_width="660dp"
+            android:layout_height="58dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="130dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@color/white_100"
+                android:drawableLeft="@drawable/ic_united_states"
+                android:gravity="center_vertical|start"
+                android:text="Inglés"
+                android:textSize="16dp"
+                android:textStyle="normal" />
+
+            <RadioButton
+                android:id="@+id/radioButton"
+                android:layout_width="30dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@color/white_100"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="660dp"
+            android:layout_height="58dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="130dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@color/white_100"
+                android:drawableLeft="@drawable/ic_france"
+                android:gravity="center_vertical|start"
+                android:text="Frances"
+                android:textSize="16dp"
+                android:textStyle="normal" />
+
+            <RadioButton
+                android:id="@+id/radioButton1"
+                android:layout_width="30dp"
+                android:layout_height="48dp"
+                android:background="@color/white_100"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="660dp"
+            android:layout_height="58dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="130dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@color/white_100"
+                android:drawableLeft="@drawable/ic_spain"
+                android:gravity="center_vertical|start"
+                android:text="Español"
+                android:textSize="16dp"
+                android:textStyle="normal" />
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="30dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@color/white_100" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="660dp"
+            android:layout_height="58dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="130dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@color/white_100"
+                android:drawableLeft="@drawable/ic_vietnam"
+                android:gravity="center_vertical|start"
+                android:text="Vietnamita"
+                android:textSize="16dp"
+                android:textStyle="normal" />
+
+            <RadioButton
+                android:id="@+id/radioButton3"
+                android:layout_width="30dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@color/white_100" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="660dp"
+            android:layout_height="58dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="130dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@color/white_100"
+                android:drawableLeft="@drawable/ic_brazil"
+                android:gravity="center_vertical|start"
+                android:text="Portugués"
+                android:textSize="16dp"
+                android:textStyle="normal" />
+
+            <RadioButton
+                android:id="@+id/radioButton4"
+                android:layout_width="30dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@color/white_100" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
