@@ -38,4 +38,10 @@
     <string name="firstIdClient">Cliente ID#00222</string>
     <string name="secondClientLabel">Kaylyn Yokel</string>
     <string name="secIdClient">Cliente ID#00222</string>
+    <string name="sentinelprime">sentinelPrime</string>
+    <string name="txtsentinelprime">txtsentinelPrime</string>
+    <string name="sentinel">Sentinel</string>
+    <string name="prime">Prime</string>
+    <string name="txt_sentinel">Sentinel</string>
+    <string name="txt_prime">Prime</string>
 </resources>
