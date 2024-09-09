@@ -1,0 +1,7 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#FFFFFF"/>  <!-- Puedes cambiar el color aquí -->
+    <corners android:radius="36dp"/>  <!-- Hace que el botón sea redondo -->
+    <size
+        android:width="72dp"
+        android:height="72dp" />      <!-- Tamaño del botón -->
+</shape>

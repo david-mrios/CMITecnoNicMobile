@@ -1,23 +1,595 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".dashboard">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="176dp"
-        android:layout_marginTop="335dp"
-        android:layout_marginEnd="178dp"
-        android:layout_marginBottom="377dp"
-        android:text="@string/screen9"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:padding="16dp"
+        tools:context=".dashboard">
+
+        <!-- Profile img -->
+        <ImageView
+            android:id="@+id/profileImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/profileImg"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ci_profile"
+            tools:src="@drawable/ci_profile"
+            tools:srcCompat="@drawable/ci_profile" />
+
+        <!-- welcome text -->
+        <TextView
+            android:id="@+id/welcomeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/welcomeHome"
+            android:textColor="#546E7A"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@id/profileImage"
+            app:layout_constraintTop_toTopOf="@id/profileImage" />
+
+        <TextView
+            android:id="@+id/userNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nameUserHome"
+            android:layout_marginStart="10dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/profileImage"
+            app:layout_constraintTop_toBottomOf="@id/welcomeText"
+            app:layout_constraintBottom_toBottomOf="@id/profileImage" />
+        <!-- Search icon -->
+        <ImageView
+            android:id="@+id/searchIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/ic_circular_button"
+            android:contentDescription="@string/searchIconHome"
+            app:layout_constraintBottom_toBottomOf="@id/profileImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ImageContrastCheck"
+            tools:src="@drawable/ic_search" />
+
+        <TextView
+            android:id="@+id/headerResumeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            android:text="@string/headResumeLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profileImage" />
+
+        <TextView
+            android:id="@+id/headerFilterText"
+            android:layout_width="112dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="9dp"
+            android:text="@string/filterLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/headerResumeText"
+            tools:ignore="TextSizeCheck" />
+
+        <ImageView
+            android:id="@+id/filterIcon"
+            android:layout_width="19.38dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="67dp"
+            android:contentDescription="@string/descriptionImg"
+            app:layout_constraintStart_toEndOf="@+id/headerFilterText"
+            app:layout_constraintTop_toBottomOf="@+id/userNameText"
+            app:srcCompat="@drawable/ic_filter"
+            tools:ignore="ImageContrastCheck"
+            tools:srcCompat="@drawable/ic_filter" />
+
+        <ImageButton
+            android:id="@+id/btnReport"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/ic_rounded_button"
+            android:contentDescription="@string/descriptionImg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/searchIcon"
+            app:srcCompat="@drawable/ic_shape"
+            tools:ignore="DuplicateSpeakableTextCheck"
+            tools:srcCompat="@drawable/ic_shape" />
+
+
+        <!-- on way -->
+        <TextView
+            android:id="@+id/onWayLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="22dp"
+            android:text="@string/onWayLabel"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/headerFilterText" />
+
+        <TextView
+            android:id="@+id/onWayValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/onWayCount"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/onWayLabel"
+            app:layout_constraintTop_toBottomOf="@id/onWayLabel"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/onWayComparison"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/comparisonOnWay"
+            android:textColor="#546E7A"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="@id/onWayLabel"
+            app:layout_constraintTop_toBottomOf="@id/onWayValue"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:id="@+id/percentOnWayText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="22dp"
+            android:text="@string/percentOnWay"
+            android:textColor="#D32F2F"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/onWayLabel"
+            app:layout_constraintTop_toBottomOf="@+id/headerFilterText" />
+
+        <ImageView
+            android:id="@+id/iconDownOnWay"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="22dp"
+            android:contentDescription="@string/descriptionImg"
+            app:layout_constraintStart_toEndOf="@+id/percentOnWayText"
+            app:layout_constraintTop_toBottomOf="@+id/headerFilterText"
+            app:srcCompat="@drawable/ic_down"
+            tools:ignore="ImageContrastCheck"
+            tools:srcCompat="@drawable/ic_down" />
+
+        <!-- Pending -->
+        <TextView
+            android:id="@+id/backorderLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="163dp"
+            android:layout_marginEnd="113dp"
+            android:text="@string/backorderHead"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/pendingValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/countBackorder"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/backorderLabel"
+            app:layout_constraintTop_toBottomOf="@id/backorderLabel"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/pendingComparison"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/comparisonBackorder"
+            android:textColor="#546E7A"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/backorderLabel"
+            app:layout_constraintTop_toBottomOf="@id/pendingValue"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:id="@+id/percentPendingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="163dp"
+            android:text="@string/percentBackorder"
+            android:textColor="#2E7D32"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/backorderLabel"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iconDownPending"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="163dp"
+            android:contentDescription="@string/descriptionImg"
+            app:layout_constraintStart_toEndOf="@+id/percentPendingText"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_up"
+            tools:ignore="ImageContrastCheck,ImageContrastCheck"
+            tools:srcCompat="@drawable/ic_up" />
+
+        <!-- Cancel -->
+        <TextView
+            android:id="@+id/cancelledLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/cancelHead"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/onWayComparison" />
+
+        <TextView
+            android:id="@+id/cancelledValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/countCancel"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/cancelledLabel"
+            app:layout_constraintTop_toBottomOf="@id/cancelledLabel"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/cancelledComparison"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/comparisonCancel"
+            android:textColor="#546E7A"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="@id/cancelledLabel"
+            app:layout_constraintTop_toBottomOf="@id/cancelledValue"
+            tools:ignore="SmallSp" />
+
+        <!-- Delivered -->
+        <TextView
+            android:id="@+id/percentCancelledText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="23dp"
+            android:text="@string/percentCancel"
+            android:textColor="#D32F2F"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/cancelledLabel"
+            app:layout_constraintTop_toBottomOf="@+id/onWayComparison" />
+
+        <ImageView
+            android:id="@+id/iconArrowCancelled"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="23dp"
+            android:contentDescription="@string/descriptionImg"
+            app:layout_constraintStart_toEndOf="@+id/percentCancelledText"
+            app:layout_constraintTop_toBottomOf="@+id/onWayComparison"
+            app:srcCompat="@drawable/ic_down"
+            tools:ignore="ImageContrastCheck"
+            tools:srcCompat="@drawable/ic_down" />
+
+        <TextView
+            android:id="@+id/deliveredLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="113dp"
+            android:text="@string/deliveredHead"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pendingComparison" />
+
+        <TextView
+            android:id="@+id/deliveredValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/countDelivered"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/deliveredLabel"
+            app:layout_constraintTop_toBottomOf="@id/deliveredLabel"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/deliveredComparison"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/comparisonDelivered"
+            android:textColor="#546E7A"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="@id/deliveredLabel"
+            app:layout_constraintTop_toBottomOf="@id/deliveredValue"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:id="@+id/percentDeliveredText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/percentDelivered"
+            android:textColor="#2E7D32"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/deliveredLabel"
+            app:layout_constraintTop_toBottomOf="@+id/pendingComparison" />
+
+        <ImageView
+            android:id="@+id/iconArrowDelivered"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="24dp"
+            android:contentDescription="@string/descriptionImg"
+            app:layout_constraintStart_toEndOf="@+id/percentDeliveredText"
+            app:layout_constraintTop_toBottomOf="@+id/pendingComparison"
+            app:srcCompat="@drawable/ic_up"
+            tools:ignore="ImageContrastCheck"
+            tools:srcCompat="@drawable/ic_up" />
+
+        <ImageView
+            android:id="@+id/reportSellerImg"
+            android:layout_width="340dp"
+            android:layout_height="303dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="@string/descriptionImg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/deliveredComparison"
+            app:srcCompat="@drawable/ic_salesgraphs"
+            tools:srcCompat="@drawable/ic_salesgraphs" />
+
+        <ImageView
+            android:id="@+id/reportImg"
+            android:layout_width="331dp"
+            android:layout_height="77dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="@string/descriptionImg"
+            android:paddingStart="29dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.535"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reportSellerImg"
+            app:srcCompat="@drawable/ic_hitrate"
+            tools:ignore="RtlSymmetry,ImageContrastCheck"
+            tools:srcCompat="@drawable/ic_hitrate" />
+
+        <ImageView
+            android:id="@+id/reportCustomer"
+            android:layout_width="331dp"
+            android:layout_height="67dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="@string/descriptionImg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reportImg"
+            app:srcCompat="@drawable/ic_allvisitor"
+            tools:srcCompat="@drawable/ic_allvisitor" />
+
+        <ImageView
+            android:id="@+id/shippingReportsImg"
+            android:layout_width="331dp"
+            android:layout_height="303dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="@string/descriptionImg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reportCustomer"
+            app:srcCompat="@drawable/ic_shippingreports"
+            tools:srcCompat="@drawable/ic_shippingreports" />
+
+        <ImageView
+            android:id="@+id/piePaymentImg"
+            android:layout_width="331dp"
+            android:layout_height="303dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="@string/descriptionImg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shippingReportsImg"
+            app:srcCompat="@drawable/ic_paymentpie"
+            tools:ignore="ImageContrastCheck"
+            tools:srcCompat="@drawable/ic_paymentpie" />
+
+        <ImageView
+            android:id="@+id/shippingTopImg"
+            android:layout_width="331dp"
+            android:layout_height="433dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="@string/descriptionImg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/piePaymentImg"
+            app:srcCompat="@drawable/ic_shippingtop"
+            tools:srcCompat="@drawable/ic_shippingtop" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shippingTopImg">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="@string/listClientHead"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Contenedor de la lista de clientes -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp">
+
+                <!-- Cliente 1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    android:paddingVertical="10dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="@string/descriptionImg"
+                        android:src="@drawable/ci_profile" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/nameClient"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/firstClientLabel"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/idFirstClient"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/firstIdClient"
+                            android:textColor="#546E7A"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="@string/descriptionImg"
+                        android:src="@drawable/ic_email"
+                        app:srcCompat="@drawable/ic_email"
+                        tools:ignore="ImageContrastCheck"
+                        tools:srcCompat="@drawable/ic_email" />
+                </LinearLayout>
+
+                <!-- Client 2 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    android:paddingVertical="10dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="@string/descriptionImg"
+                        android:src="@drawable/ci_profile" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/secondNameClient"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/secondClientLabel"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/idSecondClient"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/secIdClient"
+                            android:textColor="#666666"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="@string/descriptionImg"
+                        android:src="@drawable/ic_email"
+                        app:srcCompat="@drawable/ic_email"
+                        tools:ignore="ImageContrastCheck"
+                        tools:srcCompat="@drawable/ic_email" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/btn_view_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="16dp"
+                    android:text="@string/showOtherClient"
+                    android:textAllCaps="true"
+                    android:textColor="@color/blue_500"
+                    android:textColorHighlight="@color/gray_500"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
