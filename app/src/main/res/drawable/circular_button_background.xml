@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#FFFFFF" /> <!-- Color de fondo del botón, puedes cambiarlo -->
+    <corners android:radius="50dp" /> <!-- Radio para hacer el botón circular -->
+    <size android:width="60dp" android:height="60dp" /> <!-- Tamaño del botón -->
+    <stroke android:width="2dp" android:color="#CCCCCC" /> <!-- Borde del botón, opcional -->
+</shape>
