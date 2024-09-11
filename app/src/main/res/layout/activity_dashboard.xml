@@ -90,10 +90,10 @@
 
         <ImageView
             android:id="@+id/filterIcon"
-            android:layout_width="19.38dp"
-            android:layout_height="16dp"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
             android:layout_marginStart="4dp"
-            android:layout_marginTop="67dp"
+            android:layout_marginTop="70dp"
             android:contentDescription="@string/descriptionImg"
             app:layout_constraintStart_toEndOf="@+id/headerFilterText"
             app:layout_constraintTop_toBottomOf="@+id/userNameText"
@@ -168,10 +168,10 @@
 
         <ImageView
             android:id="@+id/iconDownOnWay"
-            android:layout_width="12dp"
-            android:layout_height="12dp"
+            android:layout_width="9dp"
+            android:layout_height="9dp"
             android:layout_marginStart="4dp"
-            android:layout_marginTop="22dp"
+            android:layout_marginTop="23dp"
             android:contentDescription="@string/descriptionImg"
             app:layout_constraintStart_toEndOf="@+id/percentOnWayText"
             app:layout_constraintTop_toBottomOf="@+id/headerFilterText"
@@ -231,10 +231,10 @@
 
         <ImageView
             android:id="@+id/iconDownPending"
-            android:layout_width="12dp"
-            android:layout_height="12dp"
+            android:layout_width="9dp"
+            android:layout_height="9dp"
             android:layout_marginStart="4dp"
-            android:layout_marginTop="163dp"
+            android:layout_marginTop="165dp"
             android:contentDescription="@string/descriptionImg"
             app:layout_constraintStart_toEndOf="@+id/percentPendingText"
             app:layout_constraintTop_toTopOf="parent"
@@ -293,10 +293,10 @@
 
         <ImageView
             android:id="@+id/iconArrowCancelled"
-            android:layout_width="12dp"
-            android:layout_height="12dp"
+            android:layout_width="9dp"
+            android:layout_height="9dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="23dp"
+            android:layout_marginTop="24dp"
             android:contentDescription="@string/descriptionImg"
             app:layout_constraintStart_toEndOf="@+id/percentCancelledText"
             app:layout_constraintTop_toBottomOf="@+id/onWayComparison"
@@ -353,10 +353,10 @@
 
         <ImageView
             android:id="@+id/iconArrowDelivered"
-            android:layout_width="12dp"
-            android:layout_height="12dp"
+            android:layout_width="9dp"
+            android:layout_height="9dp"
             android:layout_marginStart="4dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="26dp"
             android:contentDescription="@string/descriptionImg"
             app:layout_constraintStart_toEndOf="@+id/percentDeliveredText"
             app:layout_constraintTop_toBottomOf="@+id/pendingComparison"
