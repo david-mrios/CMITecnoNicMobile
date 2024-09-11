@@ -10,6 +10,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
         tools:context=".dashboard">
 
         <!-- Profile img -->
@@ -57,13 +61,15 @@
             android:layout_height="35dp"
             android:layout_marginEnd="10dp"
             android:background="@drawable/ic_circular_button"
-            android:padding="10dp"
             android:contentDescription="@string/searchIconHome"
+            android:padding="10dp"
             app:layout_constraintBottom_toBottomOf="@id/profileImage"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_search"
             tools:ignore="ImageContrastCheck"
-            tools:src="@drawable/ic_search" />
+            tools:src="@drawable/ic_search"
+            tools:srcCompat="@drawable/ic_search" />
 
         <TextView
             android:id="@+id/headerResumeText"
@@ -520,8 +526,8 @@
                     </LinearLayout>
 
                     <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
                         android:layout_gravity="center_vertical"
                         android:contentDescription="@string/descriptionImg"
                         android:src="@drawable/ic_email"
@@ -571,8 +577,8 @@
                     </LinearLayout>
 
                     <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
                         android:layout_gravity="center_vertical"
                         android:contentDescription="@string/descriptionImg"
                         android:src="@drawable/ic_email"
@@ -587,6 +593,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:padding="16dp"
+                    android:layout_marginBottom="35dp"
                     android:text="@string/showOtherClient"
                     android:textAllCaps="true"
                     android:textColor="@color/blue_500"
