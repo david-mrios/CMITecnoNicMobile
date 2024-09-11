@@ -103,16 +103,18 @@
 
         <ImageButton
             android:id="@+id/btnReport"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_marginTop="50dp"
             android:layout_marginEnd="10dp"
             android:background="@drawable/ic_rounded_button"
             android:contentDescription="@string/descriptionImg"
+            android:padding="12dp"
+            android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/searchIcon"
             app:srcCompat="@drawable/ic_shape"
-            tools:ignore="DuplicateSpeakableTextCheck"
+            tools:ignore="DuplicateSpeakableTextCheck,TouchTargetSizeCheck"
             tools:srcCompat="@drawable/ic_shape" />
 
 
