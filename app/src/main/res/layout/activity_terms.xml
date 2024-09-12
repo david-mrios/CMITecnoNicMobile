@@ -12,9 +12,9 @@
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="37dp"
+        android:layout_marginTop="25dp"
         android:contentDescription="Back"
-        android:padding="12dp"
+        android:padding="16dp"
         android:src="@drawable/ic_left"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -24,7 +24,7 @@
         android:layout_width="218dp"
         android:layout_height="20dp"
         android:layout_marginStart="117dp"
-        android:layout_marginTop="37dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="72dp"
         android:layout_marginBottom="666dp"
         android:text="Terminos y Condiciones"
@@ -38,8 +38,9 @@
     <ScrollView
         android:layout_width="409dp"
         android:layout_height="648dp"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="100dp"
         android:padding="16dp"
+        android:layout_marginLeft="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -65,7 +66,7 @@ Al utilizar la aplicación de TecnoNic, aceptas los siguientes términos: \n \n
             android:textSize="14sp"
             android:textStyle="normal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
     </ScrollView>
 
 
