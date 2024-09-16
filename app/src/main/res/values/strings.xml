@@ -77,4 +77,5 @@
     <string name="prime">Prime</string>
     <string name="txt_sentinel">Sentinel</string>
     <string name="txt_prime">Prime</string>
+    <string name="registerLogin">Iniciar sesión</string>
 </resources>
