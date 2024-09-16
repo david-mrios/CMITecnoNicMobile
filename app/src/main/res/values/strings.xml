@@ -14,7 +14,6 @@
     <string name="testing_user">Testing USer</string>
     <string name="informaci_n_personal">Información Personal</string>
     <string name="ajustes">Ajustes</string>
-    <string name="ajustes">Ajustes</string>
     <string name="general">General</string>
     <string name="lenguaje">Lenguaje</string>
     <string name="espa_ol">Español</string>
@@ -38,7 +37,6 @@
     <string name="btnSignUp">Registrarse</string>
     <string name="loginImgbutton">TODO</string>
     <string name="txtlogin">Iniciar Sesión</string>
-    <string name="txtEmail">Correo Electronico</string>
     <string name="hint_test_gmail_com">test@gmail.com</string>
     <string name="txtcontrase_a">Contraseña</string>
     <string name="hintpassword">......</string>
