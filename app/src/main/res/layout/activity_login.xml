@@ -11,11 +11,9 @@
         android:layout_width="409dp"
         android:layout_height="729dp"
         android:layout_marginStart="1dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="1dp"
         android:layout_marginEnd="1dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="1dp"
         android:orientation="vertical"
         android:padding="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -59,9 +57,9 @@
         <EditText
             android:id="@+id/editTxtEmail"
             android:layout_width="335dp"
-            android:layout_height="48dp"
+            android:layout_height="60dp"
             android:layout_marginStart="15dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:autofillHints=""
             android:backgroundTint="@color/gray_600"
             android:drawableStart="@drawable/ic_email"
@@ -77,28 +75,38 @@
             android:layout_width="142dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="35sp"
+            android:layout_marginTop="15sp"
             android:text="@string/txtcontrase_a"
             android:textColor="@color/gray_500"
             android:textSize="14sp" />
 
-        <EditText
-            android:id="@+id/editTxtPassword"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="335dp"
-            android:layout_height="48dp"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom"
             android:layout_marginStart="15dp"
             android:layout_marginTop="10dp"
-            android:autofillHints=""
-            android:backgroundTint="@color/gray_500"
-            android:drawableStart="@drawable/ic_lock"
-            android:drawableEnd="@drawable/ic_eye"
-            android:drawablePadding="10dp"
-            android:ems="10"
+            android:gravity="center_vertical"
             android:hint="@string/hintpassword"
-            android:inputType="textPassword"
-            android:paddingTop="1dp"
-            android:paddingBottom="10dp"
-            android:textSize="45sp" />
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            app:boxBackgroundMode="filled"
+            app:boxStrokeWidth="1dp"
+            app:endIconMode="password_toggle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="335dp"
+                android:layout_height="60dp"
+                android:drawableStart="@drawable/ic_lock"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:inputType="textPassword"
+                android:paddingStart="0dp"
+                android:paddingTop="0dp"
+                android:paddingBottom="0dp"
+                android:textSize="45sp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
 
         <androidx.appcompat.widget.AppCompatButton
@@ -110,45 +118,34 @@
             android:background="@drawable/ic_rounded_button"
             android:backgroundTint="@color/blue_500"
             android:text="@string/btnLogin"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
             android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/txSignUp"
-            android:layout_width="374dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:text="Soy un usuario nuevo. Registrarse"
-            android:textAlignment="center"
-            android:textColor="@color/blue_500" />
-
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="335dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="10dp"
-            app:boxBackgroundMode="filled"
-            app:endIconMode="password_toggle"
-            app:boxStrokeColor="@color/gray_500"
-            app:boxStrokeWidth="1dp"
+        <LinearLayout
+            android:layout_width="332dp"
+            android:layout_height="56dp"
             android:gravity="center"
+            android:orientation="horizontal">
 
-            android:layout_marginBottom="8dp">
+            <TextView
+                android:id="@+id/txSignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Soy un usuario nuevo.  "
+                android:textAlignment="center"
+                android:textColor="@color/gray_500" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            <TextView
+                android:id="@+id/txSign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Registrarse"
+                android:textColor="@color/blue_500" />
 
-            android:drawableStart="@drawable/ic_lock"
-        android:inputType="textPassword"
-        android:backgroundTint="@android:color/transparent"
-        />
-
-    </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
 
 
-
-
-</LinearLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
