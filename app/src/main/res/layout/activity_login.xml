@@ -85,7 +85,6 @@
         <EditText
             android:id="@+id/editTxtPassword"
             android:layout_width="335dp"
-
             android:layout_height="48dp"
             android:layout_marginStart="15dp"
             android:layout_marginTop="10dp"
@@ -102,7 +101,7 @@
             android:textSize="45sp" />
 
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnLogin"
             android:layout_width="332dp"
             android:layout_height="56dp"
@@ -123,6 +122,33 @@
             android:textColor="@color/blue_500" />
 
 
-    </LinearLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="335dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            app:boxBackgroundMode="filled"
+            app:endIconMode="password_toggle"
+            app:boxStrokeColor="@color/gray_500"
+            app:boxStrokeWidth="1dp"
+            android:gravity="center"
+
+            android:layout_marginBottom="8dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:drawableStart="@drawable/ic_lock"
+        android:inputType="textPassword"
+        android:backgroundTint="@android:color/transparent"
+        />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+</LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
