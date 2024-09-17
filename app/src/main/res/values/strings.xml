@@ -21,7 +21,6 @@
     <string name="btnSignUp">Registrarse</string>
     <string name="loginImgbutton">TODO</string>
     <string name="txtlogin">Iniciar Sesión</string>
-    <string name="txtEmail">Correo Electronico</string>
     <string name="hint_test_gmail_com">test@gmail.com</string>
     <string name="txtcontrase_a">Contraseña</string>
     <string name="hintpassword">......</string>
