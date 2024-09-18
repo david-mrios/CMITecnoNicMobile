@@ -13,39 +13,30 @@
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="25dp"
-        android:layout_marginLeft="20dp"
-        android:contentDescription="Back"
+        android:contentDescription="TODO"
         android:padding="12dp"
         android:src="@drawable/ic_left"
-        android:background="@color/white_100"
+        android:background="@drawable/circle_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView7"
-        android:layout_width="218dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="117dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginEnd="72dp"
-        android:layout_marginBottom="666dp"
+        android:layout_width="217dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="95dp"
         android:text="Terminos y Condiciones"
-        android:textSize="18dp"
+        android:textSize="20dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
         android:layout_width="409dp"
         android:layout_height="648dp"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="70dp"
         android:padding="16dp"
-        android:layout_marginBottom="20dp"
-        android:layout_marginLeft="20dp"
-        android:background="@color/white_100"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -54,24 +45,11 @@
             android:layout_width="375dp"
             android:layout_height="648dp"
             android:padding="16dp"
-            android:text="Bienvenido a la aplicación móvil de TecnoNic. Estos términos rigen el uso de todos los productos y servicios ofrecidos por TecnoNic.\n \n
-
-Al utilizar la aplicación de TecnoNic, aceptas los siguientes términos: \n \n
-•    Uso de Servicios: \n Al usar nuestros productos, te comprometes a hacerlo de manera legal y a proporcionar información precisa.\n \n
-
-•    Propiedad Intelectual: \n Todo el contenido de esta aplicación es propiedad de TecnoNic. No se permite su uso sin autorización.\n \n
-
-•    Privacidad: \n Nos comprometemos a proteger tu información. Consulta nuestra Política de Privacidad para más detalles.\n \n
-
-•    Compras: \n Los precios y ofertas pueden cambiar sin previo aviso. Las compras están sujetas a nuestras políticas de devoluciones.\n \n
-
-•    Responsabilidad: \n TecnoNic no se hace responsable por el mal uso de los productos o servicios.\n \n
-
-•    Modificaciones:\n Nos reservamos el derecho de modificar estos términos en cualquier momento."
+            android:text="@string/terms"
             android:textSize="14sp"
             android:textStyle="normal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
     </ScrollView>
 
 
