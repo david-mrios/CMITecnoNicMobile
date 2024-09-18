@@ -2,208 +2,266 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
+    android:id="@+id/main"
     android:layout_height="match_parent"
     tools:context=".language">
 
+    <!-- Botón de regreso -->
     <ImageButton
         android:id="@+id/backButton"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:src="@drawable/ic_back"
-        android:background="@color/white_100"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/circlebutton_signup"
         android:contentDescription="Back"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:padding="12dp"
+        android:padding="16dp"
+        android:src="@drawable/ic_back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Título -->
+
+    <!-- Barra de búsqueda -->
 
     <TextView
-        android:id="@+id/textView6"
-        android:layout_width="93dp"
-        android:layout_height="31dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="355dp"
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="153dp"
         android:text="Lenguaje"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/backButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.132" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <SearchView
         android:id="@+id/searchView"
-        android:layout_width="335dp"
+        android:layout_width="345dp"
         android:layout_height="44dp"
-        android:layout_marginTop="10dp"
-        android:background="@color/gray_400"
-        android:backgroundTint="@color/white_100"
+        android:layout_margin="30dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/edit_text_background"
         android:queryHint="Buscar idioma..."
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView6" />
+        app:layout_constraintTop_toBottomOf="@id/textView7" />
 
-    <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/barrier"
-        android:layout_width="wrap_content"
+    <!-- Lista de idiomas -->
+    <LinearLayout
+        android:id="@+id/languageListContainer"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:barrierDirection="left" />
-
-    <LinearLayout
-        android:layout_width="423dp"
-        android:layout_height="315dp"
+        android:layout_margin="20dp"
+        android:layout_marginTop="40dp"
         android:orientation="vertical"
-        android:background="@drawable/ic_launcher_foreground"
-        android:paddingVertical="8dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="170dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchView">
 
-    <LinearLayout
-        android:layout_width="660dp"
-        android:layout_height="58dp"
-        android:orientation="horizontal"
-        android:background="@drawable/ic_launcher_foreground"
-        android:paddingVertical="8dp"> <!-- Padding en eje Y añadido -->
+        <!-- Elemento de idioma 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:orientation="horizontal"
+            android:paddingVertical="8dp">
 
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="130dp"
-            android:layout_height="48dp"
-            android:layout_weight="1"
-            android:background="@color/white_100"
-            android:drawableLeft="@drawable/ic_united_states"
-            android:drawablePadding="8dp"
-            android:gravity="center_vertical|start"
-            android:text="Inglés"
-            android:textSize="16sp"
-            android:textStyle="normal"/>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:paddingStart="15dp"
+                android:layout_weight="1">
 
-        <RadioButton
-            android:id="@+id/radioButton"
-            android:layout_width="30dp"
-            android:layout_height="48dp"
-            android:layout_weight="1"
-            android:background="@color/white_100"/>
+                <ImageView
+                    android:id="@+id/iconIngles"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/ic_united_states"                  />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toEndOf="@id/iconIngles"
+                    android:layout_centerVertical="true"
+                    android:paddingStart="16dp"
+                    android:text="Inglés"
+                    android:textSize="20sp"
+                    android:gravity="center_vertical"
+                    android:background="@android:color/white"/>
+            </RelativeLayout>
+
+
+            <RadioButton
+                android:id="@+id/radioBtnEnglish"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:buttonTint="@color/blue_500"
+                android:minHeight="48dp" />
+        </LinearLayout>
+        <!-- Línea divisoria -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/darker_gray" />
+
+        <!-- Elemento de idioma 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:orientation="horizontal"
+            android:paddingVertical="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:drawableLeft="@drawable/ic_france"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical|start"
+                android:paddingStart="16dp"
+                android:text="Francés"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/radioBtnFrance"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:buttonTint="@color/blue_500"
+                android:minHeight="48dp" />
+
+
+        </LinearLayout>
+        <!-- Línea divisoria -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/darker_gray" />
+
+        <!-- Elemento de idioma 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:orientation="horizontal"
+            android:paddingVertical="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:drawableLeft="@drawable/ic_brazil"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical|start"
+                android:paddingStart="16dp"
+                android:text="Australia"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/radioBtnAustralia"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:buttonTint="@color/blue_500"
+                android:minHeight="48dp" />
+
+
+        </LinearLayout>
+        <!-- Línea divisoria -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/darker_gray" />
+
+        <!-- Elemento de idioma 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:orientation="horizontal"
+            android:paddingVertical="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:drawableLeft="@drawable/ic_spain"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical|start"
+                android:paddingStart="16dp"
+                android:text="Español"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/radioBtnSpanish"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:buttonTint="@color/blue_500"
+                android:minHeight="48dp" />
+
+
+        </LinearLayout>
+        <!-- Línea divisoria -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/darker_gray" />
+
+        <!-- Elemento de idioma 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:orientation="horizontal"
+            android:paddingVertical="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:drawableLeft="@drawable/ic_vietnam"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical|start"
+                android:paddingStart="16dp"
+                android:text="Vietman"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/radioBtnVietnam"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:buttonTint="@color/blue_500"
+                android:minHeight="48dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+
+        </LinearLayout>
+        <!-- Línea divisoria -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/darker_gray" />
+
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="660dp"
-        android:layout_height="58dp"
-        android:orientation="horizontal"
-        android:background="@drawable/ic_launcher_foreground"
-        android:paddingVertical="8dp">
-
-        <TextView
-            android:id="@+id/textView10"
-            android:layout_width="130dp"
-            android:layout_height="48dp"
-            android:layout_weight="1"
-            android:background="@color/white_100"
-            android:drawableLeft="@drawable/ic_france"
-            android:drawablePadding="8dp"
-            android:gravity="center_vertical|start"
-            android:text="Frances"
-            android:textSize="16sp"
-            android:textStyle="normal"/>
-
-        <RadioButton
-            android:id="@+id/radioButton1"
-            android:layout_width="30dp"
-            android:layout_height="48dp"
-            android:background="@color/white_100"
-            android:layout_weight="1"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="660dp"
-        android:layout_height="58dp"
-        android:orientation="horizontal"
-        android:background="@drawable/ic_launcher_foreground"
-        android:paddingVertical="8dp">
-
-        <TextView
-            android:id="@+id/textView11"
-            android:layout_width="130dp"
-            android:layout_height="48dp"
-            android:layout_weight="1"
-            android:background="@color/white_100"
-            android:drawableLeft="@drawable/ic_spain"
-            android:drawablePadding="8dp"
-            android:gravity="center_vertical|start"
-            android:text="Español"
-            android:textSize="16sp"
-            android:textStyle="normal"/>
-
-        <RadioButton
-            android:id="@+id/radioButton2"
-            android:layout_width="30dp"
-            android:layout_height="48dp"
-            android:layout_weight="1"
-            android:background="@color/white_100" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="660dp"
-        android:layout_height="58dp"
-        android:orientation="horizontal"
-        android:background="@drawable/ic_launcher_foreground"
-        android:paddingVertical="8dp">
-
-        <TextView
-            android:id="@+id/textView12"
-            android:layout_width="130dp"
-            android:layout_height="48dp"
-            android:layout_weight="1"
-            android:background="@color/white_100"
-            android:drawableLeft="@drawable/ic_vietnam"
-            android:drawablePadding="8dp"
-            android:gravity="center_vertical|start"
-            android:text="Vietnamita"
-            android:textSize="16sp"
-            android:textStyle="normal"/>
-
-        <RadioButton
-            android:id="@+id/radioButton3"
-            android:layout_width="30dp"
-            android:layout_height="48dp"
-            android:layout_weight="1"
-            android:background="@color/white_100" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="660dp"
-        android:layout_height="58dp"
-        android:orientation="horizontal"
-        android:background="@drawable/ic_launcher_foreground"
-        android:paddingVertical="8dp">
-
-        <TextView
-            android:id="@+id/textView13"
-            android:layout_width="130dp"
-            android:layout_height="48dp"
-            android:layout_weight="1"
-            android:background="@color/white_100"
-            android:drawableLeft="@drawable/ic_brazil"
-            android:drawablePadding="8dp"
-            android:gravity="center_vertical|start"
-            android:text="Portugués"
-            android:textSize="16sp"
-            android:textStyle="normal"/>
-
-        <RadioButton
-            android:id="@+id/radioButton4"
-            android:layout_width="30dp"
-            android:layout_height="48dp"
-            android:layout_weight="1"
-            android:background="@color/white_100" />
-    </LinearLayout>
-
-</LinearLayout>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
