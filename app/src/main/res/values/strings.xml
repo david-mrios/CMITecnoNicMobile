@@ -38,4 +38,6 @@
     <string name="firstIdClient">Cliente ID#00222</string>
     <string name="secondClientLabel">Kaylyn Yokel</string>
     <string name="secIdClient">Cliente ID#00222</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -6,4 +6,11 @@
     </style>
 
     <style name="Theme.CMISentinelPrimeMobile" parent="Base.Theme.CMISentinelPrimeMobile" />
+
+    <style name="BottomNavigation">
+        <item name="android:background">@color/white_100</item>
+        <item name="itemIconTint">@color/gray_500</item>
+        <item name="itemTextColor">@color/gray_500</item>
+    </style>
+
 </resources>
