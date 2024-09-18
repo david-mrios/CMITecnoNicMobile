@@ -22,11 +22,12 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:elevation="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:itemIconTint="@color/nav_btn_colors"
+        app:itemTextColor="@color/nav_btn_colors"
+        app:itemActiveIndicatorStyle="false"
+        app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:menu="@menu/bottom_navigation"
         app:labelVisibilityMode="labeled"
         style="@style/BottomNavigation"/>
-
 </RelativeLayout>
