@@ -3,22 +3,22 @@
     <item
         android:id="@+id/homeFragment"
         android:title="Home"
-        android:icon="@android:drawable/ic_menu_help"
+        android:icon="@drawable/ic_iconhome"
         android:textColor="@color/nav_btn_colors"/>
     <item
         android:id="@+id/indicatorsFragment"
         android:title="Indicators"
-        android:icon="@android:drawable/ic_menu_preferences"
+        android:icon="@drawable/ic_indicators"
         android:textColor="@color/nav_btn_colors"/>
     <item
         android:id="@+id/statisticsFragment"
         android:title="Statistics"
-        android:icon="@android:drawable/ic_menu_help"
+        android:icon="@drawable/ic_statistics"
         android:textColor="@color/nav_btn_colors"/>
 
     <item
         android:id="@+id/settingsFragment"
         android:title="Settings"
-        android:icon="@android:drawable/ic_menu_preferences"
+        android:icon="@drawable/ic_settings"
         android:textColor="@color/nav_btn_colors"/>
 </menu>
