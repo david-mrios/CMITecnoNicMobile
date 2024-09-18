@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/main"
     android:layout_height="match_parent"
     tools:context=".language">
 
@@ -98,10 +99,11 @@
 
             <RadioButton
                 android:id="@+id/radioBtnEnglish"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:layout_gravity="center_vertical"
-                android:buttonTint="@color/blue_500" />
+                android:buttonTint="@color/blue_500"
+                android:minHeight="48dp" />
         </LinearLayout>
         <!-- Línea divisoria -->
         <View
@@ -132,10 +134,11 @@
 
             <RadioButton
                 android:id="@+id/radioBtnFrance"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:layout_gravity="center_vertical"
-                android:buttonTint="@color/blue_500" />
+                android:buttonTint="@color/blue_500"
+                android:minHeight="48dp" />
 
 
         </LinearLayout>
@@ -168,10 +171,11 @@
 
             <RadioButton
                 android:id="@+id/radioBtnAustralia"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:layout_gravity="center_vertical"
-                android:buttonTint="@color/blue_500" />
+                android:buttonTint="@color/blue_500"
+                android:minHeight="48dp" />
 
 
         </LinearLayout>
@@ -204,10 +208,11 @@
 
             <RadioButton
                 android:id="@+id/radioBtnSpanish"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:layout_gravity="center_vertical"
-                android:buttonTint="@color/blue_500" />
+                android:buttonTint="@color/blue_500"
+                android:minHeight="48dp" />
 
 
         </LinearLayout>
@@ -240,10 +245,12 @@
 
             <RadioButton
                 android:id="@+id/radioBtnVietnam"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:layout_gravity="center_vertical"
-                android:buttonTint="@color/blue_500" />
+                android:buttonTint="@color/blue_500"
+                android:minHeight="48dp"
+                tools:ignore="TouchTargetSizeCheck" />
 
 
         </LinearLayout>
