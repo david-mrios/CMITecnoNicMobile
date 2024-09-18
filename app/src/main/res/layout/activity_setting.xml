@@ -26,7 +26,7 @@
             android:layout_height="50dp"
             android:layout_margin="10dp"
             android:background="@drawable/round_button_background"
-            android:contentDescription="@string/boton_retroceder"
+            android:contentDescription="Todo"
             android:elevation="4dp"
             app:srcCompat="@drawable/ic_path" />
 
@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:gravity="center"
-            android:text="@string/ajustes"
+            android:text="Ajuste"
             android:textColor="@android:color/black"
             android:textSize="25sp" />
 
@@ -48,7 +48,7 @@
             android:layout_margin="9dp"
             android:layout_marginEnd="20dp"
             android:background="@drawable/round_button_background"
-            android:contentDescription="@string/bot_n_de_grupo"
+            android:contentDescription="@string/descriptionImg"
             android:elevation="4dp"
             android:scaleType="centerInside"
             app:srcCompat="@drawable/ic_group" />
