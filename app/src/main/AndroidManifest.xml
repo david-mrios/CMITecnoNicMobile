@@ -20,9 +20,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".dashboard"
-            android:exported="false"/>
                   <activity
             android:name=".changePassword"
             android:exported="false" />
@@ -34,9 +31,6 @@
             android:exported="false" />
         <activity
             android:name=".profile"
-            android:exported="false" />
-        <activity
-            android:name=".setting"
             android:exported="false" />
         <activity
             android:name=".login"
