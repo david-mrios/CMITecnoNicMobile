@@ -5,7 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".register">
+    tools:context=".register"
+    tools:ignore="VisualLintBounds">
 
 
     <LinearLayout
@@ -19,26 +20,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0">
 
-        <ImageButton
-            android:id="@+id/imageBtnBackSignUp"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/circlebutton_signup"
-            android:contentDescription="@string/descriptionImg"
-            android:padding="16dp"
-            app:srcCompat="@drawable/path"
-            tools:ignore="ImageContrastCheck" />
-
         <TextView
             android:id="@+id/textHeadSignUp"
-            android:layout_width="wrap_content"
+            android:layout_width="333dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="60dp"
             android:text="@string/txtSignUp"
+            android:textAlignment="center"
             android:textSize="32sp"
             android:textStyle="bold" />
 
@@ -63,7 +52,6 @@
             android:hint="@string/txtUser"
             android:inputType="text"
             android:minHeight="48dp"
-            android:textColorHint="@color/black"
             android:textSize="14sp"
             tools:ignore="VisualLintTextFieldSize" />
 
@@ -88,7 +76,6 @@
             android:hint="@string/txtPhoneNum"
             android:inputType="phone"
             android:minHeight="48dp"
-            android:textColorHint="@color/black"
             android:textSize="14sp"
             tools:ignore="VisualLintTextFieldSize" />
 
@@ -113,7 +100,6 @@
             android:hint="@string/txtEmailSignUp"
             android:inputType="textEmailAddress"
             android:minHeight="48dp"
-            android:textColorHint="@color/black"
             android:textSize="14sp"
             tools:ignore="VisualLintTextFieldSize" />
 
@@ -131,7 +117,7 @@
             android:id="@+id/inputPass"
             android:layout_width="335dp"
             android:layout_height="60dp"
-            android:layout_marginStart="15dp"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
             app:boxBackgroundMode="filled"
             android:hint="@string/hintPass"
@@ -170,19 +156,22 @@
             android:layout_marginTop="15dp"
             android:gravity="center"
 
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            tools:ignore="TextSizeCheck">
+
             <TextView
                 android:id="@+id/txtSignUp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Ya tengo una cuenta.  "
-                android:textColor="@color/gray_500" />
+                android:text="@string/textSingUp"
+                android:textColor="@color/gray_500"
+                tools:ignore="TextContrastCheck" />
 
             <TextView
                 android:id="@+id/linkSignUp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Iniciar sesión"
+                android:text="@string/linkTextSingUp"
                 android:textColor="@color/blue_500" />
 
         </LinearLayout>

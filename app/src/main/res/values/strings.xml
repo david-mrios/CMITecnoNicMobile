@@ -66,4 +66,6 @@
     <string name="hintPass">********</string>
     <string name="textSingIn">Soy un usuario nuevo.</string>
     <string name="textLinkSignIn">Registrarse</string>
+    <string name="textSingUp">Ya tengo una cuenta.</string>
+    <string name="linkTextSingUp">Iniciar sesión</string>
 </resources>

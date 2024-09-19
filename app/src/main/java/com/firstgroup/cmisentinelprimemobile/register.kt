@@ -33,6 +33,13 @@ class register : AppCompatActivity() {
                 startActivity(intent)
             }
         }
+
+        binding.linkSignUp.setOnClickListener {
+            val intent = Intent(this, login::class.java)
+            startActivity(intent)
+        }
+
+
     }
 
     private fun validateFields(): Boolean {
