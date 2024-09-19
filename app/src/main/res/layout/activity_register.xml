@@ -33,7 +33,7 @@
             tools:ignore="ImageContrastCheck" />
 
         <TextView
-            android:id="@+id/txtSignUp"
+            android:id="@+id/textHeadSignUp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -128,34 +128,32 @@
             android:textSize="14sp" />
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputPass"
             android:layout_width="335dp"
             android:layout_height="60dp"
-            android:layout_gravity="bottom"
-            android:layout_marginStart="20dp"
-            android:gravity="center_vertical"
-            android:hint="@string/hintpassword"
-            android:paddingTop="0dp"
-            android:paddingBottom="0dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
             app:boxBackgroundMode="filled"
-            app:boxStrokeWidth="1dp"
-            app:endIconMode="password_toggle">
+            android:hint="@string/hintPass"
+            app:endIconMode="password_toggle"
+            app:errorEnabled="true"
+            app:boxStrokeWidth="1dp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="335dp"
-                android:layout_height="60dp"
+                android:id="@+id/textEditPass"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:drawableStart="@drawable/ic_lock"
                 android:drawablePadding="10dp"
-                android:ems="10"
                 android:gravity="center_vertical"
                 android:inputType="textPassword"
-                android:paddingStart="0dp"
-                android:paddingTop="0dp"
-                android:paddingBottom="0dp"
-                android:textSize="45sp" />
+                android:textSize="16sp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button2"
+            android:id="@+id/btnRegister"
             android:layout_width="339dp"
             android:layout_height="56dp"
             android:layout_marginStart="20dp"
@@ -174,14 +172,14 @@
 
             android:orientation="horizontal">
             <TextView
-                android:id="@+id/txtSignIn"
+                android:id="@+id/txtSignUp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Ya tengo una cuenta.  "
                 android:textColor="@color/gray_500" />
 
             <TextView
-                android:id="@+id/txtSign"
+                android:id="@+id/linkSignUp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Iniciar sesión"
