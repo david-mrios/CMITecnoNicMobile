@@ -5,12 +5,36 @@
     android:layout_height="match_parent"
     tools:context=".StatisticsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:textSize="49sp"
-        android:text="Statisctics" />
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textHeadOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="60dp"
+                android:text="Cliente con mas pedidos" />
+
+
+            <ListView
+                android:id="@+id/listOrder"
+                android:layout_width="match_parent"
+                android:layout_height="196dp"
+                android:layout_marginTop="90dp"
+                android:paddingStart="16dp"
+                tools:ignore="NestedScrolling"/>
+        </FrameLayout>
+
+    </ScrollView>
 
 </FrameLayout>
