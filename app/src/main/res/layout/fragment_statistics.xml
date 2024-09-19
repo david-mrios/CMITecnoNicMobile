@@ -30,8 +30,9 @@
                 android:id="@+id/listOrder"
                 android:layout_width="match_parent"
                 android:layout_height="196dp"
-                android:layout_marginTop="90dp"
+                android:layout_marginTop="98dp"
                 android:paddingStart="16dp"
+                android:paddingEnd="16dp"
                 tools:ignore="NestedScrolling"/>
         </FrameLayout>
 

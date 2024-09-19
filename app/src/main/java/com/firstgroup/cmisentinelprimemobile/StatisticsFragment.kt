@@ -5,19 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
+import android.widget.ListView
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [StatisticsFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class StatisticsFragment : Fragment() {
-    // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
 
@@ -37,16 +31,30 @@ class StatisticsFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_statistics, container, false)
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // Datos hardcodeados para la lista
+        val data = listOf(
+            "Cliente A: 15 pedidos - $750000.0",
+            "Cliente B: 12 pedidos - $600000.0",
+            "Cliente C: 10 pedidos - $450000.0"
+        )
+
+        // Configurar el ListView
+        val listView: ListView = view.findViewById(R.id.listOrder)
+        val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1, data)
+        listView.adapter = adapter
+    }
+
     companion object {
         /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
+         * Método para crear una nueva instancia de este fragmento usando los parámetros proporcionados.
          *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment StatisticsFragment.
+         * @param param1 Parámetro 1.
+         * @param param2 Parámetro 2.
+         * @return Una nueva instancia de fragment StatisticsFragment.
          */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
             StatisticsFragment().apply {
