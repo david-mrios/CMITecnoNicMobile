@@ -123,8 +123,9 @@
                     android:id="@+id/btnProfile"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/ic_following"
                     android:contentDescription="Arrow Icon"
-                    android:background="@drawable/ic_following" />
+                    tools:ignore="TouchTargetSizeCheck" />
 
             </LinearLayout>
 
@@ -174,9 +175,10 @@
                     android:id="@+id/btnSettings"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="Arrow Icon"
                     android:background="@drawable/ic_following"
-                    app:tint="@android:color/darker_gray" />
+                    android:contentDescription="Arrow Icon"
+                    app:tint="@android:color/darker_gray"
+                    tools:ignore="TouchTargetSizeCheck" />
             </LinearLayout>
 
             <!-- Línea de división -->
