@@ -12,6 +12,7 @@
         android:layout_height="729dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="1dp"
+
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="1dp"
         android:orientation="vertical"
@@ -21,24 +22,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageButton
-            android:id="@+id/imageBtnBack"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="25dp"
-            android:background="@drawable/cirlcleimagebtn"
-            android:contentDescription="@string/loginImgbutton"
-            android:padding="15dp"
-            android:scaleType="centerInside"
-            app:srcCompat="@drawable/ic_path" />
-
         <TextView
             android:id="@+id/txtLogin"
-            android:layout_width="245dp"
+            android:layout_width="327dp"
             android:layout_height="35sp"
+            android:textAlignment="center"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="70dp"
             android:text="@string/txtlogin"
             android:textSize="32sp"
             android:textStyle="bold" />
@@ -81,17 +71,19 @@
             android:textSize="14sp" />
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputPass"
             android:layout_width="335dp"
             android:layout_height="60dp"
             android:layout_marginStart="15dp"
             android:layout_marginTop="10dp"
             app:boxBackgroundMode="filled"
             android:hint="********"
-
             app:endIconMode="password_toggle"
+            app:errorEnabled="true"
             app:boxStrokeWidth="1dp">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextPass"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:drawableStart="@drawable/ic_lock"
@@ -124,7 +116,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/txSignUp"
+                android:id="@+id/textSignUp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Soy un usuario nuevo.  "
@@ -132,7 +124,7 @@
                 android:textColor="@color/gray_500" />
 
             <TextView
-                android:id="@+id/txSign"
+                android:id="@+id/linkSingUp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Registrarse"
