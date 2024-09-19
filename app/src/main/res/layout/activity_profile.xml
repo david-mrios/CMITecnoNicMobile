@@ -110,6 +110,7 @@
                     android:src="@drawable/ic_profile_text" />
 
                 <TextView
+                    android:id="@+id/textProfile"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -118,11 +119,12 @@
                     android:textColor="@android:color/black"
                     android:textSize="16sp" />
 
-                <ImageView
+                <ImageButton
+                    android:id="@+id/btnProfile"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:contentDescription="Arrow Icon"
-                    android:src="@drawable/ic_following" />
+                    android:background="@drawable/ic_following" />
 
             </LinearLayout>
 
@@ -159,6 +161,7 @@
                     app:tint="@android:color/darker_gray" />
 
                 <TextView
+                    android:id="@+id/textSettings"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -167,11 +170,12 @@
                     android:textColor="@android:color/black"
                     android:textSize="16sp" />
 
-                <ImageView
+                <ImageButton
+                    android:id="@+id/btnSettings"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:contentDescription="Arrow Icon"
-                    android:src="@drawable/ic_following"
+                    android:background="@drawable/ic_following"
                     app:tint="@android:color/darker_gray" />
             </LinearLayout>
 
