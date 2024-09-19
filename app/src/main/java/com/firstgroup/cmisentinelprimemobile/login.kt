@@ -43,7 +43,7 @@ class login : AppCompatActivity() {
             }
         }
 
-        binding.linkSingUp.setOnClickListener {
+        binding.linkSingIn.setOnClickListener {
             val intent = Intent(this, register::class.java)
             startActivity(intent)
             finish()

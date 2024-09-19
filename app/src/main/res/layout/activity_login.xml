@@ -5,14 +5,14 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login">
+    tools:context=".login"
+    tools:ignore="VisualLintBounds">
 
     <LinearLayout
         android:layout_width="409dp"
         android:layout_height="729dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="1dp"
-
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="1dp"
         android:orientation="vertical"
@@ -26,12 +26,13 @@
             android:id="@+id/txtLogin"
             android:layout_width="327dp"
             android:layout_height="35sp"
-            android:textAlignment="center"
             android:layout_marginStart="20dp"
             android:layout_marginTop="70dp"
-            android:text="@string/txtlogin"
+            android:text="@string/headLogin"
+            android:textAlignment="center"
             android:textSize="32sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="TextSizeCheck" />
 
         <TextView
             android:id="@+id/txtEmail"
@@ -41,7 +42,8 @@
             android:layout_marginTop="35sp"
             android:text="@string/txtEmail"
             android:textColor="@color/gray_500"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            tools:ignore="TextSizeCheck" />
 
 
         <EditText
@@ -77,7 +79,7 @@
             android:layout_marginStart="15dp"
             android:layout_marginTop="10dp"
             app:boxBackgroundMode="filled"
-            android:hint="********"
+            android:hint="@string/hintPass"
             app:endIconMode="password_toggle"
             app:errorEnabled="true"
             app:boxStrokeWidth="1dp">
@@ -95,7 +97,6 @@
                 android:paddingEnd="10dp" />
         </com.google.android.material.textfield.TextInputLayout>
 
-
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnLogin"
             android:layout_width="332dp"
@@ -107,7 +108,8 @@
             android:text="@string/btnLogin"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            tools:ignore="VisualLintButtonSize" />
 
         <LinearLayout
             android:layout_width="332dp"
@@ -116,19 +118,20 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textSignUp"
+                android:id="@+id/textSignIn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Soy un usuario nuevo.  "
+                android:text="@string/textSingIn"
                 android:textAlignment="center"
                 android:textColor="@color/gray_500" />
 
             <TextView
-                android:id="@+id/linkSingUp"
+                android:id="@+id/linkSingIn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Registrarse"
-                android:textColor="@color/blue_500" />
+                android:text="@string/textLinkSignIn"
+                android:textColor="@color/blue_500"
+                tools:ignore="TextContrastCheck" />
 
         </LinearLayout>
 
