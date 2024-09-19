@@ -14,8 +14,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <!-- customers  -->
             <TextView
-                android:id="@+id/textHeadOrder"
+                android:id="@+id/textHeadCustomers"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -23,8 +24,7 @@
                 android:textStyle="bold"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="60dp"
-                android:text="Cliente con mas pedidos" />
-
+                android:text="Clientes con mas pedidos" />
 
             <ListView
                 android:id="@+id/listOrder"
@@ -34,6 +34,23 @@
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
                 tools:ignore="NestedScrolling"/>
+            <!-- Orders -->
+            <TextView
+                android:id="@+id/textHeadOrder"
+                android:layout_width="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="315dp"
+                android:text="Vista de Pedidos" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerVStateOrder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="350dp"
+                android:padding="16dp" />
         </FrameLayout>
 
     </ScrollView>
