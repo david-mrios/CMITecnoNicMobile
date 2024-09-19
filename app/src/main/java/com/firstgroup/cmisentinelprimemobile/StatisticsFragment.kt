@@ -75,11 +75,11 @@ class StatisticsFragment : Fragment() {
 
     companion object {
         /**
-         * Método para crear una nueva instancia de este fragmento usando los parámetros proporcionados.
          *
-         * @param param1 Parámetro 1.
-         * @param param2 Parámetro 2.
-         * @return Una nueva instancia de fragment StatisticsFragment.
+         *
+         * @param param1
+         * @param param2
+         * @return
          */
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
