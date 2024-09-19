@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.ListView
+import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -71,6 +72,16 @@ class StatisticsFragment : Fragment() {
         val tvSpent: TextView = view.findViewById(R.id.tvSpent)
         val spent = "$169.6K"
         tvSpent.text = spent
+
+        // Setear el progreso de cada barra
+        val progressBarProduct1 = view.findViewById<ProgressBar>(R.id.progressBarProduct1)
+        val progressBarProduct2 = view.findViewById<ProgressBar>(R.id.progressBarProduct2)
+        val progressBarProduct3 = view.findViewById<ProgressBar>(R.id.progressBarProduct3)
+
+        // Ejemplo: actualizar valores en tiempo real
+        progressBarProduct1.progress = 100
+        progressBarProduct2.progress = 50
+        progressBarProduct3.progress = 25
     }
 
     companion object {
