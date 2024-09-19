@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.ListView
+import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -60,6 +61,16 @@ class StatisticsFragment : Fragment() {
         val listView: ListView = view.findViewById(R.id.listOrder)
         val listAdapter = ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1, data)
         listView.adapter = listAdapter
+
+        // Asignar el valor de ganancia al TextView
+        val tvProfit: TextView = view.findViewById(R.id.tvProfit)
+        val earnings = "$169.6K"
+        tvProfit.text = earnings
+
+        // Asignar el valor de ganancia al TextView
+        val tvSpent: TextView = view.findViewById(R.id.tvSpent)
+        val spent = "$169.6K"
+        tvSpent.text = spent
     }
 
     companion object {

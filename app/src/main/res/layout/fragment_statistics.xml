@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -41,19 +42,66 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="315dp"
-                android:layout_marginStart="35dp"
+                android:layout_marginStart="40dp"
                 android:text="Vista de Pedidos"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerVStateOrder"
-                android:layout_width="112dp"
+                android:layout_width="168dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="350dp"
                 android:padding="10dp"
                 android:paddingStart="35dp"
                 android:paddingEnd="16dp" />
+
+                <!-- profits  -->
+            <TextView
+                android:id="@+id/textHeadprofits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="315dp"
+                android:layout_marginStart="240dp"
+                android:text="Ganacias"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvProfit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="355dp"
+                android:layout_marginStart="240dp"
+                android:textStyle="bold"
+                android:textColor="@color/green_500"
+                android:textSize="20sp"
+                android:text="Data" />
+
+                <!--  Spent  -->
+
+            <TextView
+                android:id="@+id/textHeadSpent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="420dp"
+                android:layout_marginStart="240dp"
+                android:text="Gastado"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvSpent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="460dp"
+                android:textColor="@color/red_500"
+                android:layout_marginStart="240dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="Data" />
+
         </FrameLayout>
 
     </ScrollView>

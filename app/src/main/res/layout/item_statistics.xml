@@ -5,7 +5,6 @@
     android:orientation="vertical"
     android:padding="8dp">
 
-    <!-- Primera fila con Fecha y Nombre -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,9 +17,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Fecha"
+            android:textStyle="bold"
             android:textSize="14sp"
             android:textColor="@android:color/black"
-            android:layout_marginBottom="8dp" /> <!-- Margen inferior -->
+            android:layout_marginBottom="8dp" />
 
         <TextView
             android:id="@+id/tvCount1"
@@ -28,8 +28,8 @@
             android:layout_height="wrap_content"
             android:text="Nombre"
             android:textSize="14sp"
-            android:textColor="@android:color/black"
-            android:layout_marginBottom="8dp" /> <!-- Margen inferior -->
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginBottom="8dp" />
     </LinearLayout>
 
     <!-- Segunda fila con Recibido y Pagado -->
@@ -45,9 +45,10 @@
             android:id="@+id/tvStateName2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textStyle="bold"
             android:text="Recibido"
             android:textSize="14sp"
-            android:textColor="@android:color/holo_green_dark"
+            android:textColor="@android:color/black"
             android:layout_marginBottom="8dp" /> <!-- Margen inferior -->
 
         <TextView
@@ -55,8 +56,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Pagado"
-            android:textSize="14sp"
-            android:textColor="@android:color/holo_red_dark" />
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp"/>
     </LinearLayout>
 
 </LinearLayout>
