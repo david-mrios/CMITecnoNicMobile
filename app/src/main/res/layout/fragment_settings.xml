@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SettingsFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -94,9 +94,10 @@
                 android:orientation="horizontal"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_general"
-                tools:ignore="TouchTargetSizeCheck">
+                tools:ignore="ExtraText,TouchTargetSizeCheck">
 
                 <TextView
+                    android:id="@+id/textLanguaje"
                     android:layout_width="30dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -112,11 +113,12 @@
                     android:textColor="@android:color/darker_gray"
                     android:textSize="16sp" />
 
-                <ImageView
+                <ImageButton
+                    android:id="@+id/btnLangueje"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:contentDescription="TODO"
-                    android:src="@drawable/ic_arrowbtn" />
+                    android:background="@drawable/ic_arrowbtn" />
 
             </LinearLayout>
 
@@ -153,6 +155,7 @@
                 tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck">
 
                 <TextView
+                    android:id="@+id/textProfile"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -160,11 +163,12 @@
                     android:textColor="@android:color/black"
                     android:textSize="16sp" />
 
-                <ImageView
+                <ImageButton
+                    android:id="@+id/btnProfile"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:contentDescription="TODO"
-                    android:src="@drawable/ic_arrowbtn" />
+                    android:background="@drawable/ic_arrowbtn" />
 
             </LinearLayout>
 
@@ -202,6 +206,7 @@
                 tools:ignore="TouchTargetSizeCheck">
 
                 <TextView
+                    android:id="@+id/textContact"
                     android:layout_width="30dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -209,11 +214,12 @@
                     android:textColor="@android:color/black"
                     android:textSize="16sp" />
 
-                <ImageView
+                <ImageButton
+                    android:id="@+id/btnContact"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:contentDescription="TODO"
-                    android:src="@drawable/ic_arrowbtn" />
+                    android:background="@drawable/ic_arrowbtn" />
 
             </LinearLayout>
 
@@ -261,6 +267,7 @@
                 tools:ignore="TouchTargetSizeCheck,UseCompoundDrawables">
 
                 <TextView
+                    android:id="@+id/textPassword"
                     android:layout_width="30dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -268,11 +275,12 @@
                     android:textColor="@android:color/black"
                     android:textSize="16sp" />
 
-                <ImageView
+                <ImageButton
+                    android:id="@+id/btnPassword"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:contentDescription="TODO"
-                    android:src="@drawable/ic_arrowbtn" />
+                    android:background="@drawable/ic_arrowbtn" />
 
             </LinearLayout>
 
@@ -307,6 +315,7 @@
                 tools:ignore="TouchTargetSizeCheck,UseCompoundDrawables">
 
                 <TextView
+                    android:id="@+id/textTerms"
                     android:layout_width="30dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -314,11 +323,12 @@
                     android:textColor="@android:color/black"
                     android:textSize="16sp" />
 
-                <ImageView
+                <ImageButton
+                    android:id="@+id/btnTerms"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:contentDescription="TODO"
-                    android:src="@drawable/ic_arrowbtn" />
+                    android:background="@drawable/ic_arrowbtn" />
 
             </LinearLayout>
 
