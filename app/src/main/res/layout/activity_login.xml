@@ -83,29 +83,24 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="335dp"
             android:layout_height="60dp"
-            android:layout_gravity="bottom"
             android:layout_marginStart="15dp"
             android:layout_marginTop="10dp"
-            android:gravity="center_vertical"
-            android:hint="@string/hintpassword"
-            android:paddingTop="0dp"
-            android:paddingBottom="0dp"
             app:boxBackgroundMode="filled"
-            app:boxStrokeWidth="1dp"
-            app:endIconMode="password_toggle">
+            android:hint="********"
+
+            app:endIconMode="password_toggle"
+            app:boxStrokeWidth="1dp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="335dp"
-                android:layout_height="60dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:drawableStart="@drawable/ic_lock"
                 android:drawablePadding="10dp"
-                android:ems="10"
                 android:gravity="center_vertical"
                 android:inputType="textPassword"
-                android:paddingStart="0dp"
-                android:paddingTop="0dp"
-                android:paddingBottom="0dp"
-                android:textSize="45sp" />
+                android:textSize="16sp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp" />
         </com.google.android.material.textfield.TextInputLayout>
 
 
