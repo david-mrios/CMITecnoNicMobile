@@ -9,49 +9,51 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp"
         android:weightSum="2">
 
         <TextView
-            android:id="@+id/tvCount1"
-            android:layout_width="0dp"
+            android:id="@+id/tvStateName1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="Fecha"
             android:textSize="14sp"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="8dp" /> <!-- Margen inferior -->
 
         <TextView
-            android:id="@+id/tvCount2"
-            android:layout_width="0dp"
+            android:id="@+id/tvCount1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="Nombre"
             android:textSize="14sp"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="8dp" /> <!-- Margen inferior -->
     </LinearLayout>
 
     <!-- Segunda fila con Recibido y Pagado -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp"
+
         android:weightSum="2">
 
         <TextView
-            android:id="@+id/tvStateName1"
-            android:layout_width="0dp"
+            android:id="@+id/tvStateName2"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="Recibido"
             android:textSize="14sp"
-            android:textColor="@android:color/holo_green_dark" />
+            android:textColor="@android:color/holo_green_dark"
+            android:layout_marginBottom="8dp" /> <!-- Margen inferior -->
 
         <TextView
-            android:id="@+id/tvStateName2"
-            android:layout_width="0dp"
+            android:id="@+id/tvCount2"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="Pagado"
             android:textSize="14sp"
             android:textColor="@android:color/holo_red_dark" />

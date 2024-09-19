@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.ListView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
@@ -34,6 +36,19 @@ class StatisticsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // Configurar RecyclerView de estadísticas
+        val recyclerView: RecyclerView = view.findViewById(R.id.recyclerVStateOrder)
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+
+        val statistics = listOf(
+            StatisticItem("250", "Entregado", "250", "En ruta"),
+            StatisticItem("250", "Cancelado", "250", "Pendiente"),
+        )
+
+        val recycleAdapter = StatisticsAdapter(statistics)
+        recyclerView.adapter = recycleAdapter
+
+
         // Datos hardcodeados para la lista
         val data = listOf(
             "Cliente A: 15 pedidos - $750000.0",
@@ -43,8 +58,8 @@ class StatisticsFragment : Fragment() {
 
         // Configurar el ListView
         val listView: ListView = view.findViewById(R.id.listOrder)
-        val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1, data)
-        listView.adapter = adapter
+        val listAdapter = ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1, data)
+        listView.adapter = listAdapter
     }
 
     companion object {
