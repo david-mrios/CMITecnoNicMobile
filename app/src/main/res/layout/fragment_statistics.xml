@@ -31,7 +31,7 @@
             <ListView
                 android:id="@+id/listOrder"
                 android:layout_width="match_parent"
-                android:layout_height="196dp"
+                android:layout_height="143dp"
                 android:layout_marginTop="98dp"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
@@ -41,8 +41,8 @@
                 android:id="@+id/viewLineBottom"
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="#000000"
-                android:layout_marginTop="300dp" />
+                android:background="@color/white_100"
+                android:layout_marginTop="280dp" />
             <TextView
                 android:id="@+id/textHeadOrder"
                 android:layout_width="wrap_content"
@@ -111,7 +111,7 @@
                 android:id="@+id/viewLineBottom2"
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="#000000"
+                android:background="@color/white_100"
                 android:layout_marginTop="620dp" />
 
             <TextView
@@ -175,6 +175,7 @@
                         style="@android:style/Widget.ProgressBar.Horizontal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
                         android:progressDrawable="@drawable/custom_progress_bar"
                         android:progress="50"/>
 
@@ -222,6 +223,8 @@
                         style="@android:style/Widget.ProgressBar.Horizontal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+
                         android:progressDrawable="@drawable/custom_progress_bar"
                         android:progress="30"/>
 
@@ -270,6 +273,7 @@
                         style="@android:style/Widget.ProgressBar.Horizontal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
                         android:progressDrawable="@drawable/custom_progress_bar"
                         android:progress="20"/>
 
