@@ -93,7 +93,7 @@
                     android:text="Inglés"
                     android:textSize="20sp"
                     android:gravity="center_vertical"
-                    android:background="@android:color/white"/>
+                />
             </RelativeLayout>
 
 
@@ -124,7 +124,6 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@android:color/white"
                 android:drawableLeft="@drawable/ic_france"
                 android:drawablePadding="8dp"
                 android:gravity="center_vertical|start"
@@ -161,7 +160,6 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@android:color/white"
                 android:drawableLeft="@drawable/ic_brazil"
                 android:drawablePadding="8dp"
                 android:gravity="center_vertical|start"
@@ -198,7 +196,6 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@android:color/white"
                 android:drawableLeft="@drawable/ic_spain"
                 android:drawablePadding="8dp"
                 android:gravity="center_vertical|start"
@@ -235,7 +232,6 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@android:color/white"
                 android:drawableLeft="@drawable/ic_vietnam"
                 android:drawablePadding="8dp"
                 android:gravity="center_vertical|start"

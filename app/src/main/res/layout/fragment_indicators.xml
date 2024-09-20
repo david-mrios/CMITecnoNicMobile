@@ -12,6 +12,6 @@
         android:gravity="center"
         android:textSize="50sp"
         android:textColor="@color/green_dark"
-        android:text="Indicadores" />
+        android:text="Indicators Fragment" />
 
 </FrameLayout>
