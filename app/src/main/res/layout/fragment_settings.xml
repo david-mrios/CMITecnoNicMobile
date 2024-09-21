@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="30dp"
     tools:context=".SettingsFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -13,13 +14,9 @@
 
         <RelativeLayout
             android:id="@+id/relativeLayout"
-            android:layout_width="409dp"
+            android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:layout_marginStart="50dp"
             android:layout_marginTop="44dp"
-            android:layout_marginEnd="50dp"
-            android:paddingStart="22dp"
-            android:paddingEnd="22dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -28,7 +25,9 @@
                 android:id="@+id/pathImgBtn"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_margin="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="3dp"
                 android:background="@drawable/ic_circular_button"
                 android:contentDescription="Todo"
                 android:elevation="4dp"
@@ -48,9 +47,9 @@
                 android:id="@+id/groupImgBtn"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:layout_marginEnd="3dp"
                 android:layout_alignParentEnd="true"
-                android:layout_margin="9dp"
-                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/ic_circular_button"
                 android:contentDescription="@string/descriptionImg"
                 android:elevation="4dp"
@@ -63,7 +62,6 @@
             android:id="@+id/tv_general"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="33dp"
             android:layout_marginTop="27dp"
             android:paddingBottom="8dp"
             android:text="General"
@@ -75,18 +73,16 @@
         <!-- Opción lenguaje -->
         <LinearLayout
             android:id="@+id/linearLayoutLenguaje"
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
             android:layout_height="45dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="40dp"
+            android:layout_marginTop="15dp"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_general">
 
             <LinearLayout
-                android:layout_width="350dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clickable="true"
                 android:focusable="true"
@@ -98,7 +94,7 @@
 
                 <TextView
                     android:id="@+id/textLanguaje"
-                    android:layout_width="30dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Lenguaje"
@@ -117,8 +113,9 @@
                     android:id="@+id/btnLangueje"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="TODO"
-                    android:background="@drawable/ic_arrowbtn" />
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/ic_arrowbtn"
+                    android:contentDescription="TODO" />
 
             </LinearLayout>
 
@@ -135,17 +132,15 @@
         <!-- Opción profile -->
         <LinearLayout
             android:id="@+id/linearLayoutProfile"
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
             android:layout_height="45dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="40dp"
             android:layout_marginTop="15dp"
             android:orientation="vertical"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayoutLenguaje">
 
             <LinearLayout
-                android:layout_width="350dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clickable="true"
                 android:focusable="true"
@@ -157,7 +152,7 @@
 
                 <TextView
                     android:id="@+id/textProfile"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Mi perfil"
@@ -168,8 +163,9 @@
                     android:id="@+id/btnProfile"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="TODO"
-                    android:background="@drawable/ic_arrowbtn" />
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/ic_arrowbtn"
+                    android:contentDescription="TODO" />
 
             </LinearLayout>
 
@@ -187,16 +183,15 @@
         <!-- Opción profile -->
         <LinearLayout
             android:id="@+id/linearLayoutContact"
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
             android:layout_height="45dp"
-            android:layout_marginStart="32dp"
             android:layout_marginTop="15dp"
             android:orientation="vertical"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayoutProfile">
 
             <LinearLayout
-                android:layout_width="350dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clickable="true"
                 android:focusable="true"
@@ -208,7 +203,7 @@
 
                 <TextView
                     android:id="@+id/textContact"
-                    android:layout_width="30dp"
+                    android:layout_width="299dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Contactenos"
@@ -219,8 +214,9 @@
                     android:id="@+id/btnContact"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="TODO"
-                    android:background="@drawable/ic_arrowbtn" />
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/ic_arrowbtn"
+                    android:contentDescription="TODO"/>
 
             </LinearLayout>
 
@@ -238,7 +234,6 @@
             android:id="@+id/textSecurity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="33dp"
             android:layout_marginTop="40dp"
             android:paddingBottom="8dp"
             android:text="Seguridad"
@@ -250,16 +245,15 @@
 
         <LinearLayout
             android:id="@+id/linearLayoutPassword"
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
             android:layout_height="45dp"
-            android:layout_marginStart="36dp"
             android:layout_marginTop="15dp"
             android:orientation="vertical"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textSecurity">
 
             <LinearLayout
-                android:layout_width="350dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clickable="true"
                 android:focusable="true"
@@ -280,8 +274,10 @@
                     android:id="@+id/btnPassword"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="TODO"
-                    android:background="@drawable/ic_arrowbtn" />
+                    android:layout_marginEnd="10dp"
+
+                    android:background="@drawable/ic_arrowbtn"
+                    android:contentDescription="TODO" />
 
             </LinearLayout>
 
@@ -298,16 +294,15 @@
 
         <LinearLayout
             android:id="@+id/linearLayoutTerms"
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
             android:layout_height="45dp"
-            android:layout_marginStart="36dp"
             android:layout_marginTop="15dp"
             android:orientation="vertical"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayoutPassword">
 
             <LinearLayout
-                android:layout_width="350dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clickable="true"
                 android:focusable="true"
@@ -327,9 +322,11 @@
                 <ImageButton
                     android:id="@+id/btnTerms"
                     android:layout_width="wrap_content"
+                    android:layout_marginEnd="10dp"
+
                     android:layout_height="wrap_content"
-                    android:contentDescription="TODO"
-                    android:background="@drawable/ic_arrowbtn" />
+                    android:background="@drawable/ic_arrowbtn"
+                    android:contentDescription="TODO" />
 
             </LinearLayout>
 

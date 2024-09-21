@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:padding="16dp"
             android:layout_marginTop="25dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="150dp"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp">
 
@@ -488,6 +488,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
+                    android:paddingBottom="70dp"
                     android:paddingHorizontal="16dp">
 
                     <!-- Cliente 1 -->
@@ -598,7 +599,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:padding="16dp"
-                        android:layout_marginBottom="35dp"
+                        android:layout_marginBottom="150dp"
                         android:text="@string/showOtherClient"
                         android:textAllCaps="true"
                         android:textColor="@color/blue_500"
