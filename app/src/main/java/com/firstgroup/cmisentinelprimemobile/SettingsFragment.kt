@@ -42,13 +42,19 @@ class SettingsFragment : Fragment() {
 
         // Configurar el evento click para navegar a ProfileActivity
         binding.linearLayoutLenguaje.setOnClickListener {
-            val intent = Intent(requireContext(), language::class.java)
-            startActivity(intent)
-        }
+           val intent = Intent(requireContext(), language::class.java)
+           startActivity(intent)
+           }
+         binding.linearLayoutProfile.setOnClickListener {
+             // Navegar a ProfileActivity
+             val intents = Intent(requireContext(), profile::class.java)
+             startActivity(intents)
+            }
+
+
 
         return binding.root
     }
-
 
     companion object {
         /**
