@@ -56,6 +56,11 @@ class SettingsFragment : Fragment() {
             val intents = Intent(requireContext(), changePassword::class.java)
             startActivity(intents)
         }
+        binding.linearLayoutTerms.setOnClickListener {
+            // Navegar a la actividad Terms
+            val intent = Intent(requireContext(), Terms::class.java)
+            startActivity(intent)
+        }
 
         return binding.root
     }

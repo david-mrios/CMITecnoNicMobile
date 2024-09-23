@@ -38,6 +38,9 @@
         <activity
             android:name=".register"
             android:exported="false" />
+        <activity
+            android:name=".Terms"
+            android:exported="false" />
 
 
     </application>
