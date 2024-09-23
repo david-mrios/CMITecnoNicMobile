@@ -44,14 +44,18 @@ class SettingsFragment : Fragment() {
         binding.linearLayoutLenguaje.setOnClickListener {
            val intent = Intent(requireContext(), language::class.java)
            startActivity(intent)
-           }
-         binding.linearLayoutProfile.setOnClickListener {
-             // Navegar a ProfileActivity
-             val intents = Intent(requireContext(), profile::class.java)
-             startActivity(intents)
-            }
+        }
+        binding.linearLayoutProfile.setOnClickListener {
+            // Navegar a ProfileActivity
+            val intents = Intent(requireContext(), profile::class.java)
+            startActivity(intents)
+        }
 
-
+        binding.linearLayoutPassword.setOnClickListener {
+            // Navegar a Cambiar Contraseña
+            val intents = Intent(requireContext(), changePassword::class.java)
+            startActivity(intents)
+        }
 
         return binding.root
     }
