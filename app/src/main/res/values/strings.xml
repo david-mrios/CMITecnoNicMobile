@@ -74,4 +74,8 @@
     <string name="changePassConfirm">Confirmar Nueva Contraseña</string>
     <string name="changePassTitleDown">Ambas contraseñas deben coincidir</string>
     <string name="changePassBtn">Cambiar Contraseña</string>
+    <string name="editProfile">Editar Perfil</string>
+    <string name="editProfileUser">Testing User</string>
+    <string name="editProfileName">Nombre Completo</string>
+    <string name="editProfileCreateDate">Se unió 21 Enero 2024</string>
 </resources>

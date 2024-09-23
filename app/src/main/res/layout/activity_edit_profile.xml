@@ -8,16 +8,15 @@
     tools:context=".editProfile">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
+        android:layout_width="415dp"
         android:layout_height="match_parent"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="VisualLintBounds">
 
         <ImageButton
             android:id="@+id/imageButton"
@@ -26,13 +25,13 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="44dp"
             android:background="@drawable/circle_button"
-            android:contentDescription="Back button"
+            android:contentDescription="@string/descriptionImg"
             android:padding="8dp"
             android:scaleType="centerInside"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_back"
-            tools:ignore="TouchTargetSizeCheck" />
+            tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
 
         <TextView
             android:id="@+id/textView5"
@@ -41,7 +40,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="49dp"
             android:layout_marginEnd="149dp"
-            android:text="Editar Perfil"
+            android:text="@string/editProfile"
             android:textColor="@color/black"
             android:textSize="25sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -54,7 +53,7 @@
             android:layout_marginTop="31dp"
             android:layout_marginEnd="160dp"
             android:background="@drawable/circle_button"
-            android:contentDescription="Profile image"
+            android:contentDescription="@string/descriptionImg"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView5"
             app:srcCompat="@drawable/ic_profile" />
@@ -65,11 +64,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="7dp"
             android:layout_marginEnd="150dp"
-            android:text="Testing User"
+            android:text="@string/editProfileUser"
             android:textColor="@color/black"
-            android:textSize="20dp"
+            android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
+            app:layout_constraintTop_toBottomOf="@+id/imageButton2"
+            tools:ignore="TextSizeCheck,TextSizeCheck,TextSizeCheck,TextSizeCheck" />
 
         <TextView
             android:id="@+id/txtEmail"
@@ -77,31 +77,34 @@
             android:layout_height="16dp"
             android:layout_marginStart="30dp"
             android:layout_marginTop="186dp"
-            android:text="Nombre Completo"
+            android:text="@string/editProfileName"
             android:textColor="@color/gray_500"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+            app:layout_constraintTop_toBottomOf="@+id/imageButton"
+            tools:ignore="TextSizeCheck,TextContrastCheck" />
 
         <EditText
             android:id="@+id/editTextText"
-            android:layout_width="404dp"
+            android:layout_width="match_parent"
             android:layout_height="58dp"
             android:layout_marginStart="30dp"
             android:layout_marginTop="7dp"
+            android:layout_marginEnd="30dp"
             android:autofillHints=""
             android:background="@android:color/transparent"
-            android:drawableLeft="@drawable/ic_testing_user"
+            android:drawableStart="@drawable/ic_testing_user"
             android:drawablePadding="20dp"
             android:ems="10"
+            android:hint="@string/editProfileUser"
             android:inputType="text"
-            android:padding="12dp"
-            android:hint="Testing User"
             android:textColor="@android:color/black"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
+            app:layout_constraintTop_toBottomOf="@+id/txtEmail"
+            tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
 
         <TextView
             android:id="@+id/textView10"
@@ -109,30 +112,34 @@
             android:layout_height="16dp"
             android:layout_marginStart="30dp"
             android:layout_marginTop="6dp"
-            android:text="Correo Electrónico"
+            android:autofillHints=""
+            android:text="@string/txtEmail"
             android:textColor="@color/gray_500"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextText"
+            tools:ignore="TextSizeCheck,TextContrastCheck" />
 
         <EditText
             android:id="@+id/editTextText2"
-            android:layout_width="404dp"
+            android:layout_width="match_parent"
             android:layout_height="58dp"
             android:layout_marginStart="30dp"
             android:layout_marginTop="17dp"
+            android:layout_marginEnd="30dp"
+            android:autofillHints=""
             android:background="@android:color/transparent"
-            android:drawableLeft="@drawable/ic_email_mail_letter"
+            android:drawableStart="@drawable/ic_email_mail_letter"
             android:drawablePadding="20dp"
             android:ems="10"
+            android:hint="@string/txtEmailSignUp"
             android:inputType="textEmailAddress"
-            android:padding="12dp"
-            android:hint="testing@gmail.com"
             android:textColor="@android:color/black"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView10" />
+            app:layout_constraintTop_toBottomOf="@+id/textView10"
+            tools:ignore="TextContrastCheck" />
 
         <TextView
             android:id="@+id/textView11"
@@ -140,30 +147,34 @@
             android:layout_height="16dp"
             android:layout_marginStart="30dp"
             android:layout_marginTop="6dp"
-            android:text="Número de Teléfono"
+            android:text="@string/txtPhoneNumber"
             android:textColor="@color/gray_500"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextText2"
+            tools:ignore="TextSizeCheck,TextContrastCheck" />
 
         <EditText
             android:id="@+id/editTextText3"
-            android:layout_width="404dp"
+            android:layout_width="match_parent"
             android:layout_height="58dp"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="14dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:autofillHints=""
             android:background="@android:color/transparent"
-            android:drawableLeft="@drawable/ic_phone"
+            android:drawableStart="@drawable/ic_phone"
             android:drawablePadding="20dp"
             android:ems="10"
+            android:hint="@string/txtPhoneNum"
             android:inputType="phone"
             android:padding="12dp"
-            android:hint="+8801712663389"
             android:textColor="@android:color/black"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+            app:layout_constraintTop_toBottomOf="@+id/textView11"
+            tools:ignore="TextContrastCheck" />
 
         <TextView
             android:id="@+id/textView12"
@@ -172,7 +183,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginEnd="135dp"
             android:layout_marginBottom="40dp"
-            android:text="Se unió 21 Enero 2024"
+            android:text="@string/editProfileCreateDate"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
