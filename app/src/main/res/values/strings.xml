@@ -68,4 +68,10 @@
     <string name="textLinkSignIn">Registrarse</string>
     <string name="textSingUp">Ya tengo una cuenta.</string>
     <string name="linkTextSingUp">Iniciar sesión</string>
+    <string name="changePassCurrent">Contraseña Actual</string>
+    <string name="changePass">Cambio de Contraseña</string>
+    <string name="changePassNew">Nueva Contraseña</string>
+    <string name="changePassConfirm">Confirmar Nueva Contraseña</string>
+    <string name="changePassTitleDown">Ambas contraseñas deben coincidir</string>
+    <string name="changePassBtn">Cambiar Contraseña</string>
 </resources>
