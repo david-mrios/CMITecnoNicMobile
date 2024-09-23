@@ -2,8 +2,9 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:id="@+id/main"
+    android:layout_gravity="center"
     android:layout_height="match_parent"
     tools:context=".language">
 
@@ -15,11 +16,12 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="40dp"
         android:background="@drawable/circlebutton_signup"
-        android:contentDescription="Back"
+        android:contentDescription="@string/descriptionImg"
         android:padding="16dp"
         android:src="@drawable/ic_back"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
     <!-- Título -->
 
@@ -31,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="53dp"
         android:layout_marginEnd="153dp"
-        android:text="Lenguaje"
+        android:text="@string/languageHead"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,6 +74,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:paddingStart="15dp"
+                android:paddingEnd="15dp"
                 android:layout_weight="1">
 
                 <ImageView
@@ -80,7 +83,7 @@
                     android:layout_height="30dp"
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true"
-                    android:contentDescription="TODO"
+                    android:contentDescription="@string/descriptionImg"
                     android:src="@drawable/ic_united_states"                  />
 
                 <TextView
@@ -90,7 +93,8 @@
                     android:layout_toEndOf="@id/iconIngles"
                     android:layout_centerVertical="true"
                     android:paddingStart="16dp"
-                    android:text="Inglés"
+                    android:paddingEnd="16dp"
+                    android:text="@string/languageIngles"
                     android:textSize="20sp"
                     android:gravity="center_vertical"
                 />
@@ -103,7 +107,8 @@
                 android:layout_height="50dp"
                 android:layout_gravity="center_vertical"
                 android:buttonTint="@color/blue_500"
-                android:minHeight="48dp" />
+                android:minHeight="48dp"
+                tools:ignore="DuplicateSpeakableTextCheck,TouchTargetSizeCheck" />
         </LinearLayout>
         <!-- Línea divisoria -->
         <View
@@ -124,12 +129,13 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:drawableLeft="@drawable/ic_france"
                 android:drawablePadding="8dp"
                 android:gravity="center_vertical|start"
                 android:paddingStart="16dp"
-                android:text="Francés"
-                android:textSize="16sp" />
+                android:paddingEnd="16dp"
+                android:text="@string/languageFrances"
+                android:textSize="16sp"
+                app:drawableStartCompat="@drawable/ic_france" />
 
             <RadioButton
                 android:id="@+id/radioBtnFrance"
@@ -137,7 +143,8 @@
                 android:layout_height="50dp"
                 android:layout_gravity="center_vertical"
                 android:buttonTint="@color/blue_500"
-                android:minHeight="48dp" />
+                android:minHeight="48dp"
+                tools:ignore="TouchTargetSizeCheck" />
 
 
         </LinearLayout>
@@ -160,12 +167,13 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:drawableLeft="@drawable/ic_brazil"
                 android:drawablePadding="8dp"
                 android:gravity="center_vertical|start"
                 android:paddingStart="16dp"
-                android:text="Australia"
-                android:textSize="16sp" />
+                android:paddingEnd="16dp"
+                android:text="@string/languageAustralia"
+                android:textSize="16sp"
+                app:drawableLeftCompat="@drawable/ic_brazil" />
 
             <RadioButton
                 android:id="@+id/radioBtnAustralia"
@@ -173,7 +181,8 @@
                 android:layout_height="50dp"
                 android:layout_gravity="center_vertical"
                 android:buttonTint="@color/blue_500"
-                android:minHeight="48dp" />
+                android:minHeight="48dp"
+                tools:ignore="TouchTargetSizeCheck" />
 
 
         </LinearLayout>
@@ -196,12 +205,14 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:drawableLeft="@drawable/ic_spain"
                 android:drawablePadding="8dp"
                 android:gravity="center_vertical|start"
                 android:paddingStart="16dp"
+                android:paddingEnd="16dp"
                 android:text="Español"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                app:drawableLeftCompat="@drawable/ic_spain"
+                tools:ignore="HardcodedText" />
 
             <RadioButton
                 android:id="@+id/radioBtnSpanish"
@@ -209,7 +220,8 @@
                 android:layout_height="50dp"
                 android:layout_gravity="center_vertical"
                 android:buttonTint="@color/blue_500"
-                android:minHeight="48dp" />
+                android:minHeight="48dp"
+                tools:ignore="TouchTargetSizeCheck" />
 
 
         </LinearLayout>
@@ -232,12 +244,13 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:drawableLeft="@drawable/ic_vietnam"
                 android:drawablePadding="8dp"
                 android:gravity="center_vertical|start"
                 android:paddingStart="16dp"
-                android:text="Vietman"
-                android:textSize="16sp" />
+                android:paddingEnd="16dp"
+                android:text="@string/languageVietman"
+                android:textSize="16sp"
+                app:drawableStartCompat="@drawable/ic_vietnam" />
 
             <RadioButton
                 android:id="@+id/radioBtnVietnam"

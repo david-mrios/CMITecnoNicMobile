@@ -78,4 +78,9 @@
     <string name="editProfileUser">Testing User</string>
     <string name="editProfileName">Nombre Completo</string>
     <string name="editProfileCreateDate">Se unió 21 Enero 2024</string>
+    <string name="languageHead">Lenguaje</string>
+    <string name="languageIngles">Inglés</string>
+    <string name="languageFrances">Francés</string>
+    <string name="languageAustralia">Australia</string>
+    <string name="languageVietman">Vietman</string>
 </resources>
