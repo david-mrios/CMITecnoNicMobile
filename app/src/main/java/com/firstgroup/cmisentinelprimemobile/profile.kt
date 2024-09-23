@@ -28,6 +28,14 @@ class profile : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+
+        binding.addImgBtn.setOnClickListener {
+            val intent = Intent(this, editProfile::class.java)
+            startActivity(intent)
+            finish()
+        }
+
         binding.backImgBtn.setOnClickListener {
             val intent = Intent(this, MainMenu::class.java)
             startActivity(intent)
