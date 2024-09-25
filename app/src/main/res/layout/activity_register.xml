@@ -10,7 +10,7 @@
 
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="406dp"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="16dp"
@@ -119,11 +119,11 @@
             android:layout_height="60dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
-            app:boxBackgroundMode="filled"
             android:hint="@string/hintPass"
+            app:boxBackgroundMode="filled"
+            app:boxStrokeWidth="1dp"
             app:endIconMode="password_toggle"
-            app:errorEnabled="true"
-            app:boxStrokeWidth="1dp">
+            app:errorEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/textEditPass"
@@ -133,9 +133,9 @@
                 android:drawablePadding="10dp"
                 android:gravity="center_vertical"
                 android:inputType="textPassword"
-                android:textSize="16sp"
                 android:paddingStart="10dp"
-                android:paddingEnd="10dp" />
+                android:paddingEnd="10dp"
+                android:textSize="16sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <androidx.appcompat.widget.AppCompatButton
