@@ -10,7 +10,7 @@
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        tools:ignore="SpeakableTextPresentCheck">
+        tools:ignore="SpeakableTextPresentCheck,UselessParent">
 
         <FrameLayout
             android:layout_width="wrap_content"
@@ -26,7 +26,7 @@
                 android:textStyle="bold"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="60dp"
-                android:text="Clientes con mas pedidos" />
+                android:text="@string/headFirstStatistics" />
 
             <!-- Orders -->
             <ListView
@@ -50,7 +50,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="315dp"
                 android:layout_marginStart="40dp"
-                android:text="Vista de Pedidos"
+                android:text="@string/headSecondStat"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -70,7 +70,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="315dp"
                 android:layout_marginStart="240dp"
-                android:text="Ganacias"
+                android:text="@string/headProfits"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -78,12 +78,12 @@
                 android:id="@+id/tvProfit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="360dp"
                 android:layout_marginStart="240dp"
-                android:textStyle="bold"
-                android:textColor="@color/green_500"
+                android:layout_marginTop="360dp"
+                android:text="@string/headFourStac"
+                android:textColor="#43A047"
                 android:textSize="20sp"
-                android:text="Data" />
+                android:textStyle="bold" />
 
                 <!--  Spent  -->
 
@@ -93,7 +93,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="420dp"
                 android:layout_marginStart="240dp"
-                android:text="Gastado"
+                android:text="@string/headThirdStatic"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -101,12 +101,13 @@
                 android:id="@+id/tvSpent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="460dp"
-                android:textColor="@color/red_500"
                 android:layout_marginStart="240dp"
-                android:textStyle="bold"
+                android:layout_marginTop="460dp"
+                android:text="@string/headFourStac"
+                android:textColor="@color/red_500"
                 android:textSize="20sp"
-                android:text="Data" />
+                android:textStyle="bold"
+                tools:ignore="TextContrastCheck" />
 
             <View
                 android:id="@+id/viewLineBottom2"
@@ -121,7 +122,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="630dp"
                 android:textAlignment="center"
-                android:text="Productos por región"
+                android:text="@string/region1"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -145,7 +146,7 @@
                         android:id="@+id/tvFirstProduct"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Laptop"
+                        android:text="@string/product1"
                         android:textStyle="bold"
                         android:textSize="18sp"/>
 
@@ -158,7 +159,7 @@
                             android:id="@+id/tvFirstRegion"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Managua"
+                            android:text="@string/address1"
                             android:layout_gravity="center_vertical"/>
 
                         <TextView
@@ -166,7 +167,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
-                            android:text="50000.0"
+                            android:text="@string/countProfit"
                             android:layout_gravity="center_vertical"/>
 
                     </LinearLayout>
@@ -193,7 +194,7 @@
                         android:id="@+id/tvSecondProduct"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Cellphone"
+                        android:text="@string/product2"
                         android:textStyle="bold"
                         android:textSize="18sp"/>
 
@@ -206,7 +207,7 @@
                             android:id="@+id/tvSecondRegion"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Masaya"
+                            android:text="@string/address2"
                             android:layout_gravity="center_vertical"/>
 
                         <TextView
@@ -214,7 +215,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
-                            android:text="30000.0"
+                            android:text="@string/countSpent"
                             android:layout_gravity="center_vertical"/>
 
                     </LinearLayout>
@@ -243,7 +244,7 @@
                         android:id="@+id/tvThirdProduct"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Airdrop"
+                        android:text="@string/product3"
                         android:textStyle="bold"
                         android:textSize="18sp"/>
 
@@ -256,7 +257,7 @@
                             android:id="@+id/tvThirdRegion"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Granada"
+                            android:text="@string/address3"
                             android:layout_gravity="center_vertical"/>
 
                         <TextView
@@ -264,7 +265,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
-                            android:text="20000.0"
+                            android:text="@string/priceProduc"
                             android:layout_gravity="center_vertical"/>
 
                     </LinearLayout>

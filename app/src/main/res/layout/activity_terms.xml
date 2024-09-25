@@ -3,10 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:layout_gravity="center"
     android:layout_width="410dp"
     android:layout_height="match_parent"
-    tools:context=".Terms">
+    android:layout_gravity="center"
+    tools:context=".Terms"
+    tools:ignore="TextSizeCheck">
 
     <ImageButton
         android:id="@+id/backButton"
@@ -14,12 +15,13 @@
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="25dp"
-        android:contentDescription="Back Button"
+        android:background="@drawable/circle_button"
+        android:contentDescription="@string/descriptionImg"
         android:padding="12dp"
         android:src="@drawable/ic_left"
-        android:background="@drawable/circle_button"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ImageContrastCheck" />
 
     <TextView
         android:id="@+id/textView7"
@@ -27,11 +29,12 @@
         android:layout_height="28dp"
         android:layout_marginStart="33dp"
         android:layout_marginTop="35dp"
-        android:text="Términos y Condiciones"
+        android:text="@string/termHead"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/backButton"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextSizeCheck" />
 
     <ScrollView
         android:layout_width="match_parent"

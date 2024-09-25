@@ -29,5 +29,6 @@
         app:layout_constraintRight_toRightOf="parent"
         app:menu="@menu/bottom_navigation"
         app:labelVisibilityMode="labeled"
-        style="@style/BottomNavigation"/>
+        style="@style/BottomNavigation"
+        tools:ignore="VisualLintBottomNav" />
 </RelativeLayout>

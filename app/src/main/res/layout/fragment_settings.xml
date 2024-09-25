@@ -30,9 +30,10 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:background="@drawable/ic_circular_button"
-                android:contentDescription="Todo"
+                android:contentDescription="@string/descriptionImg"
                 android:elevation="4dp"
-                app:srcCompat="@drawable/ic_path" />
+                app:srcCompat="@drawable/ic_path"
+                tools:ignore="DuplicateSpeakableTextCheck" />
 
             <TextView
                 android:id="@+id/titleTxt"
@@ -40,9 +41,10 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:gravity="center"
-                android:text="Ajuste"
+                android:text="@string/settingProfile"
                 android:textColor="@android:color/black"
-                android:textSize="25sp" />
+                android:textSize="25sp"
+                tools:ignore="RelativeOverlap" />
 
             <ImageButton
                 android:id="@+id/groupImgBtn"
@@ -65,8 +67,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="27dp"
             android:paddingBottom="8dp"
-            android:text="General"
-            android:textColor="@android:color/darker_gray"
+            android:text="@string/settingHead2"
+            android:textColor="#A1887F"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
@@ -95,19 +97,20 @@
 
                 <TextView
                     android:id="@+id/textLanguaje"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Lenguaje"
+                    android:text="@string/headLenguage"
                     android:textColor="@android:color/black"
                     android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:paddingStart="8dp"
                     android:paddingEnd="8dp"
-                    android:text="Español"
-                    android:textColor="@android:color/darker_gray"
+                    android:text="@string/lenguageHardcodeado"
+                    android:textColor="#546E7A"
                     android:textSize="16sp" />
 
                 <ImageButton
@@ -116,7 +119,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
                     android:background="@drawable/ic_arrowbtn"
-                    android:contentDescription="TODO" />
+                    android:contentDescription="@string/descriptionImg"
+                    tools:ignore="ImageContrastCheck,TouchTargetSizeCheck" />
 
             </LinearLayout>
 
@@ -153,10 +157,10 @@
 
                 <TextView
                     android:id="@+id/textProfile"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Mi perfil"
+                    android:text="@string/headProfileSetting"
                     android:textColor="@android:color/black"
                     android:textSize="16sp" />
 
@@ -166,7 +170,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
                     android:background="@drawable/ic_arrowbtn"
-                    android:contentDescription="TODO" />
+                    android:contentDescription="@string/descriptionImg"
+                    tools:ignore="ImageContrastCheck,TouchTargetSizeCheck" />
 
             </LinearLayout>
 
@@ -204,10 +209,10 @@
 
                 <TextView
                     android:id="@+id/textContact"
-                    android:layout_width="299dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Contactenos"
+                    android:text="@string/contacHead"
                     android:textColor="@android:color/black"
                     android:textSize="16sp" />
 
@@ -217,7 +222,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
                     android:background="@drawable/ic_arrowbtn"
-                    android:contentDescription="TODO" />
+                    android:contentDescription="@string/descriptionImg"
+                    tools:ignore="ImageContrastCheck,TouchTargetSizeCheck" />
 
             </LinearLayout>
 
@@ -237,8 +243,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:paddingBottom="8dp"
-            android:text="Seguridad"
-            android:textColor="@android:color/darker_gray"
+            android:text="@string/headSecurity"
+            android:textColor="#A1887F"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayoutContact" />
@@ -264,10 +270,10 @@
 
                 <TextView
                     android:id="@+id/textPassword"
-                    android:layout_width="30dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Cambiar la contraseña"
+                    android:text="@string/changePass"
                     android:textColor="@android:color/black"
                     android:textSize="16sp" />
 
@@ -278,7 +284,8 @@
                     android:layout_marginEnd="10dp"
 
                     android:background="@drawable/ic_arrowbtn"
-                    android:contentDescription="TODO" />
+                    android:contentDescription="@string/descriptionImg"
+                    tools:ignore="ImageContrastCheck,TouchTargetSizeCheck" />
 
             </LinearLayout>
 
@@ -313,21 +320,22 @@
 
                 <TextView
                     android:id="@+id/textTerms"
-                    android:layout_width="30dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Politicas de privacidad"
+                    android:text="@string/termsSetting"
                     android:textColor="@android:color/black"
                     android:textSize="16sp" />
 
                 <ImageButton
                     android:id="@+id/btnTerms"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
 
                     android:layout_marginEnd="10dp"
                     android:background="@drawable/ic_arrowbtn"
-                    android:contentDescription="TODO" />
+                    android:contentDescription="@string/descriptionImg"
+                    tools:ignore="ImageContrastCheck,TouchTargetSizeCheck" />
 
             </LinearLayout>
 

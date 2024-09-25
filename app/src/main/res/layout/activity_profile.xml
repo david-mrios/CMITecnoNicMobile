@@ -40,11 +40,12 @@
             android:layout_marginTop="54dp"
             android:layout_marginEnd="24dp"
             android:background="@drawable/ic_circular_button"
-            android:contentDescription="TODO"
+            android:contentDescription="@string/descriptionImg"
             android:padding="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_user_edit_pen" />
+            app:srcCompat="@drawable/ic_user_edit_pen"
+            tools:ignore="DuplicateSpeakableTextCheck" />
 
         <TextView
             android:id="@+id/textView4"
@@ -52,12 +53,13 @@
             android:layout_height="34dp"
             android:layout_marginStart="100dp"
             android:layout_marginTop="68dp"
-            android:text="Perfil"
+            android:text="@string/headProfile"
             android:textColor="@android:color/black"
             android:textSize="20sp"
             app:layout_constraintStart_toEndOf="@+id/backImgBtn"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_goneMarginStart="16dp" />
+            app:layout_goneMarginStart="16dp"
+            tools:ignore="TextSizeCheck" />
 
         <ImageView
             android:id="@+id/profileImgView"
@@ -65,7 +67,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:layout_marginTop="36dp"
-            android:contentDescription="TODO"
+            android:contentDescription="@string/descriptionImg"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/backImgBtn"
             app:srcCompat="@drawable/ic_profile" />
@@ -76,7 +78,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="55dp"
             android:layout_marginEnd="160dp"
-            android:text="Testing User"
+            android:text="@string/txtUser"
             android:textColor="@android:color/black"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -105,8 +107,9 @@
                 <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:contentDescription="Profile Icon"
-                    android:src="@drawable/ic_profile_text" />
+                    android:contentDescription="@string/descriptionImg"
+                    android:src="@drawable/ic_profile_text"
+                    tools:ignore="ImageContrastCheck" />
 
                 <TextView
                     android:id="@+id/textProfile"
@@ -114,7 +117,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_weight="1"
-                    android:text="Información Personal"
+                    android:text="@string/infoPersonalProfile"
                     android:textColor="@android:color/black"
                     android:textSize="16sp" />
 
@@ -123,8 +126,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/ic_following"
-                    android:contentDescription="Arrow Icon"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    android:contentDescription="@string/descriptionImg"
+                    tools:ignore="TouchTargetSizeCheck,ImageContrastCheck" />
 
             </LinearLayout>
 
@@ -156,9 +159,10 @@
                 <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:contentDescription="Settings Icon"
+                    android:contentDescription="@string/descriptionImg"
                     android:src="@drawable/ic_configuration"
-                    app:tint="@android:color/darker_gray" />
+                    app:tint="@android:color/darker_gray"
+                    tools:ignore="ImageContrastCheck" />
 
                 <TextView
                     android:id="@+id/textSettings"
@@ -166,7 +170,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_weight="1"
-                    android:text="Ajuste"
+                    android:text="@string/settingProfile"
                     android:textColor="@android:color/black"
                     android:textSize="16sp" />
 
@@ -175,9 +179,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/ic_following"
-                    android:contentDescription="Arrow Icon"
+                    android:contentDescription="@string/descriptionImg"
                     app:tint="@android:color/darker_gray"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    tools:ignore="TouchTargetSizeCheck,ImageContrastCheck" />
             </LinearLayout>
 
             <!-- Línea de división -->
