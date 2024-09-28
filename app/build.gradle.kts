@@ -37,6 +37,10 @@ android {
     viewBinding {
         enable  = true
     }
+
+    buildFeatures{
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -51,5 +55,10 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(kotlin("script-runtime"))
 
+    // API PACKAGE INTEGRATION
+    implementation (libs.fuel) //Core package
+    implementation (libs.github.fuel.android) //Android
+    implementation (libs.github.fuel.gson) //Fuel Gson
+    implementation (libs.gson) //Gson
 
 }
