@@ -55,90 +55,91 @@ class StatisticsFragment : Fragment() {
         rvSalesByShipmentLocationPivot = binding.rvSalesByShipmentLocationPivot
 
         // 1. SalesByCustomerAndProduct
-        Fuel.get("")
+        Fuel.get("https://4slz48p3-5069.use2.devtunnels.ms/cubedata/get-sales-by-customer-and-product")
             .response { _, response, _ ->
                 val jsonString = response.body().asString("application/json")
                 val gson = Gson()
                 salesByCustomerAndProductList =
-                    gson.fromJson(jsonString, Array<SalesByCustomerAndProduct>::class.java).toList()
+                    gson.fromJson(jsonString, Array<SalesByCustomerAndProduct>::class.java).toList().take(10) // Limitar a 10 registros
                 rvSalesByCustomerAndProduct.layoutManager = LinearLayoutManager(requireContext())
                 rvSalesByCustomerAndProduct.adapter =
                     SalesCustomerProductAdapter(salesByCustomerAndProductList)
             }
 
         // 2. SalesByShipmentLocation
-        Fuel.get("")
+        Fuel.get("https://4slz48p3-5069.use2.devtunnels.ms/cubedata/get-sales-by-shipment-location")
             .response { _, response, _ ->
                 val jsonString = response.body().asString("application/json")
                 val gson = Gson()
                 salesByShipmentLocationList =
-                    gson.fromJson(jsonString, Array<SalesByShipmentLocation>::class.java).toList()
+                    gson.fromJson(jsonString, Array<SalesByShipmentLocation>::class.java).toList().take(10) // Limitar a 10 registros
                 rvSalesByShipmentLocation.layoutManager = LinearLayoutManager(requireContext())
                 rvSalesByShipmentLocation.adapter = SalesShipmentLocationAdapter(salesByShipmentLocationList)
             }
 
         // 3. ShippingCostByProduct
-        Fuel.get("")
+        Fuel.get("https://4slz48p3-5069.use2.devtunnels.ms/cubedata/get-shipping-cost-by-product")
             .response { _, response, _ ->
                 val jsonString = response.body().asString("application/json")
                 val gson = Gson()
                 ShippingCostByProductList =
-                    gson.fromJson(jsonString, Array<ShippingCostByProduct>::class.java).toList()
+                    gson.fromJson(jsonString, Array<ShippingCostByProduct>::class.java).toList().take(10) // Limitar a 10 registros
                 rvShippingCostByProduct.layoutManager = LinearLayoutManager(requireContext())
                 rvShippingCostByProduct.adapter =
                     ShippingCostProductAdapter(ShippingCostByProductList)
             }
 
         // 4. SalesByPurchaseOrder
-        Fuel.get("")
+        Fuel.get("https://4slz48p3-5069.use2.devtunnels.ms/cubedata/get-sales-by-purchase-order")
             .response { _, response, _ ->
                 val jsonString = response.body().asString("application/json")
                 val gson = Gson()
                 salesByPurchaseOrderList =
-                    gson.fromJson(jsonString, Array<SalesByPurchaseOrder>::class.java).toList()
+                    gson.fromJson(jsonString, Array<SalesByPurchaseOrder>::class.java).toList().take(10) // Limitar a 10 registros
                 rvSalesByPurchaseOrder.layoutManager = LinearLayoutManager(requireContext())
                 rvSalesByPurchaseOrder.adapter = SalesPurchaseOrderAdapter(salesByPurchaseOrderList)
             }
 
         // 5. TaxesByCustomer
-        Fuel.get("")
+        Fuel.get("https://4slz48p3-5069.use2.devtunnels.ms/cubedata/get-taxes-by-customer")
             .response { _, response, _ ->
                 val jsonString = response.body().asString("application/json")
                 val gson = Gson()
-                taxesByCustomerList = gson.fromJson(jsonString, Array<TaxesByCustomer>::class.java).toList()
+                taxesByCustomerList = gson.fromJson(jsonString, Array<TaxesByCustomer>::class.java).toList().take(10) // Limitar a 10 registros
                 rvTaxesByCustomer.layoutManager = LinearLayoutManager(requireContext())
                 rvTaxesByCustomer.adapter = TaxesCustomerAdapter(taxesByCustomerList)
             }
 
         // 6. ShippedProductsByLocation
-        Fuel.get("")
+        Fuel.get("https://4slz48p3-5069.use2.devtunnels.ms/cubedata/get-shipped-products-by-location")
             .response { _, response, _ ->
                 val jsonString = response.body().asString("application/json")
                 val gson = Gson()
-                shippedProductsByLocationList = gson.fromJson(jsonString, Array<ShippedProductsByLocation>::class.java).toList()
+                shippedProductsByLocationList = gson.fromJson(jsonString, Array<ShippedProductsByLocation>::class.java).toList().take(10) // Limitar a 10 registros
                 rvShippedProductsByLocation.layoutManager = LinearLayoutManager(requireContext())
                 rvShippedProductsByLocation.adapter = ShippedProductsByLocationAdapter(shippedProductsByLocationList)
             }
 
         // 7. ShippingCostByPurchaseOrder
-        Fuel.get("")
+        Fuel.get("https://4slz48p3-5069.use2.devtunnels.ms/cubedata/get-shipping-cost-by-purchase-order")
             .response { _, response, _ ->
                 val jsonString = response.body().asString("application/json")
                 val gson = Gson()
-                shippingCostByPurchaseOrderList = gson.fromJson(jsonString, Array<ShippingCostByPurchaseOrder>::class.java).toList()
+                shippingCostByPurchaseOrderList = gson.fromJson(jsonString, Array<ShippingCostByPurchaseOrder>::class.java).toList().take(10) // Limitar a 10 registros
                 rvShippingCostByPurchaseOrder.layoutManager = LinearLayoutManager(requireContext())
                 rvShippingCostByPurchaseOrder.adapter = ShippingCostByPurchaseOrderAdapter(shippingCostByPurchaseOrderList)
             }
 
-        // 8.  SalesByShipmentLocationPivot
-        Fuel.get("")
+        // 8. SalesByShipmentLocationPivot
+        Fuel.get("https://4slz48p3-5069.use2.devtunnels.ms/cubedata/get-sales-by-shipment-location-pivot")
             .response { _, response, _ ->
                 val jsonString = response.body().asString("application/json")
                 val gson = Gson()
-                salesByShipmentLocationPivotList = gson.fromJson(jsonString, Array<SalesByShipmentLocationPivot>::class.java).toList()
+                salesByShipmentLocationPivotList = gson.fromJson(jsonString, Array<SalesByShipmentLocationPivot>::class.java).toList().take(10) // Limitar a 10 registros
                 rvSalesByShipmentLocationPivot.layoutManager = LinearLayoutManager(requireContext())
                 rvSalesByShipmentLocationPivot.adapter = SalesShipmentPivotAdapter(salesByShipmentLocationPivotList)
             }
+
         return binding.root
     }
 
