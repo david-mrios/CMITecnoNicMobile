@@ -8,9 +8,71 @@
     tools:context=".StatisticsFragment">
 
     <ScrollView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:ignore="SpeakableTextPresentCheck,UselessLeaf,UselessParent">
-    </ScrollView>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- RecyclerView for Sales By Customer and Product -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSalesByCustomerAndProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"/>
+
+            <!-- RecyclerView for Sales By Shipment Location -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSalesByShipmentLocation"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="30dp"
+                android:layout_height="wrap_content"/>
+
+            <!-- RecyclerView for Shipping Cost By Product -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvShippingCostByProduct"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="30dp"
+                android:layout_height="wrap_content"/>
+
+            <!-- RecyclerView for Sales By Purchase Order -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSalesByPurchaseOrder"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="30dp"
+                android:layout_height="wrap_content"/>
+
+            <!-- RecyclerView for Taxes By Customer -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTaxesByCustomer"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="30dp"
+                android:layout_height="wrap_content"/>
+
+            <!-- RecyclerView for Shipped Products By Location -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvShippedProductsByLocation"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="30dp"
+                android:layout_height="wrap_content"/>
+
+            <!-- RecyclerView for Shipping Cost By Purchase Order -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvShippingCostByPurchaseOrder"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="30dp"
+                android:layout_height="wrap_content"/>
+
+            <!-- RecyclerView for Sales By Shipment Location Pivot -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSalesByShipmentLocationPivot"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="80dp"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </ScrollView>
 </FrameLayout>
