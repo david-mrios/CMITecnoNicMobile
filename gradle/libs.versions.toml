@@ -18,6 +18,7 @@ constraintlayout = "2.1.4"
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 fuel = { module = "com.github.kittinunf.fuel:fuel", version.ref = "fuel" }
+fuel-coroutines = { module = "com.github.kittinunf.fuel:fuel-coroutines", version.ref = "fuel" }
 github-fuel-android = { module = "com.github.kittinunf.fuel:fuel-android", version.ref = "fuelAndroid" }
 github-fuel-gson = { module = "com.github.kittinunf.fuel:fuel-gson", version.ref = "fuelGson" }
 gson = { module = "com.google.code.gson:gson", version.ref = "gson" }

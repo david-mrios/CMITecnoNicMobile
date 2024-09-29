@@ -60,5 +60,6 @@ dependencies {
     implementation (libs.github.fuel.android) //Android
     implementation (libs.github.fuel.gson) //Fuel Gson
     implementation (libs.gson) //Gson
+    implementation (libs.fuel.coroutines)
 
 }

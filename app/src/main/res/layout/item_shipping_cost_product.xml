@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="?attr/selectableItemBackground">
+
+    <!-- Product Hierarchy -->
+    <TextView
+        android:id="@+id/tvProductHierarchy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Product: Carga inalámbrica"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:drawableLeft="@drawable/ci_profile"
+        android:drawablePadding="8dp" />
+
+    <!-- Brand Name -->
+    <TextView
+        android:id="@+id/tvBrandName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Brand: Amazon"
+        android:textSize="16sp"
+        android:textColor="@color/gray_500"
+        android:drawableLeft="@drawable/ic_default_state_one"
+        android:drawablePadding="8dp"
+        android:layout_marginTop="4dp" />
+
+    <!-- Shipping Cost -->
+    <TextView
+        android:id="@+id/tvShippingCost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Shipping Cost: $25.52"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="8dp"
+        android:textStyle="italic" />
+
+    <!-- Divider Line -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_500"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp" />
+
+
+</LinearLayout>

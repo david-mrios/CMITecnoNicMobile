@@ -36,28 +36,23 @@ class SettingsFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inicializar el binding para inflar el layout
+    ): View {
         _binding = FragmentSettingsBinding.inflate(inflater, container, false)
 
-        // Configurar el evento click para navegar a ProfileActivity
         binding.linearLayoutLenguaje.setOnClickListener {
            val intent = Intent(requireContext(), language::class.java)
            startActivity(intent)
         }
         binding.linearLayoutProfile.setOnClickListener {
-            // Navegar a ProfileActivity
             val intents = Intent(requireContext(), profile::class.java)
             startActivity(intents)
         }
 
         binding.linearLayoutPassword.setOnClickListener {
-            // Navegar a Cambiar Contraseña
             val intents = Intent(requireContext(), changePassword::class.java)
             startActivity(intents)
         }
         binding.linearLayoutTerms.setOnClickListener {
-            // Navegar a la actividad Terms
             val intent = Intent(requireContext(), Terms::class.java)
             startActivity(intent)
         }

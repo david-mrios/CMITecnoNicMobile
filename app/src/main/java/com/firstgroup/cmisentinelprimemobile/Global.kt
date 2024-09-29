@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 // 1. Total de ventas por cliente y producto (Operación: Dice)
 data class SalesByCustomerAndProduct(
     @SerializedName("Customer Key") val customerKey: String,  // Clave del cliente
-    @SerializedName("Product") val product: String,          // Nombre del producto
+    @SerializedName("ProductHierarchy") val product: String,          // Nombre del producto
     @SerializedName("Sales Amount") val salesAmount: Double, // Monto total de ventas
     @SerializedName("Quantity") val quantity: Int            // Cantidad vendida
 )
@@ -19,14 +19,14 @@ data class SalesByShipmentLocation(
 
 // 3. Costo total de envío por cada producto (Operación: Slice)
 data class ShippingCostByProduct(
-    @SerializedName("Product") val product: String,          // Producto
+    @SerializedName("ProductHierarchy") val product: String,          // Producto
     @SerializedName("Brand Name") val brandName: String,     // Marca
     @SerializedName("Shipping Cost") val shippingCost: Double // Costo de envío por producto
 )
 
 // 4. Total de ventas por orden de compra (Operación: Dice)
 data class SalesByPurchaseOrder(
-    @SerializedName("Order Status") val orderStatus: String,  // Estado de la orden
+    @SerializedName("Status") val orderStatus: String,  // Estado de la orden
     @SerializedName("Sales Amount") val salesAmount: Double,  // Monto total de ventas
     @SerializedName("Quantity") val quantity: Int             // Cantidad de productos en la orden
 )
@@ -47,7 +47,7 @@ data class ShippedProductsByLocation(
 
 // 7. Costo total de envío por cada orden de compra (Operación: Slice)
 data class ShippingCostByPurchaseOrder(
-    @SerializedName("Order Status") val orderStatus: String,   // Estado de la orden
+    @SerializedName("Status") val orderStatus: String,   // Estado de la orden
     @SerializedName("Shipping Cost") val shippingCost: Double  // Costo total de envío
 )
 

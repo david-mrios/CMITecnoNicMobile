@@ -37,50 +37,6 @@ class StatisticsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Configurar RecyclerView de estadísticas
-        val recyclerView: RecyclerView = view.findViewById(R.id.recyclerVStateOrder)
-        recyclerView.layoutManager = LinearLayoutManager(requireContext())
-
-        val statistics = listOf(
-            StatisticItem("250", "Entregado", "250", "En ruta"),
-            StatisticItem("250", "Cancelado", "250", "Pendiente"),
-        )
-
-        val recycleAdapter = StatisticsAdapter(statistics)
-        recyclerView.adapter = recycleAdapter
-
-
-        // Datos hardcodeados para la lista
-        val data = listOf(
-            "Cliente A: 15 pedidos - $750000.0",
-            "Cliente B: 12 pedidos - $600000.0",
-            "Cliente C: 10 pedidos - $450000.0"
-        )
-
-        // Configurar el ListView
-        val listView: ListView = view.findViewById(R.id.listOrder)
-        val listAdapter = ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1, data)
-        listView.adapter = listAdapter
-
-        // Asignar el valor de ganancia al TextView
-        val tvProfit: TextView = view.findViewById(R.id.tvProfit)
-        val earnings = "$169.6K"
-        tvProfit.text = earnings
-
-        // Asignar el valor de ganancia al TextView
-        val tvSpent: TextView = view.findViewById(R.id.tvSpent)
-        val spent = "$169.6K"
-        tvSpent.text = spent
-
-        // Setear el progreso de cada barra
-        val progressBarProduct1 = view.findViewById<ProgressBar>(R.id.progressBarProduct1)
-        val progressBarProduct2 = view.findViewById<ProgressBar>(R.id.progressBarProduct2)
-        val progressBarProduct3 = view.findViewById<ProgressBar>(R.id.progressBarProduct3)
-
-        // Ejemplo: actualizar valores en tiempo real
-        progressBarProduct1.progress = 100
-        progressBarProduct2.progress = 50
-        progressBarProduct3.progress = 25
     }
 
     companion object {

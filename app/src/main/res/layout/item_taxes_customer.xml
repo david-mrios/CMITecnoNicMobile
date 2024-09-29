@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="?attr/selectableItemBackground">
+
+    <!-- Customer Key -->
+    <TextView
+        android:id="@+id/tvCustomerKey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Customer Key: Aaron Elwood"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:drawableLeft="@drawable/ci_profile"
+    android:drawablePadding="8dp" />
+
+    <!-- Last Name -->
+
+    <!-- Tax Amount -->
+    <TextView
+        android:id="@+id/tvTaxAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tax Amount: $6"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="8dp"
+        android:textStyle="italic" />
+
+    <!-- Divider Line -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp" />
+
+</LinearLayout>
