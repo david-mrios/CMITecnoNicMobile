@@ -20,16 +20,22 @@ class ShippingCostByPurchaseOrderAdapter(private val purchaseOrders: List<Shippi
         fun bind(purchaseOrder: ShippingCostByPurchaseOrder) {
             statusText.text = "Estado: ${purchaseOrder.orderStatus}" // Asigna el estado de la orden
             shippingCost.text = "Costo de Envío: $${purchaseOrder.shippingCost}" // Asigna el costo de envío
-            if (purchaseOrder.orderStatus == "cancelado") {
-                statusIcon.setImageResource(R.drawable.ic_cancelled)
-            } else if (purchaseOrder.orderStatus == "entregado") {
-                statusIcon.setImageResource(R.drawable.ic_delivered) // Icono de ejemplo para otros estados
-            } else if (purchaseOrder.orderStatus == "enviado") {
-                statusIcon.setImageResource(R.drawable.ic_delivered) // Icono de ejemplo para otros estados
-            } else if (purchaseOrder.orderStatus == "pendiente") {
-                statusIcon.setImageResource(R.drawable.ic_pending) // Icono de ejemplo para otros estados
-            } else  {
-                statusIcon.setImageResource(R.drawable.ic_pending) // Icono de ejemplo para otros estados
+            when (purchaseOrder.orderStatus) {
+                "cancelado" -> {
+                    statusIcon.setImageResource(R.drawable.ic_cancelled)
+                }
+                "entregado" -> {
+                    statusIcon.setImageResource(R.drawable.ic_delivered) // Icono de ejemplo para otros estados
+                }
+                "enviado" -> {
+                    statusIcon.setImageResource(R.drawable.ic_delivered) // Icono de ejemplo para otros estados
+                }
+                "pendiente" -> {
+                    statusIcon.setImageResource(R.drawable.ic_pending) // Icono de ejemplo para otros estados
+                }
+                else -> {
+                    statusIcon.setImageResource(R.drawable.ic_pending) // Icono de ejemplo para otros estados
+                }
             }
         }
     }

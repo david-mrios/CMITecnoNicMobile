@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView
 class SalesPurchaseOrderAdapter(private val orderList: List<SalesByPurchaseOrder>) :
     RecyclerView.Adapter<SalesPurchaseOrderAdapter.OrderViewHolder>() {
 
-    // ViewHolder: Vincula los elementos del layout con los datos
     class OrderViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val tvSalesStatus = itemView.findViewById<TextView>(R.id.tvSalesStatus)
         private val tvSalesAmount = itemView.findViewById<TextView>(R.id.tvSalesAmount)

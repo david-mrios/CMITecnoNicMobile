@@ -17,6 +17,7 @@ data class SalesByShipmentLocation(
     @SerializedName("Sales Amount") val salesAmount: Double        // Monto total de ventas
 )
 
+
 // 3. Costo total de envío por cada producto (Operación: Slice)
 data class ShippingCostByProduct(
     @SerializedName("ProductHierarchy") val product: String,          // Producto
@@ -59,14 +60,12 @@ data class SalesByShipmentLocationPivot(
     @SerializedName("Shipping Cost") val shippingCost: Double         // Costo de envío
 )
 
-// Declaración de listas
+// Declaración una lista
 lateinit var salesByCustomerAndProductList: List<SalesByCustomerAndProduct>
 lateinit var salesByShipmentLocationList: List<SalesByShipmentLocation>
-lateinit var shippingCostByProductList: List<ShippingCostByProduct>
+lateinit var ShippingCostByProductList: List<ShippingCostByProduct>
 lateinit var salesByPurchaseOrderList: List<SalesByPurchaseOrder>
 lateinit var taxesByCustomerList: List<TaxesByCustomer>
 lateinit var shippedProductsByLocationList: List<ShippedProductsByLocation>
 lateinit var shippingCostByPurchaseOrderList: List<ShippingCostByPurchaseOrder>
 lateinit var salesByShipmentLocationPivotList: List<SalesByShipmentLocationPivot>
-
-
