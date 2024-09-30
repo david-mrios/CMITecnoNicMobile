@@ -1,53 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="16dp"
-    android:background="?attr/selectableItemBackground">
+    android:layout_margin="8dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="8dp">
 
-    <!-- Shipping City -->
-    <TextView
-        android:id="@+id/tvShippingCity"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="City: Masaya"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:drawablePadding="8dp" />
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="?attr/selectableItemBackground">
 
-    <!-- Shipping Country -->
-    <TextView
-        android:id="@+id/tvShippingCountry"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Country: Nicaragua"
-        android:textSize="16sp"
-        android:textColor="@color/blue_500"
-        android:drawableLeft="@drawable/ic_brazil"
-        android:drawablePadding="8dp"
-        android:layout_marginTop="4dp" />
+        <!-- Shipping City -->
+        <TextView
+            android:id="@+id/tvShippingCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="City: Masaya"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:drawablePadding="8dp" />
 
-    <!-- Sales Amount with Bold and Larger Text -->
-    <TextView
-        android:id="@+id/tvSalesAmount"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Sales: $20,684"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:layout_marginTop="8dp"
-        android:gravity="center_horizontal" />
+        <!-- Shipping Country -->
+        <TextView
+            android:id="@+id/tvShippingCountry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Country: Nicaragua"
+            android:textSize="16sp"
+            android:textColor="@color/gray_500"
+            android:drawableLeft="@drawable/ic_nicaraguan"
+            android:drawablePadding="8dp"
+            android:layout_marginTop="4dp" />
 
-    <!-- Divider Line -->
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/green_500"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp" />
+        <!-- Sales Amount with Bold and Larger Text -->
+        <TextView
+            android:id="@+id/tvSalesAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sales: $20,684"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal" />
 
+        <!-- Divider Line -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_500"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp" />
 
-</LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

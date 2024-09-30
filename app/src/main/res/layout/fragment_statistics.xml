@@ -17,125 +17,250 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Title and RecyclerView for Sales By Customer and Product -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="1. Total de ventas por cliente y producto (Operación: Dice)"
                 android:textStyle="bold"
-                android:padding="20dp"
-                android:layout_marginBottom="10dp" />
+                android:textSize="18sp"
+                android:padding="15dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/ic_header_query"
+                android:gravity="center"
+                android:elevation="4dp"
+                android:textColor="@android:color/white" />
+
+            <ProgressBar
+                android:id="@+id/pbSalesByCustomerAndProduct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvSalesByCustomerAndProduct"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
                 android:layout_marginBottom="30dp" />
 
-            <!-- Title and RecyclerView for Sales By Shipment Location -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="2. Monto total de ventas por ubicación de envío (Operación: Slice)"
                 android:textStyle="bold"
-                android:padding="20dp"
-                android:layout_marginBottom="10dp" />
+                android:textSize="18sp"
+                android:padding="15dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_header_query"
+                android:gravity="center"
+                android:elevation="4dp"
+                android:textColor="@android:color/white" />
+            <ProgressBar
+                android:id="@+id/pbSalesByShipmentLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvSalesByShipmentLocation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
                 android:layout_marginBottom="30dp" />
 
-            <!-- Title and RecyclerView for Shipping Cost By Product -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="3. Costo total de envío por cada producto (Operación: Slice)"
                 android:textStyle="bold"
-                android:padding="20dp"
-                android:layout_marginBottom="10dp" />
+                android:textSize="18sp"
+                android:padding="15dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_header_query"
+                android:gravity="center"
+                android:elevation="4dp"
+                android:textColor="@android:color/white" />
+            <ProgressBar
+                android:id="@+id/pbShippingCostByProduct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvShippingCostByProduct"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
                 android:layout_marginBottom="30dp" />
 
-            <!-- Title and RecyclerView for Sales By Purchase Order -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="4. Total de ventas por cada orden de compra (Operación: Roll Up)"
                 android:textStyle="bold"
-                android:padding="20dp"
-                android:layout_marginBottom="10dp" />
+                android:textSize="18sp"
+                android:padding="15dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_header_query"
+                android:gravity="center"
+                android:elevation="4dp"
+                android:textColor="@android:color/white" />
+
+            <ProgressBar
+                android:id="@+id/pbSalesByPurchaseOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvSalesByPurchaseOrder"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
                 android:layout_marginBottom="30dp" />
 
-            <!-- Title and RecyclerView for Taxes By Customer -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="5. Monto total de impuestos por cliente (Operación: Dice)"
                 android:textStyle="bold"
-                android:padding="20dp"
-                android:layout_marginBottom="10dp" />
+                android:textSize="18sp"
+                android:padding="15dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_header_query"
+                android:gravity="center"
+                android:elevation="4dp"
+                android:textColor="@android:color/white" />
+
+            <ProgressBar
+                android:id="@+id/pbTaxesByCustomer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvTaxesByCustomer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
                 android:layout_marginBottom="30dp" />
 
-            <!-- Title and RecyclerView for Shipped Products By Location -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="40dp"
+                android:background="@drawable/ic_header_query"
+                android:elevation="4dp"
+                android:gravity="center"
+                android:padding="15dp"
                 android:text="6. Cantidad total de productos enviados por ubicación de envío (Operación: Drill Down)"
-                android:textStyle="bold"
-                android:padding="20dp"
-                android:layout_marginBottom="10dp" />
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <ProgressBar
+                android:id="@+id/pbShippedProductsByLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvShippedProductsByLocation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
                 android:layout_marginBottom="30dp" />
 
-            <!-- Title and RecyclerView for Shipping Cost By Purchase Order -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="7. Costo total de envío por cada orden de compra (Operación: Roll Up)"
                 android:textStyle="bold"
-                android:padding="20dp"
-                android:layout_marginBottom="10dp" />
+                android:textSize="18sp"
+                android:padding="15dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_header_query"
+                android:gravity="center"
+                android:elevation="4dp"
+                android:textColor="@android:color/white" />
+
+            <ProgressBar
+                android:id="@+id/pbShippingCostByPurchaseOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvShippingCostByPurchaseOrder"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
                 android:layout_marginBottom="30dp" />
 
-            <!-- Title and RecyclerView for Sales By Shipment Location Pivot -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="8. Monto total de ventas en función de la ubicación de envío (Operación: Pivot)"
                 android:textStyle="bold"
-                android:padding="20dp"
-                android:layout_marginBottom="10dp" />
+                android:textSize="18sp"
+                android:padding="15dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_header_query"
+                android:gravity="center"
+                android:elevation="4dp"
+                android:textColor="@android:color/white" />
+
+            <ProgressBar
+                android:id="@+id/pbSalesByShipmentLocationPivot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvSalesByShipmentLocationPivot"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:layout_marginBottom="80dp" />
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="150dp" />
 
         </LinearLayout>
     </ScrollView>

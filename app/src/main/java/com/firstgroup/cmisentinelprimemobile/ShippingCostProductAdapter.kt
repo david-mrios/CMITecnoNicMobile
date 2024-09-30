@@ -21,9 +21,9 @@ class ShippingCostProductAdapter(private val productList: List<ShippingCostByPro
         // Función para asignar los datos a los elementos de la vista
         @SuppressLint("SetTextI18n")
         fun bind(product: ShippingCostByProduct) {
-            tvProductHierarchy.text = "Product: ${product.product}" // Asigna la jerarquía del producto
-            tvBrandName.text = "Brand: ${product.brandName}" // Asigna el nombre de la marca
-            tvShippingCost.text = "Shipping Cost: ${product.shippingCost}" // Asigna el costo de envío
+            tvProductHierarchy.text = "Producto: ${product.product}" // Asigna la jerarquía del producto
+            tvBrandName.text = "Marca: ${product.brandName}" // Asigna el nombre de la marca
+            tvShippingCost.text = "Costo de envios: $${product.shippingCost}" // Asigna el costo de envío
         }
     }
 

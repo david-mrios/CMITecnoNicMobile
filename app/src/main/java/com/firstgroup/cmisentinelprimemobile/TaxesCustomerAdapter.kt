@@ -17,8 +17,8 @@ class TaxesCustomerAdapter(private val taxList: List<TaxesByCustomer>) :
         // Función para asignar los datos a los elementos de la vista
         @SuppressLint("SetTextI18n")
         fun bind(taxesCustomer: TaxesByCustomer) {
-            tvCustomerKey.text = "Customer Key: ${taxesCustomer.customerKey} ${taxesCustomer.lastName}" // Asigna la clave del cliente
-            tvTaxAmount.text = "Tax Amount: ${taxesCustomer.taxAmount}"
+            tvCustomerKey.text = "Cliente: ${taxesCustomer.customerKey} ${taxesCustomer.lastName}" // Asigna la clave del cliente
+            tvTaxAmount.text = "Impuestos totales: $${taxesCustomer.taxAmount}"
         }
     }
 

@@ -1,64 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="16dp"
-    android:background="?attr/selectableItemBackground">
+    android:layout_margin="8dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="8dp">
 
-    <!-- Customer Name -->
-    <TextView
-        android:id="@+id/tvCustomerName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Customer Name: Aaron"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:textColor="@color/black" />
-
-    <!-- Product Hierarchy -->
-    <TextView
-        android:id="@+id/tvProductHierarchy"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Product: Smartwatch"
-        android:textSize="16sp"
-        android:textColor="@color/blue_500" />
-
-    <!-- Horizontal LinearLayout to hold Sales Amount and Quantity -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="8dp">
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="?attr/selectableItemBackground">
 
-        <!-- Sales Amount -->
+        <!-- Customer Name -->
         <TextView
-            android:id="@+id/tvSalesAmount"
-            android:layout_width="0dp"
+            android:id="@+id/tvCustomerName"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Sales: $94"
-            android:textSize="16sp"
-            android:textColor="@color/black"
-            android:textStyle="italic" />
-
-        <!-- Quantity -->
-        <TextView
-            android:id="@+id/tvQuantity"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Qty: 26"
-            android:textSize="16sp"
+            android:text="Customer Name: Aaron"
+            android:textSize="18sp"
+            android:textStyle="bold"
             android:textColor="@color/black" />
+
+        <!-- Product Hierarchy -->
+        <TextView
+            android:id="@+id/tvProductHierarchy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Product: Smartwatch"
+            android:textSize="16sp"
+            android:textColor="@color/gray_500" />
+
+        <!-- Horizontal LinearLayout to hold Sales Amount and Quantity -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <!-- Sales Amount -->
+            <TextView
+                android:id="@+id/tvSalesAmount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Sales: $94"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="italic" />
+
+            <!-- Quantity -->
+            <TextView
+                android:id="@+id/tvQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Qty: 26"
+                android:textSize="16sp"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <!-- Divider Line -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_500"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp" />
+
     </LinearLayout>
-
-    <!-- Divider Line -->
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/blue_500"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"/>
-
-</LinearLayout>
+</androidx.cardview.widget.CardView>

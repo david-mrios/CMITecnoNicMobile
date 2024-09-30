@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CMISentinelPrimeMobile</string>
+    <string name="app_name">Sentinel Prime</string>
     <string name="screen1">loading screen</string>
     <string name="screen2">register</string>
     <string name="screen3">login</string>

@@ -21,9 +21,9 @@ class SalesShipmentLocationAdapter(private val shipmentList: List<SalesByShipmen
         // Función para asignar los datos a los elementos de la vista
         @SuppressLint("SetTextI18n")
         fun bind(shipment: SalesByShipmentLocation) {
-            tvShippingCity.text = "City: ${shipment.shippingCity}" // Asigna la ciudad
-            tvShippingCountry.text = "Country: ${shipment.shippingCountry}" // Asigna el país
-            tvSalesAmount.text = "Sales: ${shipment.salesAmount}" // Asigna el monto de ventas
+            tvShippingCity.text = "Ciudad: ${shipment.shippingCity}" // Asigna la ciudad
+            tvShippingCountry.text = "Pais: ${shipment.shippingCountry}" // Asigna el país
+            tvSalesAmount.text = "Ventas: $${shipment.salesAmount}" // Asigna el monto de ventas
         }
     }
 

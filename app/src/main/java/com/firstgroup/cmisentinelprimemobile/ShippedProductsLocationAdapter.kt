@@ -19,7 +19,7 @@ class ShippedProductsByLocationAdapter(private val shippedProducts: List<Shipped
         @SuppressLint("SetTextI18n")
         fun bind(shippedProduct: ShippedProductsByLocation) {
             shippingInfo.text = "${shippedProduct.shippingCity}, ${shippedProduct.shippingCountry}" // Asigna la ciudad y país
-            quantity.text = "Cantidad de envíos: ${shippedProduct.quantity}" // Asigna la cantidad de envíos
+            quantity.text = "Cantidad de envíos: $${shippedProduct.quantity}" // Asigna la cantidad de envíos
         }
     }
 

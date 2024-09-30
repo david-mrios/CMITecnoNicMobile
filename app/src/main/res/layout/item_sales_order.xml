@@ -1,50 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="16dp"
-    android:background="?attr/selectableItemBackground">
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
 
-    <!-- Sales Status with Icon -->
-    <TextView
-        android:id="@+id/tvSalesStatus"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Status: Cancelado"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:drawablePadding="8dp"
-        app:drawableStartCompat="@drawable/ic_cancelled" />
+        android:orientation="vertical"
+        android:padding="16dp">
 
-    <!-- Sales Amount -->
-    <TextView
-        android:id="@+id/tvSalesAmount"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Sales Amount: $49,688"
-        android:textSize="16sp"
-        android:textColor="@color/black"
-        android:layout_marginTop="4dp" />
+        <!-- Image Icon -->
 
-    <!-- Quantity -->
-    <TextView
-        android:id="@+id/tvQuantity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Quantity: 5,753"
-        android:textSize="16sp"
-        android:textColor="@color/gray_500"
-        android:layout_marginTop="4dp" />
+        <!-- Sales Status -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables">
+            <ImageView
+                android:id="@+id/imgSalesStatus"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="start"
+                android:contentDescription="Sales Status Icon"
+                android:src="@drawable/ic_cancelled" />
 
-    <!-- Divider Line -->
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/gray_500"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp" />
+            <TextView
+                android:id="@+id/tvSalesStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Status: Cancelado"
+                android:layout_marginStart="10dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="8dp" />
 
-</LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- Sales Amount -->
+        <TextView
+            android:id="@+id/tvSalesAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sales Amount: $49,688"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="4dp" />
+
+        <!-- Quantity -->
+        <TextView
+            android:id="@+id/tvQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quantity: 5,753"
+            android:textSize="16sp"
+            android:textColor="@color/gray_500"
+            android:layout_marginTop="4dp" />
+
+        <!-- Divider Line -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_500"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

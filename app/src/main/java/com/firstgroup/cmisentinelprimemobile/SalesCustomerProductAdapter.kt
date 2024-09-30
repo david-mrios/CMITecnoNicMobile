@@ -19,10 +19,10 @@ class SalesCustomerProductAdapter(private val salesList: List<SalesByCustomerAnd
 
         @SuppressLint("SetTextI18n")
         fun bind(sale: SalesByCustomerAndProduct) {
-            tvCustomerName.text = "Customer Name: ${sale.customerKey}"
-            tvProductHierarchy.text = "Product: ${sale.product}"
-            tvSalesAmount.text = "Sales: ${sale.salesAmount}"
-            tvQuantity.text = "Qty : ${sale.quantity}"
+            tvCustomerName.text = "Cliente: ${sale.customerKey}"
+            tvProductHierarchy.text = "Producto: ${sale.product}"
+            tvSalesAmount.text = "Ventas: $${sale.salesAmount}"
+            tvQuantity.text = "Cantidad : ${sale.quantity}"
         }
     }
 

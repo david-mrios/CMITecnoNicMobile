@@ -27,7 +27,7 @@
                 android:id="@+id/location_icon"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_cancelled"
+                android:src="@drawable/ic_nicaraguan"
                 android:layout_marginEnd="8dp" />
 
             <!-- Ciudad y país -->

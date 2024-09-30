@@ -30,6 +30,16 @@ class StatisticsFragment : Fragment() {
     private lateinit var rvShippingCostByPurchaseOrder: RecyclerView
     private lateinit var rvSalesByShipmentLocationPivot: RecyclerView
 
+    // Progress bar declarations
+    private lateinit var pbSalesByCustomerAndProduct: View
+    private lateinit var pbSalesByShipmentLocation: View
+    private lateinit var pbShippingCostByProduct: View
+    private lateinit var pbSalesByPurchaseOrder: View
+    private lateinit var pbTaxesByCustomer: View
+    private lateinit var pbShippedProductsByLocation: View
+    private lateinit var pbShippingCostByPurchaseOrder: View
+    private lateinit var pbSalesByShipmentLocationPivot: View
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -54,93 +64,135 @@ class StatisticsFragment : Fragment() {
         rvShippingCostByPurchaseOrder = binding.rvShippingCostByPurchaseOrder
         rvSalesByShipmentLocationPivot = binding.rvSalesByShipmentLocationPivot
 
-        // 1. SalesByCustomerAndProduct
+        // Initialize progress bars
+        pbSalesByCustomerAndProduct = binding.pbSalesByCustomerAndProduct
+        pbSalesByShipmentLocation = binding.pbSalesByShipmentLocation
+        pbShippingCostByProduct = binding.pbShippingCostByProduct
+        pbSalesByPurchaseOrder = binding.pbSalesByPurchaseOrder
+        pbTaxesByCustomer = binding.pbTaxesByCustomer
+        pbShippedProductsByLocation = binding.pbShippedProductsByLocation
+        pbShippingCostByPurchaseOrder = binding.pbShippingCostByPurchaseOrder
+        pbSalesByShipmentLocationPivot = binding.pbSalesByShipmentLocationPivot
+
+        // Load data and manage progress bars
+        loadSalesByCustomerAndProduct()
+        loadSalesByShipmentLocation()
+        loadShippingCostByProduct()
+        loadSalesByPurchaseOrder()
+        loadTaxesByCustomer()
+        loadShippedProductsByLocation()
+        loadShippingCostByPurchaseOrder()
+        loadSalesByShipmentLocationPivot()
+
+        return binding.root
+    }
+
+    private fun loadSalesByCustomerAndProduct() {
+        pbSalesByCustomerAndProduct.visibility = View.VISIBLE // Show progress bar
         Fuel.get("https://4slz48p3-5069.use2.devtunnels.ms/cubedata/get-sales-by-customer-and-product")
             .response { _, response, _ ->
-                val jsonString = response.body().asString("application/json")
+                pbSalesByCustomerAndProduct.visibility = View.GONE // Hide progress bar
+                val jsonString = response.body().asString("application/json; charset=utf-8")
                 val gson = Gson()
-                salesByCustomerAndProductList =
-                    gson.fromJson(jsonString, Array<SalesByCustomerAndProduct>::class.java).toList().take(10) // Limitar a 10 registros
+                val salesByCustomerAndProductList =
+                    gson.fromJson(jsonString, Array<SalesByCustomerAndProduct>::class.java).toList().take(10)
                 rvSalesByCustomerAndProduct.layoutManager = LinearLayoutManager(requireContext())
-                rvSalesByCustomerAndProduct.adapter =
-                    SalesCustomerProductAdapter(salesByCustomerAndProductList)
+                rvSalesByCustomerAndProduct.adapter = SalesCustomerProductAdapter(salesByCustomerAndProductList)
             }
+    }
 
-        // 2. SalesByShipmentLocation
+    private fun loadSalesByShipmentLocation() {
+        pbSalesByShipmentLocation.visibility = View.VISIBLE // Show progress bar
         Fuel.get("https://4slz48p3-5069.use2.devtunnels.ms/cubedata/get-sales-by-shipment-location")
             .response { _, response, _ ->
-                val jsonString = response.body().asString("application/json")
+                pbSalesByShipmentLocation.visibility = View.GONE // Hide progress bar
+                val jsonString = response.body().asString("application/json; charset=utf-8")
                 val gson = Gson()
-                salesByShipmentLocationList =
-                    gson.fromJson(jsonString, Array<SalesByShipmentLocation>::class.java).toList().take(10) // Limitar a 10 registros
+                val salesByShipmentLocationList =
+                    gson.fromJson(jsonString, Array<SalesByShipmentLocation>::class.java).toList().take(10)
                 rvSalesByShipmentLocation.layoutManager = LinearLayoutManager(requireContext())
                 rvSalesByShipmentLocation.adapter = SalesShipmentLocationAdapter(salesByShipmentLocationList)
             }
+    }
 
-        // 3. ShippingCostByProduct
+    private fun loadShippingCostByProduct() {
+        pbShippingCostByProduct.visibility = View.VISIBLE // Show progress bar
         Fuel.get("https://4slz48p3-5069.use2.devtunnels.ms/cubedata/get-shipping-cost-by-product")
             .response { _, response, _ ->
-                val jsonString = response.body().asString("application/json")
+                pbShippingCostByProduct.visibility = View.GONE // Hide progress bar
+                val jsonString = response.body().asString("application/json; charset=utf-8")
                 val gson = Gson()
-                ShippingCostByProductList =
-                    gson.fromJson(jsonString, Array<ShippingCostByProduct>::class.java).toList().take(10) // Limitar a 10 registros
+                val shippingCostByProductList =
+                    gson.fromJson(jsonString, Array<ShippingCostByProduct>::class.java).toList().take(10)
                 rvShippingCostByProduct.layoutManager = LinearLayoutManager(requireContext())
-                rvShippingCostByProduct.adapter =
-                    ShippingCostProductAdapter(ShippingCostByProductList)
+                rvShippingCostByProduct.adapter = ShippingCostProductAdapter(shippingCostByProductList)
             }
+    }
 
-        // 4. SalesByPurchaseOrder
+    private fun loadSalesByPurchaseOrder() {
+        pbSalesByPurchaseOrder.visibility = View.VISIBLE // Show progress bar
         Fuel.get("https://4slz48p3-5069.use2.devtunnels.ms/cubedata/get-sales-by-purchase-order")
             .response { _, response, _ ->
-                val jsonString = response.body().asString("application/json")
+                pbSalesByPurchaseOrder.visibility = View.GONE // Hide progress bar
+                val jsonString = response.body().asString("application/json; charset=utf-8")
                 val gson = Gson()
-                salesByPurchaseOrderList =
-                    gson.fromJson(jsonString, Array<SalesByPurchaseOrder>::class.java).toList().take(10) // Limitar a 10 registros
+                val salesByPurchaseOrderList =
+                    gson.fromJson(jsonString, Array<SalesByPurchaseOrder>::class.java).toList().take(10)
                 rvSalesByPurchaseOrder.layoutManager = LinearLayoutManager(requireContext())
                 rvSalesByPurchaseOrder.adapter = SalesPurchaseOrderAdapter(salesByPurchaseOrderList)
             }
+    }
 
-        // 5. TaxesByCustomer
+    private fun loadTaxesByCustomer() {
+        pbTaxesByCustomer.visibility = View.VISIBLE // Show progress bar
         Fuel.get("https://4slz48p3-5069.use2.devtunnels.ms/cubedata/get-taxes-by-customer")
             .response { _, response, _ ->
-                val jsonString = response.body().asString("application/json")
+                pbTaxesByCustomer.visibility = View.GONE // Hide progress bar
+                val jsonString = response.body().asString("application/json; charset=utf-8")
                 val gson = Gson()
-                taxesByCustomerList = gson.fromJson(jsonString, Array<TaxesByCustomer>::class.java).toList().take(10) // Limitar a 10 registros
+                val taxesByCustomerList = gson.fromJson(jsonString, Array<TaxesByCustomer>::class.java).toList().take(10)
                 rvTaxesByCustomer.layoutManager = LinearLayoutManager(requireContext())
                 rvTaxesByCustomer.adapter = TaxesCustomerAdapter(taxesByCustomerList)
             }
+    }
 
-        // 6. ShippedProductsByLocation
+    private fun loadShippedProductsByLocation() {
+        pbShippedProductsByLocation.visibility = View.VISIBLE // Show progress bar
         Fuel.get("https://4slz48p3-5069.use2.devtunnels.ms/cubedata/get-shipped-products-by-location")
             .response { _, response, _ ->
-                val jsonString = response.body().asString("application/json")
+                pbShippedProductsByLocation.visibility = View.GONE // Hide progress bar
+                val jsonString = response.body().asString("application/json; charset=utf-8")
                 val gson = Gson()
-                shippedProductsByLocationList = gson.fromJson(jsonString, Array<ShippedProductsByLocation>::class.java).toList().take(10) // Limitar a 10 registros
+                val shippedProductsByLocationList = gson.fromJson(jsonString, Array<ShippedProductsByLocation>::class.java).toList().take(10)
                 rvShippedProductsByLocation.layoutManager = LinearLayoutManager(requireContext())
                 rvShippedProductsByLocation.adapter = ShippedProductsByLocationAdapter(shippedProductsByLocationList)
             }
+    }
 
-        // 7. ShippingCostByPurchaseOrder
+    private fun loadShippingCostByPurchaseOrder() {
+        pbShippingCostByPurchaseOrder.visibility = View.VISIBLE // Show progress bar
         Fuel.get("https://4slz48p3-5069.use2.devtunnels.ms/cubedata/get-shipping-cost-by-purchase-order")
             .response { _, response, _ ->
-                val jsonString = response.body().asString("application/json")
+                pbShippingCostByPurchaseOrder.visibility = View.GONE // Hide progress bar
+                val jsonString = response.body().asString("application/json; charset=utf-8")
                 val gson = Gson()
-                shippingCostByPurchaseOrderList = gson.fromJson(jsonString, Array<ShippingCostByPurchaseOrder>::class.java).toList().take(10) // Limitar a 10 registros
+                val shippingCostByPurchaseOrderList = gson.fromJson(jsonString, Array<ShippingCostByPurchaseOrder>::class.java).toList().take(10)
                 rvShippingCostByPurchaseOrder.layoutManager = LinearLayoutManager(requireContext())
                 rvShippingCostByPurchaseOrder.adapter = ShippingCostByPurchaseOrderAdapter(shippingCostByPurchaseOrderList)
             }
+    }
 
-        // 8. SalesByShipmentLocationPivot
+    private fun loadSalesByShipmentLocationPivot() {
+        pbSalesByShipmentLocationPivot.visibility = View.VISIBLE // Show progress bar
         Fuel.get("https://4slz48p3-5069.use2.devtunnels.ms/cubedata/get-sales-by-shipment-location-pivot")
             .response { _, response, _ ->
-                val jsonString = response.body().asString("application/json")
+                pbSalesByShipmentLocationPivot.visibility = View.GONE // Hide progress bar
+                val jsonString = response.body().asString("application/json; charset=utf-8")
                 val gson = Gson()
-                salesByShipmentLocationPivotList = gson.fromJson(jsonString, Array<SalesByShipmentLocationPivot>::class.java).toList().take(10) // Limitar a 10 registros
+                val salesByShipmentLocationPivotList = gson.fromJson(jsonString, Array<SalesByShipmentLocationPivot>::class.java).toList().take(10)
                 rvSalesByShipmentLocationPivot.layoutManager = LinearLayoutManager(requireContext())
                 rvSalesByShipmentLocationPivot.adapter = SalesShipmentPivotAdapter(salesByShipmentLocationPivotList)
             }
-
-        return binding.root
     }
 
     override fun onDestroyView() {
