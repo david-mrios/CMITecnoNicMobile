@@ -62,11 +62,26 @@ class SettingsFragment : Fragment() {
             }
         }//Fin de Lenguaje
 
-        binding.linearLayoutProfile.setOnClickListener {
-            val intents = Intent(requireContext(), profile::class.java)
-            startActivity(intents)
-        }
 
+        // Crear navegacion de Perfil
+        val navigateToProfileClickListener = View.OnClickListener {
+            // Crear el intent que lanzará la actividad de perfil
+            val intent = Intent(requireContext(), profile::class.java)
+            // Iniciar la actividad con el intent creado
+            startActivity(intent)
+        }
+        // Usar el método 'apply' para asignar el mismo OnClickListener a varios elementos
+        binding.apply {
+            // Crear una lista de las vistas que deben compartir el comportamiento de navegación
+            listOf(
+                linearLayoutProfile,
+                textProfile,
+                btnProfile
+            ).forEach {
+                it.setOnClickListener(navigateToProfileClickListener)
+            }
+        }//Fin de Perfil
+        
         binding.linearLayoutPassword.setOnClickListener {
             val intents = Intent(requireContext(), changePassword::class.java)
             startActivity(intents)
