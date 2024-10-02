@@ -37,12 +37,31 @@ class SettingsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        // Inicializar el binding para inflar el layout del fragmento
         _binding = FragmentSettingsBinding.inflate(inflater, container, false)
 
-        binding.linearLayoutLenguaje.setOnClickListener {
-           val intent = Intent(requireContext(), language::class.java)
-           startActivity(intent)
+        // Crear un OnClickListener común que navega a la actividad 'language::class.java'
+        val navigateToLanguageClickListener = View.OnClickListener {
+            // Crear el intent que lanzará la actividad de lenguaje
+            val intent = Intent(requireContext(), language::class.java)
+            // Iniciar la actividad con el intent creado
+            startActivity(intent)
         }
+
+        // Usar el método 'apply' para asignar el mismo OnClickListener a varios elementos
+        binding.apply {
+            // Crear una lista de las vistas que deben compartir el comportamiento de navegación
+            listOf(
+                linearLayoutLenguaje, // LinearLayout que envuelve el selector de lenguaje
+                textLanguaje,         // Texto para cambiar el lenguaje
+                btnLangueje,          // Botón para cambiar el lenguaje
+                textLanguaje2
+            ).forEach {
+                // Asignar el OnClickListener común a cada una de las vistas de la lista
+                it.setOnClickListener(navigateToLanguageClickListener)
+            }
+        }//Fin de Lenguaje
+
         binding.linearLayoutProfile.setOnClickListener {
             val intents = Intent(requireContext(), profile::class.java)
             startActivity(intents)
