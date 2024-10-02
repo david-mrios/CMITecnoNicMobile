@@ -33,12 +33,6 @@ class IndicatorsFragment : Fragment() {
     ): View {
         _binding = FragmentIndicatorsBinding.inflate(inflater, container, false)
 
-        Fuel.get("https://4slz48p3-5069.use2.devtunnels.ms/cubedata/get-shipping-cost-by-purchase-order")
-            .response() { _, response, _ ->
-                val jsonString = response.body().asString("application/json")
-                binding.testApi.text = jsonString
-            }
-
 
         return binding.root
     }

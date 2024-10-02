@@ -20,7 +20,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="1. Total de ventas por cliente y producto (Operación: Dice)"
+                android:text="Total de ventas por cliente y producto"
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:padding="15dp"
@@ -51,7 +51,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="2. Monto total de ventas por ubicación de envío (Operación: Slice)"
+                android:text="Monto total de ventas por ubicación de envío"
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:padding="15dp"
@@ -81,7 +81,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="3. Costo total de envío por cada producto (Operación: Slice)"
+                android:text="Costo total de envío por cada producto"
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:padding="15dp"
@@ -111,7 +111,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="4. Total de ventas por cada orden de compra (Operación: Roll Up)"
+                android:text="Total de ventas por cada orden de compra"
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:padding="15dp"
@@ -142,7 +142,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="5. Monto total de impuestos por cliente (Operación: Dice)"
+                android:text="Monto total de impuestos por cliente"
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:padding="15dp"
@@ -180,7 +180,7 @@
                 android:elevation="4dp"
                 android:gravity="center"
                 android:padding="15dp"
-                android:text="6. Cantidad total de productos enviados por ubicación de envío (Operación: Drill Down)"
+                android:text="Cantidad total de productos enviados por ubicación de envío"
                 android:textColor="@android:color/white"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -203,7 +203,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="7. Costo total de envío por cada orden de compra (Operación: Roll Up)"
+                android:text="Costo total de envío por cada orden de compra"
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:padding="15dp"
@@ -234,7 +234,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="8. Monto total de ventas en función de la ubicación de envío (Operación: Pivot)"
+                android:text="Monto total de ventas en función de la ubicación de envío"
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:padding="15dp"
