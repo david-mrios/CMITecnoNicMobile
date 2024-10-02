@@ -101,10 +101,24 @@ class SettingsFragment : Fragment() {
             }
         }//Fin de Contraseña
 
-        binding.linearLayoutTerms.setOnClickListener {
+        // Crear navegacion de Politicas de privacidad
+        val navigateToTermsClickListener = View.OnClickListener {
+            // Crear el intent que lanzará la actividad de Cambio de contraseña
             val intent = Intent(requireContext(), Terms::class.java)
+            // Iniciar la actividad con el intent creado
             startActivity(intent)
         }
+        // Usar el método 'apply' para asignar el mismo OnClickListener a varios elementos
+        binding.apply {
+            // Crear una lista de las vistas que deben compartir el comportamiento de navegación
+            listOf(
+                linearLayoutTerms,
+                textTerms,
+                btnTerms
+            ).forEach {
+                it.setOnClickListener(navigateToTermsClickListener)
+            }
+        }//Fin de Politicas de Privacidad
 
         return binding.root
     }
