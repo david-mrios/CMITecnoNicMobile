@@ -37,25 +37,88 @@ class SettingsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        // Inicializar el binding para inflar el layout del fragmento
         _binding = FragmentSettingsBinding.inflate(inflater, container, false)
 
-        binding.linearLayoutLenguaje.setOnClickListener {
-           val intent = Intent(requireContext(), language::class.java)
-           startActivity(intent)
-        }
-        binding.linearLayoutProfile.setOnClickListener {
-            val intents = Intent(requireContext(), profile::class.java)
-            startActivity(intents)
-        }
-
-        binding.linearLayoutPassword.setOnClickListener {
-            val intents = Intent(requireContext(), changePassword::class.java)
-            startActivity(intents)
-        }
-        binding.linearLayoutTerms.setOnClickListener {
-            val intent = Intent(requireContext(), Terms::class.java)
+        // Crear un OnClickListener común que navega a la actividad 'language::class.java'
+        val navigateToLanguageClickListener = View.OnClickListener {
+            // Crear el intent que lanzará la actividad de lenguaje
+            val intent = Intent(requireContext(), language::class.java)
+            // Iniciar la actividad con el intent creado
             startActivity(intent)
         }
+        // Usar el método 'apply' para asignar el mismo OnClickListener a varios elementos
+        binding.apply {
+            // Crear una lista de las vistas que deben compartir el comportamiento de navegación
+            listOf(
+                linearLayoutLenguaje, // LinearLayout que envuelve el selector de lenguaje
+                textLanguaje,         // Texto para cambiar el lenguaje
+                btnLangueje,          // Botón para cambiar el lenguaje
+                textLanguaje2
+            ).forEach {
+                // Asignar el OnClickListener común a cada una de las vistas de la lista
+                it.setOnClickListener(navigateToLanguageClickListener)
+            }
+        }//Fin de Lenguaje
+
+
+        // Crear navegacion de Perfil
+        val navigateToProfileClickListener = View.OnClickListener {
+            // Crear el intent que lanzará la actividad de perfil
+            val intent = Intent(requireContext(), profile::class.java)
+            // Iniciar la actividad con el intent creado
+            startActivity(intent)
+        }
+        // Usar el método 'apply' para asignar el mismo OnClickListener a varios elementos
+        binding.apply {
+            // Crear una lista de las vistas que deben compartir el comportamiento de navegación
+            listOf(
+                linearLayoutProfile,
+                textProfile,
+                btnProfile
+            ).forEach {
+                it.setOnClickListener(navigateToProfileClickListener)
+            }
+        }//Fin de Perfil
+
+
+        // Crear navegacion de Cambio de Contraseña
+        val navigateTochangePasswordClickListener = View.OnClickListener {
+            // Crear el intent que lanzará la actividad de Cambio de contraseña
+            val intent = Intent(requireContext(), changePassword::class.java)
+            // Iniciar la actividad con el intent creado
+            startActivity(intent)
+        }
+        // Usar el método 'apply' para asignar el mismo OnClickListener a varios elementos
+        binding.apply {
+            // Crear una lista de las vistas que deben compartir el comportamiento de navegación
+            listOf(
+                linearLayoutPassword,
+                textPassword,
+                btnPassword
+            ).forEach {
+                it.setOnClickListener(navigateTochangePasswordClickListener)
+            }
+        }//Fin de Contraseña
+
+        // Crear navegacion de Politicas de privacidad
+        val navigateToTermsClickListener = View.OnClickListener {
+            // Crear el intent que lanzará la actividad de Cambio de contraseña
+            val intent = Intent(requireContext(), Terms::class.java)
+            // Iniciar la actividad con el intent creado
+            startActivity(intent)
+        }
+        // Usar el método 'apply' para asignar el mismo OnClickListener a varios elementos
+        binding.apply {
+            // Crear una lista de las vistas que deben compartir el comportamiento de navegación
+            listOf(
+                linearLayoutTerms,
+                textTerms,
+                btnTerms
+            ).forEach {
+                it.setOnClickListener(navigateToTermsClickListener)
+            }
+        }//Fin de Politicas de Privacidad
 
         return binding.root
     }
