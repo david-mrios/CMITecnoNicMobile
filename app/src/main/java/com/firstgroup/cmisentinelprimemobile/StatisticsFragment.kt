@@ -89,7 +89,7 @@ class StatisticsFragment : Fragment() {
 
     private fun loadSalesByCustomerAndProduct() {
         pbSalesByCustomerAndProduct.visibility = View.VISIBLE // Show progress bar
-        Fuel.get("https://4slz48p3-5069.use2.devtunnels.ms/cubedata/get-sales-by-customer-and-product")
+        Fuel.get("https://serverfirstgroup.westus2.cloudapp.azure.com/apiolap/cubedata/get-sales-by-customer-and-product")
             .response { _, response, _ ->
                 pbSalesByCustomerAndProduct.visibility = View.GONE // Hide progress bar
                 val jsonString = response.body().asString("application/json; charset=utf-8")
@@ -103,7 +103,7 @@ class StatisticsFragment : Fragment() {
 
     private fun loadSalesByShipmentLocation() {
         pbSalesByShipmentLocation.visibility = View.VISIBLE // Show progress bar
-        Fuel.get("https://4slz48p3-5069.use2.devtunnels.ms/cubedata/get-sales-by-shipment-location")
+        Fuel.get("https://serverfirstgroup.westus2.cloudapp.azure.com/apiolap/cubedata/get-sales-by-shipment-location")
             .response { _, response, _ ->
                 pbSalesByShipmentLocation.visibility = View.GONE // Hide progress bar
                 val jsonString = response.body().asString("application/json; charset=utf-8")
@@ -117,7 +117,7 @@ class StatisticsFragment : Fragment() {
 
     private fun loadShippingCostByProduct() {
         pbShippingCostByProduct.visibility = View.VISIBLE // Show progress bar
-        Fuel.get("https://4slz48p3-5069.use2.devtunnels.ms/cubedata/get-shipping-cost-by-product")
+        Fuel.get("https://serverfirstgroup.westus2.cloudapp.azure.com/apiolap/cubedata/get-shipping-cost-by-product")
             .response { _, response, _ ->
                 pbShippingCostByProduct.visibility = View.GONE // Hide progress bar
                 val jsonString = response.body().asString("application/json; charset=utf-8")
@@ -131,7 +131,7 @@ class StatisticsFragment : Fragment() {
 
     private fun loadSalesByPurchaseOrder() {
         pbSalesByPurchaseOrder.visibility = View.VISIBLE // Show progress bar
-        Fuel.get("https://4slz48p3-5069.use2.devtunnels.ms/cubedata/get-sales-by-purchase-order")
+        Fuel.get("https://serverfirstgroup.westus2.cloudapp.azure.com/apiolap/cubedata/get-sales-by-purchase-order")
             .response { _, response, _ ->
                 pbSalesByPurchaseOrder.visibility = View.GONE // Hide progress bar
                 val jsonString = response.body().asString("application/json; charset=utf-8")
@@ -145,7 +145,7 @@ class StatisticsFragment : Fragment() {
 
     private fun loadTaxesByCustomer() {
         pbTaxesByCustomer.visibility = View.VISIBLE // Show progress bar
-        Fuel.get("https://4slz48p3-5069.use2.devtunnels.ms/cubedata/get-taxes-by-customer")
+        Fuel.get("https://serverfirstgroup.westus2.cloudapp.azure.com/apiolap/cubedata/get-taxes-by-customer")
             .response { _, response, _ ->
                 pbTaxesByCustomer.visibility = View.GONE // Hide progress bar
                 val jsonString = response.body().asString("application/json; charset=utf-8")
@@ -158,7 +158,7 @@ class StatisticsFragment : Fragment() {
 
     private fun loadShippedProductsByLocation() {
         pbShippedProductsByLocation.visibility = View.VISIBLE // Show progress bar
-        Fuel.get("https://4slz48p3-5069.use2.devtunnels.ms/cubedata/get-shipped-products-by-location")
+        Fuel.get("https://serverfirstgroup.westus2.cloudapp.azure.com/apiolap/cubedata/get-shipped-products-by-location")
             .response { _, response, _ ->
                 pbShippedProductsByLocation.visibility = View.GONE // Hide progress bar
                 val jsonString = response.body().asString("application/json; charset=utf-8")
@@ -171,7 +171,7 @@ class StatisticsFragment : Fragment() {
 
     private fun loadShippingCostByPurchaseOrder() {
         pbShippingCostByPurchaseOrder.visibility = View.VISIBLE // Show progress bar
-        Fuel.get("https://4slz48p3-5069.use2.devtunnels.ms/cubedata/get-shipping-cost-by-purchase-order")
+        Fuel.get("https://serverfirstgroup.westus2.cloudapp.azure.com/apiolap/cubedata/get-shipping-cost-by-purchase-order")
             .response { _, response, _ ->
                 pbShippingCostByPurchaseOrder.visibility = View.GONE // Hide progress bar
                 val jsonString = response.body().asString("application/json; charset=utf-8")
@@ -184,7 +184,7 @@ class StatisticsFragment : Fragment() {
 
     private fun loadSalesByShipmentLocationPivot() {
         pbSalesByShipmentLocationPivot.visibility = View.VISIBLE // Show progress bar
-        Fuel.get("https://4slz48p3-5069.use2.devtunnels.ms/cubedata/get-sales-by-shipment-location-pivot")
+        Fuel.get("https://serverfirstgroup.westus2.cloudapp.azure.com/apiolap/cubedata/get-sales-by-shipment-location-pivot")
             .response { _, response, _ ->
                 pbSalesByShipmentLocationPivot.visibility = View.GONE // Hide progress bar
                 val jsonString = response.body().asString("application/json; charset=utf-8")
