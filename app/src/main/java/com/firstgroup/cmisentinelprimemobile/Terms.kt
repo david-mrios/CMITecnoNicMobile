@@ -26,7 +26,9 @@ class Terms : AppCompatActivity() {
             insets
         }
         binding.backButton.setOnClickListener {
-            val intent = Intent(this, MainMenu::class.java)
+            val intent = Intent(this, MainMenu::class.java).apply {
+                putExtra("fragmentToLoad", "SettingsFragment")
+            }
             startActivity(intent)
             finish()
         }
