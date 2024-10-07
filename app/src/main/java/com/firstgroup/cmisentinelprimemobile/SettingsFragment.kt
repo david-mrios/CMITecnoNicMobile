@@ -50,7 +50,6 @@ class SettingsFragment : Fragment() {
                 btnLangueje,          // Botón para cambiar el lenguaje
                 textLanguaje2
             ).forEach {
-                // Asignar el OnClickListener común a cada una de las vistas de la lista
                 it.setOnClickListener(navigateToLanguageClickListener)
             }
         }//Fin de Lenguaje
@@ -76,7 +75,6 @@ class SettingsFragment : Fragment() {
             startActivity(intent)
         }
         binding.apply {
-            // Crear una lista de las vistas que deben compartir el comportamiento de navegación
             listOf(
                 linearLayoutPassword,
                 textPassword,
@@ -88,7 +86,6 @@ class SettingsFragment : Fragment() {
 
         val navigateToTermsClickListener = View.OnClickListener {
             val intent = Intent(requireContext(), Terms::class.java)
-            // Iniciar la actividad con el intent creado
             startActivity(intent)
         }
         binding.apply {

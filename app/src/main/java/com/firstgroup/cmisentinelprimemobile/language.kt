@@ -34,10 +34,13 @@ class language : AppCompatActivity() {
 
         }
         binding.backButton.setOnClickListener {
-            val intent = Intent(this, MainMenu::class.java)
+            val intent = Intent(this, MainMenu::class.java).apply {
+                putExtra("fragmentToLoad", "SettingsFragment")
+            }
             startActivity(intent)
             finish()
         }
+
 
         radioButtonEnglish = findViewById(R.id.radioBtnEnglish)
         radioButtonFrench = findViewById(R.id.radioBtnFrance)

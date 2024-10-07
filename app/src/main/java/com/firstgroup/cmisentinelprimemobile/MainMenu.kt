@@ -19,9 +19,18 @@ class MainMenu : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main_menu)
 
-
-
         val navigation: BottomNavigationView = findViewById(R.id.bottom_navigation)
+
+        val fragmentToLoad = intent.getStringExtra("fragmentToLoad")
+
+        when (fragmentToLoad) {
+            "SettingsFragment" -> loadFragment(settingsFragment)
+            "IndicatorsFragment" -> loadFragment(indicatorsFragment)
+            "StatisticsFragment" -> loadFragment(statisticsFragment)
+            "HomeFragment" -> loadFragment(homeFragment)
+            else -> loadFragment(homeFragment)
+        }
+
         navigation.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.settingsFragment -> {
@@ -43,8 +52,6 @@ class MainMenu : AppCompatActivity() {
                 else -> false
             }
         }
-
-        loadFragment(homeFragment)
     }
 
     private fun loadFragment(fragment: Fragment) {

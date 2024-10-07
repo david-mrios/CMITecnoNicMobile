@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.firstgroup.cmisentinelprimemobile.databinding.FragmentStatisticsBinding
@@ -96,6 +97,14 @@ class StatisticsFragment : Fragment() {
             binding.pbSalesByShipmentLocationPivot.visibility = View.GONE // Ocultar ProgressBar
             if (salesList.isNotEmpty()) {
                 binding.rvSalesByShipmentLocationPivot.adapter = SalesShipmentPivotAdapter(salesList)
+            }
+        }
+
+        // Observa el error y muestra un Toast si ocurre
+        viewModel.errorMessage.observe(viewLifecycleOwner) { error ->
+            if (error != null) {
+                Toast.makeText(requireContext(), error, Toast.LENGTH_SHORT).show()
+                // Puedes realizar acciones adicionales aquí si es necesario, como mantener visible el ProgressBar
             }
         }
     }
