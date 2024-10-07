@@ -11,42 +11,36 @@
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="1dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-
         <ImageView
             android:id="@+id/imgLogo"
             android:layout_width="80dp"
-            android:contentDescription="@string/descriptionImg"
             android:layout_height="86dp"
+            android:contentDescription="@string/descriptionImg"
             app:srcCompat="@drawable/ic_main" />
 
         <TextView
             android:id="@+id/txtSentinel"
-            android:layout_width="178sp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/txt_sentinel"
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textSize="35sp"
-            android:textStyle="bold"
-            tools:ignore="TextSizeCheck" />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/txtPrime"
-            android:textAllCaps="true"
-            android:layout_width="178sp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/txt_prime"
             android:textAlignment="center"
+            android:textAllCaps="true"
             android:textSize="35sp"
             android:textStyle="bold"/>
 

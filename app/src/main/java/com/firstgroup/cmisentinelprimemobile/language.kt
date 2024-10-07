@@ -45,6 +45,8 @@ class language : AppCompatActivity() {
         radioButtonSpanish = findViewById(R.id.radioBtnSpanish)
         radioButtonVietnam = findViewById(R.id.radioBtnVietnam)
 
+        radioButtonSpanish.isChecked = true
+
         radioButtonEnglish.setOnClickListener(onRadioButtonClicked)
         radioButtonFrench.setOnClickListener(onRadioButtonClicked)
         radioButtonAustralia.setOnClickListener(onRadioButtonClicked)

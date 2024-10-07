@@ -7,7 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class ShippedProductsByLocationAdapter(private val shippedProducts: List<ShippedProductsByLocation>) :
+    class ShippedProductsByLocationAdapter(private val shippedProducts: List<ShippedProductsByLocation>) :
     RecyclerView.Adapter<ShippedProductsByLocationAdapter.ShippedProductViewHolder>() {
 
     class ShippedProductViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

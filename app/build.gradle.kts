@@ -59,4 +59,8 @@ dependencies {
     implementation (libs.gson) //Gson
     implementation (libs.fuel.coroutines)
 
+    // Package search view
+    implementation (libs.androidx.appcompat.v151)
+
+
 }

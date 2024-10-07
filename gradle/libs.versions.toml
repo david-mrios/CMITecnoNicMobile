@@ -1,5 +1,6 @@
 [versions]
 agp = "8.5.1"
+appcompatVersion = "1.5.1"
 fuel = "2.3.1"
 fuelAndroid = "2.3.1"
 fuelGson = "2.3.1"
@@ -16,6 +17,7 @@ constraintlayout = "2.1.4"
 
 
 [libraries]
+androidx-appcompat-v151 = { module = "androidx.appcompat:appcompat", version.ref = "appcompatVersion" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 fuel = { module = "com.github.kittinunf.fuel:fuel", version.ref = "fuel" }
 fuel-coroutines = { module = "com.github.kittinunf.fuel:fuel-coroutines", version.ref = "fuel" }

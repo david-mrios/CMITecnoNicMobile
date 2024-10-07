@@ -12,29 +12,16 @@
         android:layout_width="410dp"
         android:layout_height="match_parent"
         android:paddingStart="40dp"
+        android:layout_marginTop="50dp"
         android:paddingEnd="40dp">
 
         <RelativeLayout
             android:id="@+id/relativeLayout"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:layout_marginTop="30dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
-
-            <ImageButton
-                android:id="@+id/pathImgBtn"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_marginStart="3dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:background="@drawable/ic_circular_button"
-                android:contentDescription="@string/descriptionImg"
-                android:elevation="4dp"
-                app:srcCompat="@drawable/ic_path"
-                tools:ignore="DuplicateSpeakableTextCheck" />
 
             <TextView
                 android:id="@+id/titleTxt"
@@ -47,18 +34,6 @@
                 android:textSize="25sp"
                 tools:ignore="RelativeOverlap" />
 
-            <ImageButton
-                android:id="@+id/groupImgBtn"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="3dp"
-                android:background="@drawable/ic_circular_button"
-                android:contentDescription="@string/descriptionImg"
-                android:elevation="4dp"
-                android:scaleType="centerInside"
-                app:srcCompat="@drawable/ic_group" />
         </RelativeLayout>
 
         <!-- Sección "General" -->

@@ -8,8 +8,12 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class ShippingCostByPurchaseOrderAdapter(private val purchaseOrders: List<ShippingCostByPurchaseOrder>) :
+class ShippingCostByPurchaseOrderAdapter(purchaseOrders: List<ShippingCostByPurchaseOrder>) :
     RecyclerView.Adapter<ShippingCostByPurchaseOrderAdapter.PurchaseOrderViewHolder>() {
+
+    // Filtrar los pedidos para excluir los que ienen estado "enviado"
+    private val filteredPurchaseOrders: List<ShippingCostByPurchaseOrder> =
+        purchaseOrders.filter { it.orderStatus != "enviado" }
 
     class PurchaseOrderViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val statusIcon: ImageView = itemView.findViewById(R.id.status_icon)
@@ -18,23 +22,27 @@ class ShippingCostByPurchaseOrderAdapter(private val purchaseOrders: List<Shippi
 
         @SuppressLint("SetTextI18n")
         fun bind(purchaseOrder: ShippingCostByPurchaseOrder) {
-            statusText.text = "Estado: ${purchaseOrder.orderStatus}" // Asigna el estado de la orden
+            val statusDisplayText = if (purchaseOrder.orderStatus == "en proceso") {
+                "Estado: En ruta"
+            } else {
+                "Estado: ${purchaseOrder.orderStatus}"
+            }
+
+            statusText.text = statusDisplayText // Asigna el estado de la orden
             shippingCost.text = "Costo de Envío: $${purchaseOrder.shippingCost}" // Asigna el costo de envío
+
             when (purchaseOrder.orderStatus) {
                 "cancelado" -> {
                     statusIcon.setImageResource(R.drawable.ic_cancelled)
                 }
                 "entregado" -> {
-                    statusIcon.setImageResource(R.drawable.ic_delivered) // Icono de ejemplo para otros estados
-                }
-                "enviado" -> {
-                    statusIcon.setImageResource(R.drawable.ic_delivered) // Icono de ejemplo para otros estados
+                    statusIcon.setImageResource(R.drawable.ic_delivered) // Icono de entregado
                 }
                 "pendiente" -> {
-                    statusIcon.setImageResource(R.drawable.ic_pending) // Icono de ejemplo para otros estados
+                    statusIcon.setImageResource(R.drawable.ic_pending) // Icono de pendiente
                 }
                 else -> {
-                    statusIcon.setImageResource(R.drawable.ic_pending) // Icono de ejemplo para otros estados
+                    statusIcon.setImageResource(R.drawable.ic_in_route) // Icono por defecto
                 }
             }
         }
@@ -47,11 +55,11 @@ class ShippingCostByPurchaseOrderAdapter(private val purchaseOrders: List<Shippi
     }
 
     override fun getItemCount(): Int {
-        return purchaseOrders.size
+        return filteredPurchaseOrders.size // Cambiado para devolver el tamaño de la lista filtrada
     }
 
     override fun onBindViewHolder(holder: PurchaseOrderViewHolder, position: Int) {
-        val purchaseOrder = purchaseOrders[position]
+        val purchaseOrder = filteredPurchaseOrders[position] // Usar la lista filtrada
         holder.bind(purchaseOrder)
     }
 }

@@ -53,7 +53,7 @@ class register : AppCompatActivity() {
         if (binding.editTxtPhone.text.isNullOrEmpty()) {
             binding.editTxtPhone.error = "Número de teléfono es requerido"
             isValid = false
-        } else if (!binding.editTxtPhone.text.toString().matches(Regex("^[0-9]{10}$"))) {
+        } else if (!binding.editTxtPhone.text.toString().matches(Regex("^[0-9]{8}$"))) {
             binding.editTxtPhone.error = "Número de teléfono no válido"
             isValid = false
         }

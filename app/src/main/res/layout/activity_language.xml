@@ -2,11 +2,12 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:id="@+id/main"
     android:layout_gravity="center"
     android:layout_height="match_parent"
-    tools:context=".language">
+    tools:context=".language"
+    tools:ignore="ExtraText">
 
     <!-- Botón de regreso -->
     <ImageButton
@@ -14,7 +15,7 @@
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="60dp"
         android:background="@drawable/circlebutton_signup"
         android:contentDescription="@string/descriptionImg"
         android:padding="16dp"
@@ -25,43 +26,32 @@
 
     <!-- Título -->
 
-    <!-- Barra de búsqueda -->
+    <!-- Lista de idiomas -->
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="53dp"
-        android:layout_marginEnd="153dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="152dp"
         android:text="@string/languageHead"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <SearchView
-        android:id="@+id/searchView"
-        android:layout_width="345dp"
-        android:layout_height="44dp"
-        android:layout_margin="30dp"
-        android:layout_marginTop="60dp"
-        android:background="@drawable/edit_text_background"
-        android:queryHint="Buscar idioma..."
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView7" />
-
-    <!-- Lista de idiomas -->
     <LinearLayout
         android:id="@+id/languageListContainer"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="400dp"
         android:layout_margin="20dp"
-        android:layout_marginTop="40dp"
         android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/searchView">
+        app:layout_constraintTop_toBottomOf="@id/textView7"
+        app:layout_constraintVertical_bias="0.063">
 
         <!-- Elemento de idioma 1 -->
         <LinearLayout
@@ -73,9 +63,9 @@
             <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:paddingStart="15dp"
-                android:paddingEnd="15dp"
-                android:layout_weight="1">
+                android:paddingEnd="15dp">
 
                 <ImageView
                     android:id="@+id/iconIngles"
@@ -84,22 +74,20 @@
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true"
                     android:contentDescription="@string/descriptionImg"
-                    android:src="@drawable/ic_united_states"                  />
+                    android:src="@drawable/ic_united_states" />
 
                 <TextView
                     android:id="@+id/textView9"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_toEndOf="@id/iconIngles"
                     android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/iconIngles"
+                    android:gravity="center_vertical"
                     android:paddingStart="16dp"
                     android:paddingEnd="16dp"
                     android:text="@string/languageIngles"
-                    android:textSize="20sp"
-                    android:gravity="center_vertical"
-                />
+                    android:textSize="20sp" />
             </RelativeLayout>
-
 
             <RadioButton
                 android:id="@+id/radioBtnEnglish"
@@ -110,6 +98,7 @@
                 android:minHeight="48dp"
                 tools:ignore="DuplicateSpeakableTextCheck,TouchTargetSizeCheck" />
         </LinearLayout>
+
         <!-- Línea divisoria -->
         <View
             android:layout_width="match_parent"
@@ -145,9 +134,8 @@
                 android:buttonTint="@color/blue_500"
                 android:minHeight="48dp"
                 tools:ignore="TouchTargetSizeCheck" />
-
-
         </LinearLayout>
+
         <!-- Línea divisoria -->
         <View
             android:layout_width="match_parent"
@@ -156,7 +144,7 @@
             android:layout_marginEnd="16dp"
             android:background="@android:color/darker_gray" />
 
-        <!-- Elemento de idioma 2 -->
+        <!-- Elemento de idioma 3 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="58dp"
@@ -183,9 +171,8 @@
                 android:buttonTint="@color/blue_500"
                 android:minHeight="48dp"
                 tools:ignore="TouchTargetSizeCheck" />
-
-
         </LinearLayout>
+
         <!-- Línea divisoria -->
         <View
             android:layout_width="match_parent"
@@ -194,7 +181,7 @@
             android:layout_marginEnd="16dp"
             android:background="@android:color/darker_gray" />
 
-        <!-- Elemento de idioma 2 -->
+        <!-- Elemento de idioma 4 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="58dp"
@@ -222,9 +209,8 @@
                 android:buttonTint="@color/blue_500"
                 android:minHeight="48dp"
                 tools:ignore="TouchTargetSizeCheck" />
-
-
         </LinearLayout>
+
         <!-- Línea divisoria -->
         <View
             android:layout_width="match_parent"
@@ -233,7 +219,7 @@
             android:layout_marginEnd="16dp"
             android:background="@android:color/darker_gray" />
 
-        <!-- Elemento de idioma 2 -->
+        <!-- Elemento de idioma 5 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="58dp"
@@ -260,17 +246,11 @@
                 android:buttonTint="@color/blue_500"
                 android:minHeight="48dp"
                 tools:ignore="TouchTargetSizeCheck" />
-
-
         </LinearLayout>
+
         <!-- Línea divisoria -->
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:background="@android:color/darker_gray" />
 
     </LinearLayout>
+    a
 
 </androidx.constraintlayout.widget.ConstraintLayout>

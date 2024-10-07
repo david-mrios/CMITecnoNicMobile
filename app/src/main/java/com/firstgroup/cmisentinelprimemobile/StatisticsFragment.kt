@@ -4,49 +4,15 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
-import androidx.recyclerview.widget.LinearLayoutManager
 import android.view.ViewGroup
-import androidx.recyclerview.widget.RecyclerView
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.firstgroup.cmisentinelprimemobile.databinding.FragmentStatisticsBinding
-import com.github.kittinunf.fuel.Fuel
-import com.google.gson.Gson
-
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
 class StatisticsFragment : Fragment() {
-    private var param1: String? = null
-    private var param2: String? = null
     private var _binding: FragmentStatisticsBinding? = null
     private val binding get() = _binding!!
-
-    // RecyclerView declarations
-    private lateinit var rvSalesByCustomerAndProduct: RecyclerView
-    private lateinit var rvSalesByShipmentLocation: RecyclerView
-    private lateinit var rvShippingCostByProduct: RecyclerView
-    private lateinit var rvSalesByPurchaseOrder: RecyclerView
-    private lateinit var rvTaxesByCustomer: RecyclerView
-    private lateinit var rvShippedProductsByLocation: RecyclerView
-    private lateinit var rvShippingCostByPurchaseOrder: RecyclerView
-    private lateinit var rvSalesByShipmentLocationPivot: RecyclerView
-
-    // Progress bar declarations
-    private lateinit var pbSalesByCustomerAndProduct: View
-    private lateinit var pbSalesByShipmentLocation: View
-    private lateinit var pbShippingCostByProduct: View
-    private lateinit var pbSalesByPurchaseOrder: View
-    private lateinit var pbTaxesByCustomer: View
-    private lateinit var pbShippedProductsByLocation: View
-    private lateinit var pbShippingCostByPurchaseOrder: View
-    private lateinit var pbSalesByShipmentLocationPivot: View
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private lateinit var viewModel: StatisticsViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -54,160 +20,130 @@ class StatisticsFragment : Fragment() {
     ): View {
         _binding = FragmentStatisticsBinding.inflate(inflater, container, false)
 
-        // Initialize RecyclerViews
-        rvSalesByCustomerAndProduct = binding.rvSalesByCustomerAndProduct
-        rvSalesByShipmentLocation = binding.rvSalesByShipmentLocation
-        rvShippingCostByProduct = binding.rvShippingCostByProduct
-        rvSalesByPurchaseOrder = binding.rvSalesByPurchaseOrder
-        rvTaxesByCustomer = binding.rvTaxesByCustomer
-        rvShippedProductsByLocation = binding.rvShippedProductsByLocation
-        rvShippingCostByPurchaseOrder = binding.rvShippingCostByPurchaseOrder
-        rvSalesByShipmentLocationPivot = binding.rvSalesByShipmentLocationPivot
+        viewModel = ViewModelProvider(this)[StatisticsViewModel::class.java]
 
-        // Initialize progress bars
-        pbSalesByCustomerAndProduct = binding.pbSalesByCustomerAndProduct
-        pbSalesByShipmentLocation = binding.pbSalesByShipmentLocation
-        pbShippingCostByProduct = binding.pbShippingCostByProduct
-        pbSalesByPurchaseOrder = binding.pbSalesByPurchaseOrder
-        pbTaxesByCustomer = binding.pbTaxesByCustomer
-        pbShippedProductsByLocation = binding.pbShippedProductsByLocation
-        pbShippingCostByPurchaseOrder = binding.pbShippingCostByPurchaseOrder
-        pbSalesByShipmentLocationPivot = binding.pbSalesByShipmentLocationPivot
+        setupRecyclerViews()
 
-        // Load data and manage progress bars
-        loadSalesByCustomerAndProduct()
-        loadSalesByShipmentLocation()
-        loadShippingCostByProduct()
-        loadSalesByPurchaseOrder()
-        loadTaxesByCustomer()
-        loadShippedProductsByLocation()
-        loadShippingCostByPurchaseOrder()
-        loadSalesByShipmentLocationPivot()
+        observeData()
+
+        loadData()
 
         return binding.root
     }
 
-    private fun loadSalesByCustomerAndProduct() {
-        pbSalesByCustomerAndProduct.visibility = View.VISIBLE // Show progress bar
-        Fuel.get("https://serverfirstgroup.westus2.cloudapp.azure.com/apiolap/cubedata/get-sales-by-customer-and-product")
-            .response { _, response, _ ->
-                pbSalesByCustomerAndProduct.visibility = View.GONE // Hide progress bar
-                val jsonString = response.body().asString("application/json; charset=utf-8")
-                val gson = Gson()
-                val salesByCustomerAndProductList =
-                    gson.fromJson(jsonString, Array<SalesByCustomerAndProduct>::class.java).toList().take(10)
-                rvSalesByCustomerAndProduct.layoutManager = LinearLayoutManager(requireContext())
-                rvSalesByCustomerAndProduct.adapter = SalesCustomerProductAdapter(salesByCustomerAndProductList)
-            }
+    private fun setupRecyclerViews() {
+        binding.rvSalesByCustomerAndProduct.layoutManager = LinearLayoutManager(requireContext())
+        binding.rvSalesByShipmentLocation.layoutManager = LinearLayoutManager(requireContext())
+        binding.rvShippingCostByProduct.layoutManager = LinearLayoutManager(requireContext())
+        binding.rvSalesByPurchaseOrder.layoutManager = LinearLayoutManager(requireContext())
+        binding.rvTaxesByCustomer.layoutManager = LinearLayoutManager(requireContext())
+        binding.rvShippedProductsByLocation.layoutManager = LinearLayoutManager(requireContext())
+        binding.rvShippingCostByPurchaseOrder.layoutManager = LinearLayoutManager(requireContext())
+        binding.rvSalesByShipmentLocationPivot.layoutManager = LinearLayoutManager(requireContext())
     }
 
-    private fun loadSalesByShipmentLocation() {
-        pbSalesByShipmentLocation.visibility = View.VISIBLE // Show progress bar
-        Fuel.get("https://serverfirstgroup.westus2.cloudapp.azure.com/apiolap/cubedata/get-sales-by-shipment-location")
-            .response { _, response, _ ->
-                pbSalesByShipmentLocation.visibility = View.GONE // Hide progress bar
-                val jsonString = response.body().asString("application/json; charset=utf-8")
-                val gson = Gson()
-                val salesByShipmentLocationList =
-                    gson.fromJson(jsonString, Array<SalesByShipmentLocation>::class.java).toList().take(10)
-                rvSalesByShipmentLocation.layoutManager = LinearLayoutManager(requireContext())
-                rvSalesByShipmentLocation.adapter = SalesShipmentLocationAdapter(salesByShipmentLocationList)
+    private fun observeData() {
+        viewModel.salesByCustomerAndProduct.observe(viewLifecycleOwner) { salesList ->
+            binding.pbSalesByCustomerAndProduct.visibility = View.GONE // Ocultar ProgressBar
+            if (salesList.isNotEmpty()) {
+                binding.rvSalesByCustomerAndProduct.adapter = SalesCustomerProductAdapter(salesList)
             }
+        }
+
+        viewModel.salesByShipmentLocation.observe(viewLifecycleOwner) { salesList ->
+            binding.pbSalesByShipmentLocation.visibility = View.GONE // Ocultar ProgressBar
+            if (salesList.isNotEmpty()) {
+                binding.rvSalesByShipmentLocation.adapter = SalesShipmentLocationAdapter(salesList)
+            }
+        }
+
+        viewModel.shippingCostByProduct.observe(viewLifecycleOwner) { costList ->
+            binding.pbShippingCostByProduct.visibility = View.GONE // Ocultar ProgressBar
+            if (costList.isNotEmpty()) {
+                binding.rvShippingCostByProduct.adapter = ShippingCostProductAdapter(costList)
+            }
+        }
+
+        viewModel.salesByPurchaseOrder.observe(viewLifecycleOwner) { salesList ->
+            binding.pbSalesByPurchaseOrder.visibility = View.GONE // Ocultar ProgressBar
+            if (salesList.isNotEmpty()) {
+                binding.rvSalesByPurchaseOrder.adapter = SalesPurchaseOrderAdapter(salesList)
+            }
+        }
+
+        viewModel.taxesByCustomer.observe(viewLifecycleOwner) { taxesList ->
+            binding.pbTaxesByCustomer.visibility = View.GONE // Ocultar ProgressBar
+            if (taxesList.isNotEmpty()) {
+                binding.rvTaxesByCustomer.adapter = TaxesCustomerAdapter(taxesList)
+            }
+        }
+
+        viewModel.shippedProductsByLocation.observe(viewLifecycleOwner) { productsList ->
+            binding.pbShippedProductsByLocation.visibility = View.GONE // Ocultar ProgressBar
+            if (productsList.isNotEmpty()) {
+                binding.rvShippedProductsByLocation.adapter = ShippedProductsByLocationAdapter(productsList)
+            }
+        }
+
+        viewModel.shippingCostByPurchaseOrder.observe(viewLifecycleOwner) { costList ->
+            binding.pbShippingCostByPurchaseOrder.visibility = View.GONE // Ocultar ProgressBar
+            if (costList.isNotEmpty()) {
+                binding.rvShippingCostByPurchaseOrder.adapter = ShippingCostByPurchaseOrderAdapter(costList)
+            }
+        }
+
+        viewModel.salesByShipmentLocationPivot.observe(viewLifecycleOwner) { salesList ->
+            binding.pbSalesByShipmentLocationPivot.visibility = View.GONE // Ocultar ProgressBar
+            if (salesList.isNotEmpty()) {
+                binding.rvSalesByShipmentLocationPivot.adapter = SalesShipmentPivotAdapter(salesList)
+            }
+        }
     }
 
-    private fun loadShippingCostByProduct() {
-        pbShippingCostByProduct.visibility = View.VISIBLE // Show progress bar
-        Fuel.get("https://serverfirstgroup.westus2.cloudapp.azure.com/apiolap/cubedata/get-shipping-cost-by-product")
-            .response { _, response, _ ->
-                pbShippingCostByProduct.visibility = View.GONE // Hide progress bar
-                val jsonString = response.body().asString("application/json; charset=utf-8")
-                val gson = Gson()
-                val shippingCostByProductList =
-                    gson.fromJson(jsonString, Array<ShippingCostByProduct>::class.java).toList().take(10)
-                rvShippingCostByProduct.layoutManager = LinearLayoutManager(requireContext())
-                rvShippingCostByProduct.adapter = ShippingCostProductAdapter(shippingCostByProductList)
-            }
-    }
+    private fun loadData() {
+        if (viewModel.salesByCustomerAndProduct.value == null) {
+            binding.pbSalesByCustomerAndProduct.visibility = View.VISIBLE // Mostrar ProgressBar
+            viewModel.loadSalesByCustomerAndProduct()
+        }
 
-    private fun loadSalesByPurchaseOrder() {
-        pbSalesByPurchaseOrder.visibility = View.VISIBLE // Show progress bar
-        Fuel.get("https://serverfirstgroup.westus2.cloudapp.azure.com/apiolap/cubedata/get-sales-by-purchase-order")
-            .response { _, response, _ ->
-                pbSalesByPurchaseOrder.visibility = View.GONE // Hide progress bar
-                val jsonString = response.body().asString("application/json; charset=utf-8")
-                val gson = Gson()
-                val salesByPurchaseOrderList =
-                    gson.fromJson(jsonString, Array<SalesByPurchaseOrder>::class.java).toList().take(10)
-                rvSalesByPurchaseOrder.layoutManager = LinearLayoutManager(requireContext())
-                rvSalesByPurchaseOrder.adapter = SalesPurchaseOrderAdapter(salesByPurchaseOrderList)
-            }
-    }
+        if (viewModel.salesByShipmentLocation.value == null) {
+            binding.pbSalesByShipmentLocation.visibility = View.VISIBLE // Mostrar ProgressBar
+            viewModel.loadSalesByShipmentLocation()
+        }
 
-    private fun loadTaxesByCustomer() {
-        pbTaxesByCustomer.visibility = View.VISIBLE // Show progress bar
-        Fuel.get("https://serverfirstgroup.westus2.cloudapp.azure.com/apiolap/cubedata/get-taxes-by-customer")
-            .response { _, response, _ ->
-                pbTaxesByCustomer.visibility = View.GONE // Hide progress bar
-                val jsonString = response.body().asString("application/json; charset=utf-8")
-                val gson = Gson()
-                val taxesByCustomerList = gson.fromJson(jsonString, Array<TaxesByCustomer>::class.java).toList().take(10)
-                rvTaxesByCustomer.layoutManager = LinearLayoutManager(requireContext())
-                rvTaxesByCustomer.adapter = TaxesCustomerAdapter(taxesByCustomerList)
-            }
-    }
+        if (viewModel.shippingCostByProduct.value == null) {
+            binding.pbShippingCostByProduct.visibility = View.VISIBLE // Mostrar ProgressBar
+            viewModel.loadShippingCostByProduct()
+        }
 
-    private fun loadShippedProductsByLocation() {
-        pbShippedProductsByLocation.visibility = View.VISIBLE // Show progress bar
-        Fuel.get("https://serverfirstgroup.westus2.cloudapp.azure.com/apiolap/cubedata/get-shipped-products-by-location")
-            .response { _, response, _ ->
-                pbShippedProductsByLocation.visibility = View.GONE // Hide progress bar
-                val jsonString = response.body().asString("application/json; charset=utf-8")
-                val gson = Gson()
-                val shippedProductsByLocationList = gson.fromJson(jsonString, Array<ShippedProductsByLocation>::class.java).toList().take(10)
-                rvShippedProductsByLocation.layoutManager = LinearLayoutManager(requireContext())
-                rvShippedProductsByLocation.adapter = ShippedProductsByLocationAdapter(shippedProductsByLocationList)
-            }
-    }
+        if (viewModel.salesByPurchaseOrder.value == null) {
+            binding.pbSalesByPurchaseOrder.visibility = View.VISIBLE // Mostrar ProgressBar
+            viewModel.loadSalesByPurchaseOrder()
+        }
 
-    private fun loadShippingCostByPurchaseOrder() {
-        pbShippingCostByPurchaseOrder.visibility = View.VISIBLE // Show progress bar
-        Fuel.get("https://serverfirstgroup.westus2.cloudapp.azure.com/apiolap/cubedata/get-shipping-cost-by-purchase-order")
-            .response { _, response, _ ->
-                pbShippingCostByPurchaseOrder.visibility = View.GONE // Hide progress bar
-                val jsonString = response.body().asString("application/json; charset=utf-8")
-                val gson = Gson()
-                val shippingCostByPurchaseOrderList = gson.fromJson(jsonString, Array<ShippingCostByPurchaseOrder>::class.java).toList().take(10)
-                rvShippingCostByPurchaseOrder.layoutManager = LinearLayoutManager(requireContext())
-                rvShippingCostByPurchaseOrder.adapter = ShippingCostByPurchaseOrderAdapter(shippingCostByPurchaseOrderList)
-            }
-    }
+        if (viewModel.taxesByCustomer.value == null) {
+            binding.pbTaxesByCustomer.visibility = View.VISIBLE // Mostrar ProgressBar
+            viewModel.loadTaxesByCustomer()
+        }
 
-    private fun loadSalesByShipmentLocationPivot() {
-        pbSalesByShipmentLocationPivot.visibility = View.VISIBLE // Show progress bar
-        Fuel.get("https://serverfirstgroup.westus2.cloudapp.azure.com/apiolap/cubedata/get-sales-by-shipment-location-pivot")
-            .response { _, response, _ ->
-                pbSalesByShipmentLocationPivot.visibility = View.GONE // Hide progress bar
-                val jsonString = response.body().asString("application/json; charset=utf-8")
-                val gson = Gson()
-                val salesByShipmentLocationPivotList = gson.fromJson(jsonString, Array<SalesByShipmentLocationPivot>::class.java).toList().take(10)
-                rvSalesByShipmentLocationPivot.layoutManager = LinearLayoutManager(requireContext())
-                rvSalesByShipmentLocationPivot.adapter = SalesShipmentPivotAdapter(salesByShipmentLocationPivotList)
-            }
+        if (viewModel.shippedProductsByLocation.value == null) {
+            binding.pbShippedProductsByLocation.visibility = View.VISIBLE // Mostrar ProgressBar
+            viewModel.loadShippedProductsByLocation()
+        }
+
+        if (viewModel.shippingCostByPurchaseOrder.value == null) {
+            binding.pbShippingCostByPurchaseOrder.visibility = View.VISIBLE // Mostrar ProgressBar
+            viewModel.loadShippingCostByPurchaseOrder()
+        }
+
+        if (viewModel.salesByShipmentLocationPivot.value == null) {
+            binding.pbSalesByShipmentLocationPivot.visibility = View.VISIBLE // Mostrar ProgressBar
+            viewModel.loadSalesByShipmentLocationPivot()
+        }
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-    }
-
-    companion object {
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            StatisticsFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
     }
 }

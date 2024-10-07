@@ -11,7 +11,7 @@
 
     <LinearLayout
         android:layout_width="406dp"
-        android:layout_height="match_parent"
+            android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -119,10 +119,10 @@
             android:layout_height="60dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
-            android:hint="@string/hintPass"
             app:boxBackgroundMode="filled"
             app:boxStrokeWidth="1dp"
             app:endIconMode="password_toggle"
+            app:hintEnabled="false"
             app:errorEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -131,6 +131,7 @@
                 android:layout_height="match_parent"
                 android:drawableStart="@drawable/ic_lock"
                 android:drawablePadding="10dp"
+                android:hint="@string/hintPass"
                 android:gravity="center_vertical"
                 android:inputType="textPassword"
                 android:paddingStart="10dp"
@@ -151,9 +152,10 @@
             tools:ignore="DuplicateSpeakableTextCheck,VisualLintButtonSize" />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
+            android:layout_width="339dp"
+            android:layout_height="56dp"
             android:layout_marginTop="15dp"
+            android:layout_marginStart="20dp"
             android:gravity="center"
 
             android:orientation="horizontal"
@@ -164,13 +166,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/textSingUp"
+                android:layout_marginBottom="11dp"
+                android:layout_marginEnd="10dp"
                 android:textColor="@color/gray_500"
                 tools:ignore="TextContrastCheck" />
 
             <TextView
                 android:id="@+id/linkSignUp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
                 android:text="@string/linkTextSingUp"
                 android:textColor="@color/blue_500" />
 

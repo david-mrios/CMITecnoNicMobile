@@ -16,12 +16,12 @@
         <activity
             android:name=".MainMenu"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-                  <activity
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+        <activity
             android:name=".changePassword"
             android:exported="false" />
         <activity
@@ -36,6 +36,10 @@
         <activity
             android:name=".login"
             android:exported="false" />
+        <activity
+            android:name=".Loading"
+            android:exported="false" />
+
         <activity
             android:name=".register"
             android:exported="false" />

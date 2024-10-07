@@ -37,19 +37,13 @@ class SettingsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Inicializar el binding para inflar el layout del fragmento
         _binding = FragmentSettingsBinding.inflate(inflater, container, false)
 
-        // Crear un OnClickListener común que navega a la actividad 'language::class.java'
         val navigateToLanguageClickListener = View.OnClickListener {
-            // Crear el intent que lanzará la actividad de lenguaje
             val intent = Intent(requireContext(), language::class.java)
-            // Iniciar la actividad con el intent creado
             startActivity(intent)
         }
-        // Usar el método 'apply' para asignar el mismo OnClickListener a varios elementos
         binding.apply {
-            // Crear una lista de las vistas que deben compartir el comportamiento de navegación
             listOf(
                 linearLayoutLenguaje, // LinearLayout que envuelve el selector de lenguaje
                 textLanguaje,         // Texto para cambiar el lenguaje
@@ -62,16 +56,11 @@ class SettingsFragment : Fragment() {
         }//Fin de Lenguaje
 
 
-        // Crear navegacion de Perfil
         val navigateToProfileClickListener = View.OnClickListener {
-            // Crear el intent que lanzará la actividad de perfil
             val intent = Intent(requireContext(), profile::class.java)
-            // Iniciar la actividad con el intent creado
             startActivity(intent)
         }
-        // Usar el método 'apply' para asignar el mismo OnClickListener a varios elementos
         binding.apply {
-            // Crear una lista de las vistas que deben compartir el comportamiento de navegación
             listOf(
                 linearLayoutProfile,
                 textProfile,
@@ -82,14 +71,10 @@ class SettingsFragment : Fragment() {
         }//Fin de Perfil
 
 
-        // Crear navegacion de Cambio de Contraseña
         val navigateTochangePasswordClickListener = View.OnClickListener {
-            // Crear el intent que lanzará la actividad de Cambio de contraseña
             val intent = Intent(requireContext(), changePassword::class.java)
-            // Iniciar la actividad con el intent creado
             startActivity(intent)
         }
-        // Usar el método 'apply' para asignar el mismo OnClickListener a varios elementos
         binding.apply {
             // Crear una lista de las vistas que deben compartir el comportamiento de navegación
             listOf(
@@ -101,16 +86,12 @@ class SettingsFragment : Fragment() {
             }
         }//Fin de Contraseña
 
-        // Crear navegacion de Politicas de privacidad
         val navigateToTermsClickListener = View.OnClickListener {
-            // Crear el intent que lanzará la actividad de Cambio de contraseña
             val intent = Intent(requireContext(), Terms::class.java)
             // Iniciar la actividad con el intent creado
             startActivity(intent)
         }
-        // Usar el método 'apply' para asignar el mismo OnClickListener a varios elementos
         binding.apply {
-            // Crear una lista de las vistas que deben compartir el comportamiento de navegación
             listOf(
                 linearLayoutTerms,
                 textTerms,
