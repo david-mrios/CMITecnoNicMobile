@@ -12,7 +12,6 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:textSize="50sp"
-        android:textColor="@color/green_dark"
         android:text="Proximamente." />
 
 </FrameLayout>

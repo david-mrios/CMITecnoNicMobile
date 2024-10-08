@@ -38,7 +38,6 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
             android:text="@string/txtName"
-            android:textColor="#546E7A"
             android:textSize="14sp" />
 
         <EditText
@@ -62,7 +61,6 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
             android:text="@string/txtPhoneNumber"
-            android:textColor="#546E7A"
             android:textSize="14sp" />
 
         <EditText
@@ -86,7 +84,6 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
             android:text="@string/txtEmail"
-            android:textColor="#546E7A"
             android:textSize="14sp" />
 
         <EditText
@@ -110,7 +107,6 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
             android:text="@string/txtPassword"
-            android:textColor="#546E7A"
             android:textSize="14sp" />
 
         <com.google.android.material.textfield.TextInputLayout

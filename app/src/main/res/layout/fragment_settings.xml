@@ -30,7 +30,6 @@
                 android:layout_centerInParent="true"
                 android:gravity="center"
                 android:text="@string/settingProfile"
-                android:textColor="@android:color/black"
                 android:textSize="25sp"
                 tools:ignore="RelativeOverlap" />
 
@@ -44,7 +43,6 @@
             android:layout_marginTop="27dp"
             android:paddingBottom="8dp"
             android:text="@string/settingHead2"
-            android:textColor="#A1887F"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
@@ -73,11 +71,10 @@
 
                 <TextView
                     android:id="@+id/textLanguaje"
-                    android:layout_width="228dp"
+                    android:layout_width="0dp"
                     android:layout_height="24dp"
                     android:layout_weight="1"
                     android:text="@string/headLenguage"
-                    android:textColor="@android:color/black"
                     android:textSize="16sp" />
 
                 <TextView
@@ -138,7 +135,6 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/headProfileSetting"
-                    android:textColor="@android:color/black"
                     android:textSize="16sp" />
 
                 <ImageButton
@@ -190,7 +186,6 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/contacHead"
-                    android:textColor="@android:color/black"
                     android:textSize="16sp" />
 
                 <ImageButton
@@ -221,7 +216,6 @@
             android:layout_marginTop="40dp"
             android:paddingBottom="8dp"
             android:text="@string/headSecurity"
-            android:textColor="#A1887F"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayoutContact" />
@@ -251,7 +245,6 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/changePass"
-                    android:textColor="@android:color/black"
                     android:textSize="16sp" />
 
                 <ImageButton
@@ -301,7 +294,6 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/termsSetting"
-                    android:textColor="@android:color/black"
                     android:textSize="16sp" />
 
                 <ImageButton

@@ -55,7 +55,6 @@ android:paddingStart="40dp"
             android:layout_marginStart="76dp"
             android:layout_marginTop="60dp"
             android:text="@string/headProfile"
-            android:textColor="@android:color/black"
             android:textSize="20sp"
             app:layout_constraintStart_toEndOf="@+id/backImgBtn"
             app:layout_constraintTop_toTopOf="parent"
@@ -81,7 +80,6 @@ android:paddingStart="40dp"
             android:layout_marginTop="56dp"
             android:layout_marginEnd="56dp"
             android:text="@string/txtUser"
-            android:textColor="@android:color/black"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4"
@@ -118,7 +116,6 @@ android:paddingStart="40dp"
                     android:layout_marginStart="16dp"
                     android:layout_weight="1"
                     android:text="@string/infoPersonalProfile"
-                    android:textColor="@android:color/black"
                     android:textSize="16sp" />
 
                 <ImageButton
@@ -168,7 +165,6 @@ android:paddingStart="40dp"
                     android:layout_marginStart="16dp"
                     android:layout_weight="1"
                     android:text="Cerrar Sesión"
-                    android:textColor="@android:color/black"
                     android:textSize="16sp" />
 
                 <ImageButton

@@ -62,28 +62,22 @@
     <string name="txt_sentinel">Sentinel</string>
     <string name="txt_prime">Prime</string>
     <string name="terms">
-    Bienvenido a la aplicación móvil de TecnoNic. Estos términos rigen el uso de todos los productos y servicios ofrecidos por TecnoNic.&#10;&#10;
-
-    Al utilizar la aplicación de TecnoNic, aceptas los siguientes términos:&#10;&#10;
-
-    <b>Uso de Servicios:</b>&#10;&#10;
-    Al usar nuestros productos, te comprometes a hacerlo de manera legal y a proporcionar información precisa.&#10;&#10;
-
-    <b>Propiedad Intelectual:</b>&#10;&#10;
-    Todo el contenido de esta aplicación es propiedad de TecnoNic. No se permite su uso sin autorización.&#10;&#10;
-
-    <b>Privacidad:</b>&#10;&#10;
-    Nos comprometemos a proteger tu información. Consulta nuestra Política de Privacidad para más detalles.&#10;&#10;
-
-    <b>Compras:</b>&#10;&#10;
-    Los precios y ofertas pueden cambiar sin previo aviso. Las compras están sujetas a nuestras políticas de devoluciones.&#10;&#10;
-
-    <b>Responsabilidad:</b>&#10;&#10;
-    TecnoNic no se hace responsable por el mal uso de los productos o servicios.&#10;&#10;
-
-    <b>Modificaciones:</b>&#10;&#10;
+    Bienvenido a la aplicación móvil de TecnoNic. Estos términos rigen el uso de todos los productos y servicios ofrecidos por TecnoNic.\n\n
+    Al utilizar la aplicación de TecnoNic, aceptas los siguientes términos:\n\n
+    <b>Uso de Servicios:</b>\n\n
+    Al usar nuestros productos, te comprometes a hacerlo de manera legal y a proporcionar información precisa.\n\n
+    <b>Propiedad Intelectual:</b>\n\n
+    Todo el contenido de esta aplicación es propiedad de TecnoNic. No se permite su uso sin autorización.\n\n
+    <b>Privacidad:</b>\n\n
+    Nos comprometemos a proteger tu información. Consulta nuestra Política de Privacidad para más detalles.\n\n
+    <b>Compras:</b>\n\n
+    Los precios y ofertas pueden cambiar sin previo aviso. Las compras están sujetas a nuestras políticas de devoluciones.\n\n
+    <b>Responsabilidad:</b>\n\n
+    TecnoNic no se hace responsable por el mal uso de los productos o servicios.\n\n
+    <b>Modificaciones:</b>\n\n
     Nos reservamos el derecho de modificar estos términos en cualquier momento.
 </string>
+
 
     <string name="headLogin">Inicia Sesión</string>
     <string name="hintPass">********</string>
