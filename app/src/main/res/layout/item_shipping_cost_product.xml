@@ -24,8 +24,8 @@
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@color/black"
-            android:drawableLeft="@drawable/ci_profile"
-            android:drawablePadding="8dp" />
+            android:drawablePadding="8dp"
+            app:drawableStartCompat="@drawable/ic_product" />
 
         <!-- Brand Name -->
         <TextView
@@ -35,9 +35,9 @@
             android:text="Brand: Amazon"
             android:textSize="16sp"
             android:textColor="@color/gray_500"
-            android:drawableLeft="@drawable/ic_default_state_one"
             android:drawablePadding="8dp"
-            android:layout_marginTop="4dp" />
+            android:layout_marginTop="4dp"
+            app:drawableStartCompat="@drawable/ic_brand" />
 
         <!-- Shipping Cost -->
         <TextView
