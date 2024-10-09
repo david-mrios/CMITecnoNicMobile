@@ -55,6 +55,27 @@ class SettingsFragment : Fragment() {
         }//Fin de Lenguaje
 
 
+
+
+        val navigateToCreateUserClickListener = View.OnClickListener {
+            val intent = Intent(requireContext(), register::class.java)
+            startActivity(intent)
+        }
+        binding.apply {
+            listOf(
+                linearLayoutContact,
+                textContact,
+                btnContact,
+            ).forEach {
+                it.setOnClickListener(navigateToCreateUserClickListener)
+            }
+        }
+
+
+
+
+
+
         val navigateToProfileClickListener = View.OnClickListener {
             val intent = Intent(requireContext(), profile::class.java)
             startActivity(intent)

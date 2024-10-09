@@ -8,6 +8,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.firstgroup.cmisentinelprimemobile.databinding.ActivityRegisterBinding // Asegúrate de importar el binding generado
 import android.util.Patterns
+import androidx.appcompat.app.AlertDialog
 
 class register : AppCompatActivity() {
 
@@ -28,16 +29,25 @@ class register : AppCompatActivity() {
 
         binding.btnRegister.setOnClickListener {
             if (validateFields()) {
-                // Si todos los campos son válidos, procede al MainMenu
-                val intent = Intent(this, MainMenu::class.java)
-                startActivity(intent)
+                val builder = AlertDialog.Builder(this)
+                builder.setTitle("Registro Exitoso")
+                builder.setMessage("¡Te has registrado correctamente!")
+                builder.setPositiveButton("Aceptar") { dialog, _ ->
+                    dialog.dismiss()
+                }
+                builder.show()
             }
         }
 
-        binding.linkSignUp.setOnClickListener {
-            val intent = Intent(this, login::class.java)
+        binding.backButton.setOnClickListener {
+            val intent = Intent(this, MainMenu::class.java).apply {
+                putExtra("fragmentToLoad", "SettingsFragment")
+            }
             startActivity(intent)
+            finish()
         }
+
+
 
 
     }

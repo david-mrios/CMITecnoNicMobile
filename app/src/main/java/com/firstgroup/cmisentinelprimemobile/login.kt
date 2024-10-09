@@ -42,12 +42,6 @@ class login : AppCompatActivity() {
                 Toast.makeText(this, "Correo o contraseña inválidos.", Toast.LENGTH_SHORT).show()
             }
         }
-
-        binding.linkSingIn.setOnClickListener {
-            val intent = Intent(this, register::class.java)
-            startActivity(intent)
-            finish()
-        }
     }
 
     private fun validateEmail(email: String): Boolean {

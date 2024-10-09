@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".register"
     tools:ignore="VisualLintBounds">
+    <!-- Botón de regreso -->
 
 
     <LinearLayout
@@ -20,23 +21,39 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0">
 
-        <TextView
-            android:id="@+id/textHeadSignUp"
-            android:layout_width="333dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="60dp"
-            android:text="@string/txtSignUp"
-            android:textAlignment="center"
-            android:textSize="32sp"
-            android:textStyle="bold" />
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="50dp">
+
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/circlebutton_signup"
+                android:contentDescription="@string/descriptionImg"
+                android:padding="16dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                android:id="@+id/textHeadSignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:text="Crear una cuenta"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+        </LinearLayout>
 
         <TextView
             android:id="@+id/txtFullName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="40dp"
             android:text="@string/txtName"
             android:textSize="14sp" />
 
@@ -46,9 +63,9 @@
             android:layout_height="60dp"
             android:layout_marginStart="20dp"
             android:autofillHints=""
-            android:drawableStart="@drawable/ic_email"
+            android:drawableStart="@drawable/ic_profile_text"
             android:drawablePadding="10dp"
-            android:hint="@string/txtUser"
+            android:hint="Test User"
             android:inputType="text"
             android:minHeight="48dp"
             android:textSize="14sp"
@@ -143,38 +160,10 @@
             android:layout_marginTop="20dp"
             android:background="@drawable/rounded_button"
             android:backgroundTint="@color/blue_500"
-            android:text="@string/btnSignUp"
+            android:text="Registrar"
             android:textColor="@color/white"
             tools:ignore="DuplicateSpeakableTextCheck,VisualLintButtonSize" />
 
-        <LinearLayout
-            android:layout_width="339dp"
-            android:layout_height="56dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginStart="20dp"
-            android:gravity="center"
-
-            android:orientation="horizontal"
-            tools:ignore="TextSizeCheck">
-
-            <TextView
-                android:id="@+id/txtSignUp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/textSingUp"
-                android:layout_marginBottom="11dp"
-                android:layout_marginEnd="10dp"
-                android:textColor="@color/gray_500"
-                tools:ignore="TextContrastCheck" />
-
-            <TextView
-                android:id="@+id/linkSignUp"
-                android:layout_width="100dp"
-                android:layout_height="40dp"
-                android:text="@string/linkTextSingUp"
-                android:textColor="@color/blue_500" />
-
-        </LinearLayout>
 
 
     </LinearLayout>
