@@ -43,56 +43,56 @@ class StatisticsViewModel : ViewModel() {
     }
 
     fun loadSalesByCustomerAndProduct() {
-        Fuel.get("https://4slz48p3-5069.use2.devtunnels.ms/cubedata/get-sales-by-customer-and-product")
+        Fuel.get("https://serverfirstgroup.westus2.cloudapp.azure.com/apiolap/cubedata/get-sales-by-customer-and-product")
             .response { _, _, result ->
                 handleResponse(result, salesByCustomerAndProduct, Array<SalesByCustomerAndProduct>::class.java)
             }
     }
 
     fun loadSalesByShipmentLocation() {
-        Fuel.get("https://4slz48p3-5069.use2.devtunnels.ms/cubedata/get-sales-by-shipment-location")
+        Fuel.get("https://serverfirstgroup.westus2.cloudapp.azure.com/apiolap/cubedata/get-sales-by-shipment-location")
             .response { _, _, result ->
                 handleResponse(result, salesByShipmentLocation, Array<SalesByShipmentLocation>::class.java)
             }
     }
 
     fun loadShippingCostByProduct() {
-        Fuel.get("https://4slz48p3-5069.use2.devtunnels.ms/cubedata/get-shipping-cost-by-product")
+        Fuel.get("https://serverfirstgroup.westus2.cloudapp.azure.com/apiolap/cubedata/get-shipping-cost-by-product")
             .response { _, _, result ->
                 handleResponse(result, shippingCostByProduct, Array<ShippingCostByProduct>::class.java)
             }
     }
 
     fun loadSalesByPurchaseOrder() {
-        Fuel.get("https://4slz48p3-5069.use2.devtunnels.ms/cubedata/get-sales-by-purchase-order")
+        Fuel.get("https://serverfirstgroup.westus2.cloudapp.azure.com/apiolap/cubedata/get-sales-by-purchase-order")
             .response { _, _, result ->
                 handleResponse(result, salesByPurchaseOrder, Array<SalesByPurchaseOrder>::class.java)
             }
     }
 
     fun loadTaxesByCustomer() {
-        Fuel.get("https://4slz48p3-5069.use2.devtunnels.ms/cubedata/get-taxes-by-customer")
+        Fuel.get("https://serverfirstgroup.westus2.cloudapp.azure.com/apiolap/cubedata/get-taxes-by-customer")
             .response { _, _, result ->
                 handleResponse(result, taxesByCustomer, Array<TaxesByCustomer>::class.java)
             }
     }
 
     fun loadShippedProductsByLocation() {
-        Fuel.get("https://4slz48p3-5069.use2.devtunnels.ms/cubedata/get-shipped-products-by-location")
+        Fuel.get("https://serverfirstgroup.westus2.cloudapp.azure.com/apiolap/cubedata/get-shipped-products-by-location")
             .response { _, _, result ->
                 handleResponse(result, shippedProductsByLocation, Array<ShippedProductsByLocation>::class.java)
             }
     }
 
     fun loadShippingCostByPurchaseOrder() {
-        Fuel.get("https://4slz48p3-5069.use2.devtunnels.ms/cubedata/get-shipping-cost-by-purchase-order")
+        Fuel.get("https://serverfirstgroup.westus2.cloudapp.azure.com/apiolap/cubedata/get-shipping-cost-by-purchase-order")
             .response { _, _, result ->
                 handleResponse(result, shippingCostByPurchaseOrder, Array<ShippingCostByPurchaseOrder>::class.java)
             }
     }
 
     fun loadSalesByShipmentLocationPivot() {
-        Fuel.get("https://4slz48p3-5069.use2.devtunnels.ms/cubedata/get-sales-by-shipment-location-pivot")
+        Fuel.get("https://serverfirstgroup.westus2.cloudapp.azure.com/apiolap/cubedata/get-sales-by-shipment-location-pivot")
             .response { _, _, result ->
                 handleResponse(result, salesByShipmentLocationPivot, Array<SalesByShipmentLocationPivot>::class.java)
             }
